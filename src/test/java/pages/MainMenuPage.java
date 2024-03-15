@@ -28,7 +28,7 @@ public class MainMenuPage {
     @FindBy(xpath = "//a[text()='Teacher Management']")
     public WebElement teacherManagementInsideMenu;
 
-    //ahada yazdım
+    //ahada yazdım...git add
 
     @FindBy(xpath = "//a[text()='Student Management']")
     public WebElement studentManagementInsideMenu;
