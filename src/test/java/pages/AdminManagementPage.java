@@ -7,5 +7,8 @@ public class AdminManagementPage {
     DDDDDDDDDDDDDDDDDDDDDDDDDDDDD
             */
 
+    //Github merge denemesi yapiyoruz
+    //Allah utandirmasin
+
 
 }
