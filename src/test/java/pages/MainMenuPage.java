@@ -28,6 +28,8 @@ public class MainMenuPage {
     @FindBy(xpath = "//a[text()='Teacher Management']")
     public WebElement teacherManagementInsideMenu;
 
+    //ahada yazdım
+
     @FindBy(xpath = "//a[text()='Student Management']")
     public WebElement studentManagementInsideMenu;
     @FindBy(xpath = "//a[text()='Student Info Management']")
@@ -47,6 +49,8 @@ public class MainMenuPage {
 
     @FindBy(xpath = "//a[text()='Logout']")
     public WebElement logoutInsideMenu;
+
+
 
 
 }
