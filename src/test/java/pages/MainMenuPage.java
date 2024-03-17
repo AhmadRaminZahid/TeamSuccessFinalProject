@@ -30,6 +30,7 @@ public class MainMenuPage {
 
     @FindBy(xpath = "//a[text()='Student Management']")
     public WebElement studentManagementInsideMenu;
+
     @FindBy(xpath = "//a[text()='Student Info Management']")
     public WebElement studentInfoManagementInsideMenu;
 

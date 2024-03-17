@@ -8,65 +8,106 @@ import utilities.Driver;
 public class StudentManagementPage {
     public StudentManagementPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(id = "advisorTeacherId")
-    public WebElement studentManagementChooseTeacher;
-    @FindBy(xpath = "//input[@placeholder='Name']")
-    public WebElement studentManagementAddStudentName;
-    @FindBy(xpath = "//input[@placeholder='Surname']")
-    public WebElement studentManagementAddStudentSurname;
-    @FindBy(xpath = "//input[@placeholder='Birth Place']")
-    public WebElement studentManagementAddStudentBirthPlace;
-    @FindBy(xpath = "//input[@placeholder='Email Address']")
-    public WebElement studentManagementAddStudentEmailAddress;
-    @FindBy(xpath = "//input[@placeholder='Phone Number']")
-    public WebElement studentManagementAddStudentPhoneNumber;
-    @FindBy(xpath = "//input[@placeholder='ssn']")
-    public WebElement studentManagementAddStudentSsn;
-    @FindBy(xpath = "//input[@placeholder='Father Name']")
-    public WebElement studentManagementAddStudentFatherName;
-    @FindBy(xpath = "//input[@placeholder='Mother Name']")
-    public WebElement studentManagementAddStudentMotherName;
-    @FindBy(xpath = "//input[@placeholder='username']")
-    public WebElement studentManagementAddStudentUsername;
-    @FindBy(xpath = "//input[@placeholder='Password']")
-    public WebElement studentManagementAddStudentPassword;
-    @FindBy(xpath = "(//input[@name='gender'])[1]")
-    public WebElement studentManagementAddTeacherGenderFemale;
-    @FindBy(xpath = "(//input[@name='gender'])[2]")
-    public WebElement studentManagementAddTeacherGenderMale;
+    @FindBy(xpath = "//h3[text()='Student Management']")
+    public WebElement headOfStudentManagement;
+
+    //Add Student
+    @FindBy (id = "advisorTeacherId")
+    public WebElement chooseTeacher;
+    @FindBy (id = "name")
+    public WebElement name;
+    @FindBy (id = "surname")
+    public WebElement surname;
+    @FindBy (id = "birthPlace")
+    public WebElement birthPlace;
+    @FindBy (id = "email")
+    public WebElement email;
+    @FindBy (id = "phoneNumber")
+    public WebElement phoneNumber;
+    @FindBy(xpath = "//input[@value='FEMALE']")
+    public WebElement femaleGender;
+    @FindBy(xpath = "//input[@value='MALE']")
+    public WebElement maleGender;
     @FindBy(id = "birthDay")
-    public WebElement studentManagementAddTeacherDateOfBirth;
-    @FindBy(xpath = "(//button[@type='button'])[5]")
-    public WebElement studentManagementAddStudentSubmitButton;
-    @FindBy(xpath = "(//tr//th)[1]")
-    public WebElement studentManagementStudentListStudentNumber;
-    @FindBy(xpath = "(//tr//th)[2]")
-    public WebElement studentManagementStudentListName;
-    @FindBy(xpath = "(//tr//th)[3]")
-    public WebElement studentManagementStudentListPhoneNumber;
-    @FindBy(xpath = "(//tr//th)[4]")
-    public WebElement studentManagementStudentListSsn;
-    @FindBy(xpath = "(//tr//th)[5]")
-    public WebElement studentManagementStudentListUsername;
-    @FindBy(xpath = "(//a[@class='page-link'])[1]")
-    public WebElement studentManagementAddStudentLeftForwardButton;
-    @FindBy(xpath = "(//a[@class='page-link'])[2]")
-    public WebElement studentManagementAddStudentLeftButton;
-    @FindBy(xpath = "(//a[@class='page-link'])[3]")
-    public WebElement studentManagementAddStudentRightButton;
+    public WebElement dateOfBirth;
+    @FindBy(id = "ssn")
+    public WebElement ssn;
+    @FindBy(id = "username")
+    public WebElement username;
+    @FindBy(id = "fatherName")
+    public WebElement fatherName;
+    @FindBy (id = "motherName")
+    public WebElement motherName;
+    @FindBy (id = "password")
+    public WebElement password;
+    @FindBy(xpath = "//button[text()='Submit']")
+    public WebElement submitButton;
+
+    @FindBy (xpath = "//div[text()='Student saved Successfully']")
+    public WebElement SuccessMessageStudentSaved;
+
+    //Student List
+    @FindBy(xpath = "//h5[text()='Student List']")
+    public WebElement headOfStudentList;
+    @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[1]")
+    public WebElement editButtonOfFirstLine;
+
+//    @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[11]")  //last line's index changes every added student
+//    public WebElement editButtonOfLastLine;
+
     @FindBy(xpath = "(//a[@class='page-link'])[4]")
-    public WebElement studentManagementAddStudentRightForwardButton;
-    @FindBy(xpath = "(//span[@class='page-link'])")
-    public WebElement studentManagementAddStudentNumOfPage;
-    @FindBy(xpath = "//div[@role='alert']")
-    public WebElement studentManagementAddStudentErrorMessage;
-    @FindBy(xpath = "//div[@role='alert']")
-    public WebElement studentManagementAddStudentSuccessMessage;
+    public WebElement rightDoubleArrow;  //end of the page, to find last added student
+
+    @FindBy(xpath = "//div[text()='Student saved Successfully']")
+    public WebElement successMessageStudentSaved;
+    @FindBy(xpath = "//div[text()='Please enter valid email']")
+    public  WebElement invalidMailMessage;
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public  WebElement invalidSsnMessage;
+    @FindBy(xpath = "//div[text()=Your username should be at least 4 characters']")
+    public  WebElement invalidUsernameMessage;
 
 
 
 
-
-
+    //Edit Student
+    @FindBy (xpath = "(//select[@id='advisorTeacherId'])[2]")
+    public WebElement editStudentChooseTeacher;
+    @FindBy (xpath = "(//input[@id='name'])[2]")
+    public WebElement editStudentName;
+    @FindBy (xpath = "(//input[@id='surname'])[2]")
+    public WebElement editStudentSurname;
+    @FindBy (xpath = "(//input[@id='birthPlace'])[2]")
+    public WebElement editStudentBirthPlace;
+    @FindBy (xpath = "(//input[@id='email'])[2]")
+    public WebElement editStudentEmail;
+    @FindBy (xpath = "(//input[@id='phoneNumber'])[2]")
+    public WebElement editStudentPhoneNumber;
+    @FindBy (xpath = "(//input[@id='ssn'])[2]")
+    public WebElement editStudentSsn;
+    @FindBy (xpath = "(//input[@id='birthDay'])[2]")
+    public WebElement editStudentDateOfBirth;
+    @FindBy (xpath = "(//input[@value='FEMALE'])[2]")
+    public WebElement editStudentGenderFemale;
+    @FindBy (xpath = "(//input[@value='MALE'])[2]")
+    public WebElement editStudentGenderMale;
+    @FindBy (xpath = "(//input[@id='username'])[2]")
+    public WebElement editStudentUsername;
+    @FindBy (xpath = "(//input[@id='fatherName'])[2]")
+    public WebElement editStudentFatherName;
+    @FindBy (xpath = "(//input[@id='motherName'])[2]")
+    public WebElement editStudentMotherName;
+    @FindBy (xpath = "(//input[@id='password'])[2]")
+    public WebElement editStudentPassword;
+    @FindBy (xpath = "(//button[text()='Submit'])[2]")
+    public WebElement editStudentSubmitButton;
+    @FindBy(xpath = "//div[text()='Student updated Successfully']")
+    public  WebElement successMessageStudentUpdated;
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public  WebElement invalidSsnStudentUpdate;
+    @FindBy(xpath = "//div[text()='You have entered an invalid value. Valid values are: MALE, FEMALE']")
+    public  WebElement invalidGenderMessageStudentUpdate;
+    @FindBy(xpath = "//div[text()='Please select advisor teacher']")
+    public  WebElement selectAdvisorFailMessageStudentUpdate;
 
 }
