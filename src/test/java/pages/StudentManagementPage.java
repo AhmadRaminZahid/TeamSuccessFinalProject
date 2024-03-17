@@ -58,6 +58,11 @@ public class StudentManagementPage {
     public WebElement studentManagementAddStudentRightForwardButton;
     @FindBy(xpath = "(//span[@class='page-link'])")
     public WebElement studentManagementAddStudentNumOfPage;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement studentManagementAddStudentErrorMessage;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement studentManagementAddStudentSuccessMessage;
+
 
 
 

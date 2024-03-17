@@ -99,6 +99,20 @@ public class LessonManagementPage {
     public WebElement lessonProgramChooseTeacher;
     @FindBy(xpath = "(//button[@type='button'])[31]")
     public WebElement lessonProgramLessonProgramAssignmentSubmitButton;
+    @FindBy(xpath = "(//div[.='Error: Education Term with TERM AND YEAR already register'])[1]")
+    public WebElement lessonManagementEducationTermErrorMessage;
+    @FindBy(xpath = "(//div[.='Created Education Term'])[1]")
+    public WebElement lessonManagementEducationTermSuccessMessage;
+    @FindBy(xpath = "(//div[.='Error: Lesson with lesson name maths already register'])[3]")
+    public WebElement lessonManagementLessonsErrorMessage;
+    @FindBy(xpath = "(//div[.='Lesson Created'])[3]")
+    public WebElement lessonManagementLessonsSuccessMessage;
+    @FindBy(xpath = "(//button[@class='btn btn-danger'])[1]")
+    public WebElement lessonManagementLessonsDeleteButton;
+    @FindBy(xpath = "(//div[.='Created Lesson Program'])[3]")
+    public WebElement lessonManagementLessonsProgramSuccessMessage;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement lessonManagementLessonsProgramErrorMessage;
 
 
 

@@ -32,6 +32,10 @@ public class ChooseLessonPage {
     public WebElement chooseLessonChooseLessonBox; //the number is change for every different box
     @FindBy(xpath = "(//button[@type='button'])[5]")
     public WebElement chooseLessonChooseLessonSubmitButton;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement chooseLessonSuccessMessage;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement chooseLessonErrorMessage;
 
 
 }

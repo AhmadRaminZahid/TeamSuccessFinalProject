@@ -79,6 +79,12 @@ public class TeacherManagementPage {
     public WebElement advisorTeacherAdvisorTeachersListRightForwardButton;
     @FindBy(xpath = "(//span[@class='page-link'])[2]")
     public WebElement advisorTeacherAdvisorTeachersListNumOfPage;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement teacherManagementAddTeacherSuccessMessage;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement teacherManagementTeacherListErrorMessageEdit;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement teacherManagementTeacherListSuccessMessageEdit;
 
 
 
