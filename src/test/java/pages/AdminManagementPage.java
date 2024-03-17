@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class AdminManagementPage {
-    public AdminManagementPage(){
+    public AdminManagementPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -44,7 +44,5 @@ public class AdminManagementPage {
 
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitButton;
-
-
 
 }

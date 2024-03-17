@@ -7,10 +7,10 @@ import utilities.Driver;
 
 public class StudentManagementPage {
 
+
     public StudentManagementPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
 
     @FindBy(xpath = "//h3[text()='Student Management']")
     public WebElement headOfStudentManagement;
@@ -55,9 +55,6 @@ public class StudentManagementPage {
     public WebElement headOfStudentList;
     @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[1]")
     public WebElement editButtonOfFirstLine;
-
-//    @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[11]")  //last line's index changes every added student
-//    public WebElement editButtonOfLastLine;
 
     @FindBy(xpath = "(//a[@class='page-link'])[4]")
     public WebElement rightDoubleArrow;  //end of the page, to find last added student
@@ -113,11 +110,5 @@ public class StudentManagementPage {
     public  WebElement invalidGenderMessageStudentUpdate;
     @FindBy(xpath = "//div[text()='Please select advisor teacher']")
     public  WebElement selectAdvisorFailMessageStudentUpdate;
-
-
-
-
-
-
 
 }
