@@ -1,5 +1,6 @@
 package pages;
 
+<<<<<<< HEAD
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,4 +47,7 @@ public class AdminManagementPage {
     public WebElement submitButton;
 
 
+=======
+public class AdminManagementPage {
+>>>>>>> origin/Semam
 }
