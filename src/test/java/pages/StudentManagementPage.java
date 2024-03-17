@@ -52,9 +52,6 @@ public class StudentManagementPage {
     @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[1]")
     public WebElement editButtonOfFirstLine;
 
-//    @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[11]")  //last line's index changes every added student
-//    public WebElement editButtonOfLastLine;
-
     @FindBy(xpath = "(//a[@class='page-link'])[4]")
     public WebElement rightDoubleArrow;  //end of the page, to find last added student
 

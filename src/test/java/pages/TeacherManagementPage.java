@@ -7,38 +7,12 @@ import utilities.Driver;
 
 public class TeacherManagementPage {
 
-    public TeacherManagementPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
+    public TeacherManagementPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
+    }
     @FindBy(id = "controlled-tab-example-tab-teachersList")
     public WebElement teacherManagementTeacher;
-    @FindBy(xpath = "//div[@class=' css-13cymwt-control']")
-    public WebElement teacherManagementAddTeacherChooseLessons;
-    @FindBy(xpath = "//input[@placeholder='Name']")
-    public WebElement teacherManagementAddTeacherName;
-    @FindBy(xpath = "//input[@placeholder='Surname']")
-    public WebElement teacherManagementAddTeacherSurname;
-    @FindBy(xpath = "//input[@placeholder='Birth Place']")
-    public WebElement teacherManagementAddTeacherBirthPlace;
-    @FindBy(xpath = "//input[@placeholder='Email Address']")
-    public WebElement teacherManagementAddTeacherEmailAddress;
-    @FindBy(xpath = "//input[@placeholder='Phone Number']")
-    public WebElement teacherManagementAddTeacherPhoneNumber;
-    @FindBy(id = "isAdvisorTeacher")
-    public WebElement teacherManagementIsAdvisorTeacherBox;
-    @FindBy(xpath = "(//input[@name='gender'])[1]")
-    public WebElement teacherManagementGenderFemaleBox;
-    @FindBy(xpath = "(//input[@name='gender'])[2]")
-    public WebElement teacherManagementGenderMaleBox;
-    @FindBy(id = "birthDay")
-    public WebElement teacherManagementAddTeacherDateOfBirth;
-    @FindBy(xpath = "//input[@placeholder='ssn']")
-    public WebElement teacherManagementAddTeacherSsn;
-    @FindBy(xpath = "//input[@placeholder='username']")
-    public WebElement teacherManagementAddTeacherUsername;
-    @FindBy(xpath = "//input[@placeholder='Password']")
-    public WebElement teacherManagementAddTeacherPassword;
-    @FindBy(xpath = "(//button[@type='button'])[7]")
-    public WebElement teacherManagementAddTeacherSubmitButton;
     @FindBy(xpath = "(//button[@type='button'])[8]")
     public WebElement teacherManagementAddTeacherEditButton; //the number change for different edit button
     @FindBy(xpath = "(//a[@class='page-link'])[1]")
@@ -86,8 +60,47 @@ public class TeacherManagementPage {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement teacherManagementTeacherListSuccessMessageEdit;
 
+    @FindBy(id = "react-select-2-placeholder")
+    public WebElement chooseLessons;
 
+    @FindBy(id = "name")
+    public WebElement teacherName;
 
+    @FindBy(id = "surname")
+    public WebElement teacherSurname;
+
+    @FindBy(id = "birthPlace")
+    public WebElement teacherBirthPlace;
+
+    @FindBy(id = "email")
+    public WebElement teacherEmail;
+
+    @FindBy(id = "phoneNumber")
+    public WebElement teacherPhoneNumber;
+
+    @FindBy(id = "isAdvisorTeacher")
+    public WebElement isAdvisorTeacherButton;
+
+    @FindBy(xpath = "//input[@value='FEMALE']")
+    public WebElement femaleRadioOption;
+
+    @FindBy(xpath = "//input[@value='MALE']")
+    public WebElement maleRadioOption;
+
+    @FindBy(id = "birthDay")
+    public WebElement DateOfBirth;
+
+    @FindBy(id = "ssn")
+    public WebElement teacherSsn;
+
+    @FindBy(id = "username")
+    public WebElement teacherUsername;
+
+    @FindBy(id = "password")
+    public WebElement teacherPassword;
+
+    @FindBy(xpath = "//button[text()='Submit']")
+    public WebElement submitButton;
 
 
 }
