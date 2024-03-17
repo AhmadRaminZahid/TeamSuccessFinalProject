@@ -6,7 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class StudentManagementPage {
-    public StudentManagementPage(){PageFactory.initElements(Driver.getDriver(),this);}
+
+
+    public StudentManagementPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(xpath = "//h3[text()='Student Management']")
     public WebElement headOfStudentManagement;

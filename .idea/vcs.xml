@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <mapping directory="" vcs="Git" />
 =======
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
@@ -18,5 +19,8 @@
 =======
     <mapping directory="" vcs="Git" />
 >>>>>>> origin/gokhan
+=======
+    <mapping directory="" vcs="Git" />
+>>>>>>> origin/serife
   </component>
 </project>

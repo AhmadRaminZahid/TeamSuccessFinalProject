@@ -30,8 +30,4 @@ public class ContactGetAllPage {
     @FindBy(xpath = "//span[@class='page-link']")
     public WebElement contactGetAllContactMessageNumOfPage;
 
-
-
-
-
 }
