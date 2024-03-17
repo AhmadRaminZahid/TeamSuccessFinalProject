@@ -8,6 +8,7 @@
       </list>
     </option>
 <<<<<<< HEAD
+<<<<<<< HEAD
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK" />
 <<<<<<< HEAD
@@ -18,4 +19,9 @@
 >>>>>>> origin/gokhan
 =======
 >>>>>>> origin/Ahmad
+=======
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21i" project-jdk-type="JavaSDK" />
+>>>>>>> origin/dimitris
 </project>
