@@ -12,6 +12,7 @@ public class LoginPage {
     }
     @FindBy(xpath ="//a[@href='/login']")
     public WebElement loginButtonMainPage;
+
     @FindBy(id = "username")
     public  WebElement userName;
     @FindBy(id = "password")
