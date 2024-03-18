@@ -15,7 +15,7 @@ import java.time.Duration;
 NOTE: all of our current codes still works, because this driver is class is good for squential and parallel testing
  */
 public class Driver {
-    private Driver(){}
+    public Driver(){}
     //    private static WebDriver driver;
 //    1. Use ThreadLocal WebDriver for parallel testing.
 //    Type of the driver is still WebDriver, but this driver is now ThreadLocal
@@ -61,10 +61,10 @@ public class Driver {
         driver.get().manage().window().maximize();
     }
     //    4. close driver
-    public static void closeDriver(){
-        if (driver!=null){
-            driver.get().quit();
-            driver.remove();
-        }
+//    public static void closeDriver(){
+//        if (driver!=null){
+//            driver.get().quit();
+//            driver.remove();
+//        }
     }
-}
+
