@@ -13,13 +13,5 @@ public class HomePage {
     @FindBy(xpath = "((//a)[2])")
     public WebElement loginHomePage;
 
-// naber/?
-//    nasilsin
-//    xasdasda
-
-
-// hello this is Ahmad
-    // hello this Ahmad again
-
 
 }
