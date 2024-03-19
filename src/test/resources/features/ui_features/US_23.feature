@@ -2,11 +2,12 @@
 
   Feature: admin creates vice dean
 
-    Background:
-      Given User should click the login button on the home page
-      And User should enter the new Admin Username created in the previous US
-      And User should enter the new Admin password created in the previous US
-      And User should click the login button on the login page
+    Background: Login_Part
+      Given Admin goes to website "https://managementonschools.com/"
+      And Admin clicks on the Log in button at the home page
+      And Admin enters the  admin User Name
+      And Admin enters the  admin password
+      And Admin clicks on the Login button
 
       Scenario: US_23_TC_01
         When Admin enters the first name for new Vice Dean
@@ -21,6 +22,7 @@
         And Admin clicks the submit button
         And Admin should see Vice Dean Saved message
         Then Admin should see the new Vice Dean in the Vice Dean List
+        And close the browser
 
       Scenario: US_23_TC_02
         When Admin enters the first name for new Vice Dean
@@ -35,6 +37,7 @@
         And Admin clicks the submit button
         And Admin should see Required message under username field
         Then Admin should NOT see the new Vice Dean in the Vice Dean List
+        And close the browser
 
       Scenario: US_23_TC_03
         When Admin enters the first name for new Vice Dean
@@ -49,6 +52,7 @@
         And Admin clicks the submit button
         And AAdmin should see One Number message under the password field
         Then Admin should NOT see the new Vice Dean in the Vice Dean List
+        And close the browser
 
       Scenario: US_23_TC_04
         When Admin enters the first name for new Vice Dean
@@ -61,6 +65,7 @@
         And Admin enters a username for new Vice Dean
         And Admin leaves the password field empty
         And Admin clicks the submit button
-        And Admin should see Vice Dean saved message
+        And Admin should see Vice Dean Saved message
         And Admin should see the new Vice Dean in the Admin List
+        And close the browser
         

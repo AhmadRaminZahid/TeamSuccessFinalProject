@@ -3,18 +3,18 @@ package stepdefinitions.ui;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.AdminManagementPage;
+import pages.LoginPage;
+import pages.ViceDeanManagementPage;
 
 public class US_23_StepDefs {
-    @And("User should enter the new Admin Username created in the previous US")
-    public void userShouldEnterTheNewAdminUsernameCreatedInThePreviousUS() {
-    }
+    LoginPage loginPage = new LoginPage();
+    ViceDeanManagementPage viceDeanManagementPage= new ViceDeanManagementPage();
 
-    @And("User should enter the new Admin password created in the previous US")
-    public void userShouldEnterTheNewAdminPasswordCreatedInThePreviousUS() {
-    }
 
     @When("Admin enters the first name for new Vice Dean")
     public void adminEntersTheFirstNameForNewViceDean() {
+
     }
 
     @And("Admin enters the surname for new Vice Dean")
@@ -80,6 +80,11 @@ public class US_23_StepDefs {
     @And("AAdmin should see One Number message under the password field")
     public void aadminShouldSeeOneNumberMessageUnderThePasswordField() {
     }
+
+    @And("Admin leaves the password field empty")
+    public void adminLeavesThePasswordFieldEmpty() {
+    }
+
 
     @And("Admin should see the new Vice Dean in the Admin List")
     public void adminShouldSeeTheNewViceDeanInTheAdminList() {

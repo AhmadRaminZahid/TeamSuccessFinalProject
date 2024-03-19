@@ -45,4 +45,14 @@ public class AdminManagementPage {
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitButton;
 
+    @FindBy(xpath = "//div[text()='Admin Saved']")
+    public WebElement adminsavedMessage;
+
+    @FindBy(xpath = "//div[text()='At least 8 characters']")
+    public WebElement AtLeast8CharectersMessage;
+
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public WebElement EnterValidSSNNumberMessage;
+
+
 }
