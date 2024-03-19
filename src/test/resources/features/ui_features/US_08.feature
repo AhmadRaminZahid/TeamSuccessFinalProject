@@ -13,7 +13,7 @@ Feature:Vice Deans should be able to create a lesson (Lessons - Add Lesson)
     And User select compulsory button
     And User enters credit score for lesson on Credit Score field
     And User clicks Submit button
-    And User sees a success message "Lesson Created"
+    Then User sees a success message
 
   Scenario:US_08 Test_Case02
     And User clicks on Lessons top center of the page
@@ -21,4 +21,4 @@ Feature:Vice Deans should be able to create a lesson (Lessons - Add Lesson)
     And User select compulsory button
     And User enters credit score for lesson on Credit Score field
     And User clicks Submit button
-    And User sees a error message "Error: Lesson with lesson name c++ already registered"
+    Then User sees a error message

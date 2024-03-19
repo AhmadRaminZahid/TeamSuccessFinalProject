@@ -24,4 +24,7 @@ public class ContactPage {
 
     @FindBy(xpath = "//*[text()='Send Message']")
     public WebElement messageOfTheContact;
+
+    @FindBy (xpath = "//table[@class='table table-striped table-bordered table-hover']")
+    public WebElement contactTable;
 }
