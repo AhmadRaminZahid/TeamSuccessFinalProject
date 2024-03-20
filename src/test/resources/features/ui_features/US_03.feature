@@ -1,3 +1,4 @@
+@us3 @ey
 Feature: Admin see the Guest user list
 
   Background:
@@ -11,7 +12,7 @@ Feature: Admin see the Guest user list
     And The user must type the Subject
     And The user must type Message
     And The user must click Send Message button
-    And The user see "Contact Message created successfully" message
+    And The user see "Contact Message Created Successfully" message
 
 
 
@@ -22,4 +23,6 @@ Feature: Admin see the Guest user list
     And user must type Message
     And user must click Send Message button
     And user see "Please enter valid email" message
+
+
 

@@ -3,7 +3,6 @@ package stepdefinitions.ui;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +10,7 @@ import pages.RegisterPage;
 import utilities.Driver;
 import utilities.WaitUtils;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class US_01_Stepdefs {
     WebDriver driver = new ChromeDriver();
@@ -26,75 +25,75 @@ public class US_01_Stepdefs {
     @And("the students clicks register button")
     public void theStudentsClicksRegisterButton() {
         registerPage.registerPage.click();
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
 
     }
 
     @And("students write their name")
     public void studentsWriteTheirName() {
         registerPage.nameOfTheRegisterField.sendKeys("John", Keys.TAB);
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students write their surname")
     public void studentsWriteTheirSurname() {
         registerPage.surnameField.sendKeys("Doer", Keys.TAB);
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students write their birth place")
     public void studentsWriteTheirBirthPlace() {
         registerPage.birthPlaceField.sendKeys("Istanbul", Keys.TAB);
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students write their phone number")
     public void studentsWriteTheirPhoneNumber() {
         registerPage.phoneNumberField.sendKeys("509-501-7458", Keys.TAB);
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students select their gender")
     public void studentsSelectTheirGender() {
         registerPage.maleOfGender.click();
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students write their date of birth")
     public void studentsWriteTheirDateOfBirth() {
         registerPage.birthDayField.sendKeys("12/25/1994");
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students write their ssn")
     public void studentsWriteTheirSsn() {
         registerPage.ssnField.sendKeys("406-07-9004");
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students write their username")
     public void studentsWriteTheirUsername() {
         registerPage.userNameOfTheRegisterField.sendKeys("JohD12");
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     //TC_01
     @And("students write their password")
     public void studentsWriteTheirPassword() {
         registerPage.passwordField.sendKeys("Nasilsin012");
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @And("students click register button")
     public void studentsClickRegisterButton() {
         registerPage.registerButton.click();
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
     @Then("students must see {string} message")
     public void studentsMustSeeMessage(String expectedResult) {
         assertEquals(expectedResult, "Guest User Registered");
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
     }
 
 
@@ -102,20 +101,19 @@ public class US_01_Stepdefs {
     @And("student writes their password")
     public void studentWritesTheirPassword() {
         registerPage.passwordField.sendKeys("nasilsin0122");
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
 
     }
 
     @Then("students must see the {string} message")
     public void studentsMustSeeTheMessage(String expectedResult) {
-        boolean Message = driver.findElement(By.xpath("//*[text()='One uppercase character']")).isDisplayed();
-        assertEquals(expectedResult, "One uppercase character");
-        WaitUtils.waitFor(2);
+        assertEquals("One uppercase character", registerPage.passwordFieldMessageOfRegisterButton.getText());
+        WaitUtils.waitFor(1);
     }
 
     @Then("students should not click register button")
     public void studentsShouldNotClickRegisterButton() {
-        registerPage.registerButton.click();
+        assertFalse(registerPage.registerButton.isSelected());
     }
 
 
