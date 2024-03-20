@@ -5,11 +5,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.LoginPage;
+import pages.MainMenuPage;
 import pages.StudentManagementPage;
 import utilities.Driver;
 
 public class US25_TC01_Stepdefs {
     LoginPage loginPage = new LoginPage();
+    MainMenuPage mainMenuPage = new MainMenuPage();
     StudentManagementPage studentManagementPage = new StudentManagementPage();
     @Given("Admin goes to website {string}")
     public void adminGoesToWebsite(String url) {
@@ -39,6 +41,7 @@ public class US25_TC01_Stepdefs {
 
     @When("Admin clicks the Menu button")
     public void adminClicksTheMenuButton() {
+        mainMenuPage.menuButton.click();
     }
 
     @And("Admin clicks the Student Management option")
