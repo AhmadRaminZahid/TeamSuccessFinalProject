@@ -22,9 +22,10 @@ public class US_23_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
     MainMenuPage mainMenuPage= new MainMenuPage();
-    public static String vicedeanSsn="112-01-1211";
-    public static String vicedeanphoneNumber="073-012-1111";
-    public static String vivedeanUsername="HekmatAmini6";
+
+    public static String vicedeanSsn="112-01-1215";
+    public static String vicedeanphoneNumber="073-012-1135";
+    public static String vivedeanUsername="HekmatAmini15";
 
 
     @When("Admin enters the first name for new Vice Dean")
@@ -75,6 +76,7 @@ public class US_23_StepDefs {
     @And("Admin clicks the submit button")
     public void adminClicksTheSubmitButton() {
         BrowserUtils.clickWithTimeOut(adminManagementPage.submitButton,5);
+        WaitUtils.waitFor(2);
     }
 
     @And("Admin should see Vice Dean Saved message")
@@ -86,7 +88,7 @@ public class US_23_StepDefs {
     public void adminShouldSeeTheNewViceDeanInTheViceDeanList() {
         ActionsUtils.actionsScrollDown();
         BrowserUtils.clickWithTimeOut(adminManagementPage.ListLastPartButton,5);
-        WaitUtils.waitFor(4);
+        WaitUtils.waitFor(5);
         List<WebElement> ssnColumnData = Driver.getDriver().findElements(By.xpath("//table//tbody//td[4]"));
         List<String> ssnColumn = new ArrayList<>();
         for (WebElement each:ssnColumnData){
@@ -124,7 +126,7 @@ public class US_23_StepDefs {
         }
         System.out.println(ssnColumn);
         boolean flag=false;
-        if (ssnColumn.contains("112-01-1210")){
+        if (ssnColumn.contains("112-01-1225")){
             flag=true;
         }
         Assert.assertFalse(flag);
@@ -157,6 +159,6 @@ public class US_23_StepDefs {
 
     @And("Admin enters new SSN number of new Vice Dean in the format\\(xxx-xx-xxxx)")
     public void adminEntersNewSSNNumberOfNewViceDeanInTheFormatXxxXxXxxx() {
-        BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,"112-01-1210",2);
+        BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,"112-01-1225",2);
     }
 }
