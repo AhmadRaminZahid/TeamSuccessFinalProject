@@ -18,8 +18,12 @@ public class StudentManagementPage {
     //Add Student
     @FindBy (id = "advisorTeacherId")
     public WebElement chooseTeacher;
+    @FindBy (xpath = "//select[@id]")
+    public WebElement chooseTeacherLast;
+
     @FindBy (id = "name")
     public WebElement name;
+
     @FindBy (id = "surname")
     public WebElement surname;
     @FindBy (id = "birthPlace")

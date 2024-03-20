@@ -53,7 +53,7 @@ public class TeacherManagementPage {
     public WebElement advisorTeacherAdvisorTeachersListRightForwardButton;
     @FindBy(xpath = "(//span[@class='page-link'])[2]")
     public WebElement advisorTeacherAdvisorTeachersListNumOfPage;
-    @FindBy(xpath = "//div[@role='alert']")
+    @FindBy(xpath = "//div[text()='Teacher saved successfully']")
     public WebElement teacherManagementAddTeacherSuccessMessage;
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement teacherManagementTeacherListErrorMessageEdit;
@@ -62,6 +62,8 @@ public class TeacherManagementPage {
 
     @FindBy(id = "react-select-2-placeholder")
     public WebElement chooseLessons;
+    @FindBy(id = "react-select-2-input")
+    public WebElement chooseLessonsLast;
 
     @FindBy(id = "name")
     public WebElement teacherName;
@@ -101,6 +103,9 @@ public class TeacherManagementPage {
 
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitButton;
+
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public WebElement failSsnMessage;
 
 
 }
