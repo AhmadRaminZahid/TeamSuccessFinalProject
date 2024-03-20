@@ -29,4 +29,16 @@ public class GuestUserPage {
     @FindBy(xpath = "(//*[@type='button'])[5]")
     public WebElement deleteOfTheGuestUserListVisible;
 
+//    @FindBy(xpath = "(//*[text()='Guest User Deleted Successful')")
+//    public WebElement deleteOfTheGuestUserListVisible;
+
+    @FindBy(xpath = "//*[text()=' Guest User deleted Successful']")
+    public WebElement deleteOfTheGuestUserListMessage;
+
+
+
+
+
+
+
 }
