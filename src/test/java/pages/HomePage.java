@@ -12,6 +12,4 @@ public class HomePage {
 
     @FindBy(xpath = "((//a)[2])")
     public WebElement loginHomePage;
-
-
 }
