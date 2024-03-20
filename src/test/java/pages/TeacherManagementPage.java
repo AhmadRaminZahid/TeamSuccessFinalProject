@@ -61,7 +61,7 @@ public class TeacherManagementPage {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement teacherManagementTeacherListSuccessMessageEdit;
 
-    @FindBy(id = "react-select-2-placeholder")
+    @FindBy(xpath = "//div[@class=' css-1xc3v61-indicatorContainer']")
     public WebElement chooseLessons;
 
     @FindBy(id = "name")

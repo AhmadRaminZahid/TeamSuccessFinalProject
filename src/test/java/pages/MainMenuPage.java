@@ -52,5 +52,9 @@ public class MainMenuPage {
     @FindBy(xpath = "(//a[@role='button'])[11]")
     public WebElement gradeAndAnnouncementsInsideMainMenuOfStudent;
 
+    @FindBy(xpath = "//button[text()='Yes']")
+    public WebElement yesForLogout;
+
+
 
 }
