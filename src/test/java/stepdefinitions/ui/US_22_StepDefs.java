@@ -3,14 +3,25 @@ package stepdefinitions.ui;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.AdminManagementPage;
 import pages.LoginPage;
+import utilities.ActionsUtils;
 import utilities.BrowserUtils;
 import utilities.Driver;
+import utilities.WaitUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class US_22_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
+    public static String Adminssn="112-01-1201";
+    public static String Adminphonenumber="073-012-1120";
+    public static String Adminusername="AdminHekmatAmini";
 
 
     @When("Admin enters the first name for new Admin")
@@ -30,6 +41,7 @@ public class US_22_StepDefs {
 
     @And("Admin enters gender of new Admin")
     public void adminEntersGenderOfNewAdmin() {
+
         BrowserUtils.clickWithTimeOut(adminManagementPage.maleGender,2);
     }
 
@@ -40,17 +52,17 @@ public class US_22_StepDefs {
 
     @And("Admin enters phone number of new Admin in the format\\(xxx-xxx-xxxx)")
     public void adminEntersPhoneNumberOfNewAdminInTheFormatXxxXxxXxxx() {
-        BrowserUtils.sendKeysWithTimeout(adminManagementPage.phoneNumber,"073-012-1120",2);
+        BrowserUtils.sendKeysWithTimeout(adminManagementPage.phoneNumber,Adminphonenumber,2);
     }
 
     @And("Admin enters SSN number of new Admin in the format\\(xxx-xx-xxxx)")
     public void adminEntersSSNNumberOfNewAdminInTheFormatXxxXxXxxx() {
-        BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,"112-01-1201",2);
+        BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,Adminssn,2);
     }
 
     @And("Admin enters a username for new Admin")
     public void adminEntersAUsernameForNewAdmin() {
-        BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,"HekmatAmini",2);
+        BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,Adminusername,2);
     }
 
     @And("Admin enters a password for new admin\\(at least eight chars and UpC,LowC,Num)")
@@ -71,23 +83,34 @@ public class US_22_StepDefs {
 
     @Then("Admin should see the new Admin in the Admin List")
     public void adminShouldSeeTheNewAdminInTheAdminList() {
+        ActionsUtils.actionsScrollDown();
+        BrowserUtils.clickWithTimeOut(adminManagementPage.ListLastPartButton,5);
+        WaitUtils.waitFor(4);
 
+        List<WebElement> ssnColumnData = Driver.getDriver().findElements(By.xpath("//table//tbody//td[4]"));
+        List<String> ssnColumn = new ArrayList<>();
+        for (WebElement each:ssnColumnData){
+            String ssnString= each.getText();
+            ssnColumn.add(ssnString);
+        }
+        System.out.println(ssnColumn);
+        boolean flag=false;
+        if (ssnColumn.contains(Adminssn)){
+            flag=true;
+        }
+        Assert.assertTrue(flag);
     }
 
     @And("Admin enters a password for new admin\\(less than eight chars and UpC,LowC,Num)")
     public void adminEntersAPasswordForNewAdminLessThanEightCharsAndUpCLowCNum() {
-        BrowserUtils.sendKeysWithTimeout(adminManagementPage.password,"Hekmat12",2);
+        BrowserUtils.sendKeysWithTimeout(adminManagementPage.password,"Hekmat1",2);
     }
 
-    @And("Admin should see the At least 8 characters still visible")
+    @Then("Admin should see the At least 8 characters still visible")
     public void adminShouldSeeTheAtLeastCharactersStillVisible() {
         adminManagementPage.AtLeast8CharectersMessage.isDisplayed();
     }
 
-    @Then("Admin should not be able to click Submit button")
-    public void adminShouldNotBeAbleToClickSubmitButton() {
-        adminManagementPage.submitButton.click();
-    }
 
     @And("Admin enters SSN in different format \\(changes the places of -)")
     public void adminEntersSSNInDifferentFormatChangesThePlacesOf() {
@@ -101,6 +124,21 @@ public class US_22_StepDefs {
 
     @Then("Admin should not see the New Admin in the Admin List")
     public void adminShouldNotSeeTheNewAdminInTheAdminList() {
+        ActionsUtils.actionsScrollDown();
+        BrowserUtils.clickWithTimeOut(adminManagementPage.ListLastPartButton,5);
+        WaitUtils.waitFor(4);
+        List<WebElement> ssnColumnData = Driver.getDriver().findElements(By.xpath("//table//tbody//td[4]"));
+        List<String> ssnColumn = new ArrayList<>();
+        for (WebElement each:ssnColumnData){
+            String ssnString= each.getText();
+            ssnColumn.add(ssnString);
+        }
+        System.out.println(ssnColumn);
+        boolean flag=false;
+        if (ssnColumn.contains("112-011-201")){
+            flag=true;
+        }
+        Assert.assertFalse(flag);
 
     }
 

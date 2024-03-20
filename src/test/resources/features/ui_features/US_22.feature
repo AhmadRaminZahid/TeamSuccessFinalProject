@@ -1,4 +1,4 @@
-@admin_creation
+@us_22
 
   Feature: admin creates new admin
     Background: Login_Part
@@ -34,8 +34,9 @@
         And Admin enters SSN number of new Admin in the format(xxx-xx-xxxx)
         And Admin enters a username for new Admin
         And Admin enters a password for new admin(less than eight chars and UpC,LowC,Num)
-        And Admin should see the At least 8 characters still visible
-        Then Admin should not be able to click Submit button
+        And Admin clicks the Submit button
+        Then Admin should see the At least 8 characters still visible
+        And Admin should not see the New Admin in the Admin List
         And close the browser
 
       Scenario: US_22_TC_03
@@ -63,7 +64,6 @@
         And Admin enters SSN number of new Admin in the format(xxx-xx-xxxx)
         And Admin enters a username for new Admin
         And Admin leaves the password field empty
-        And Admin clicks the submit button
-        And Admin should see Admin saved message
-        Then Admin should see the new Admin in the Admin List
+        And Admin clicks the Submit button
+        Then Admin should not see the New Admin in the Admin List
         And close the browser

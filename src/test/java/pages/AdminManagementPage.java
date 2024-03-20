@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AdminManagementPage {
     public AdminManagementPage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -53,6 +55,26 @@ public class AdminManagementPage {
 
     @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
     public WebElement EnterValidSSNNumberMessage;
+
+    @FindBy(xpath = "(//a[@class='page-link'])[4]")
+    public WebElement ListLastPartButton;
+
+    @FindBy(xpath = "//div[text()='Vice dean Saved']")
+    public WebElement ViceDeanSavedMessage;
+
+
+    @FindBy(xpath = "//div[text()='Required']")
+    public WebElement RequiredMessageUnderUsername;
+
+
+    @FindBy(xpath = "//div[text()='One number']")
+    public WebElement OnenumberMessageUnderPassword;
+
+
+    @FindBy(xpath = "//table//tbody//td//button")
+    public WebElement deleteAdminButton;
+
+
 
 
 }

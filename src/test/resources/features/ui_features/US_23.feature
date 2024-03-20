@@ -1,4 +1,4 @@
-@vice_dean_creation
+@us_23
 
   Feature: admin creates vice dean
 
@@ -8,6 +8,8 @@
       And Admin enters the  admin User Name
       And Admin enters the  admin password
       And Admin clicks on the Login button
+      And admin clicks the menuButton
+      And admin click the Vice Dean Management
 
       Scenario: US_23_TC_01
         When Admin enters the first name for new Vice Dean
@@ -31,7 +33,7 @@
         And Admin enters gender of new Vice Dean
         And Admin enters birth date of new Vice Dean
         And Admin enters phone number of new Vice Dean in the format(xxx-xxx-xxxx)
-        And Admin enters SSN number of new Vice Dean in the format(xxx-xx-xxxx)
+        And Admin enters new SSN number of new Vice Dean in the format(xxx-xx-xxxx)
         And Admin leaves the username field empty
         And Admin enters a password for new Vice Dean(at least eight chars and UpC,LowC,Num)
         And Admin clicks the submit button
@@ -46,11 +48,11 @@
         And Admin enters gender of new Vice Dean
         And Admin enters birth date of new Vice Dean
         And Admin enters phone number of new Vice Dean in the format(xxx-xxx-xxxx)
-        And Admin enters SSN number of new Vice Dean in the format(xxx-xx-xxxx)
+        And Admin enters new SSN number of new Vice Dean in the format(xxx-xx-xxxx)
         And Admin enters a username for new Vice Dean
         And Admin enters a password for new admin(at least eight chars and UpC,LowC)
         And Admin clicks the submit button
-        And AAdmin should see One Number message under the password field
+        And Admin should see One Number message under the password field
         Then Admin should NOT see the new Vice Dean in the Vice Dean List
         And close the browser
 
@@ -61,11 +63,10 @@
         And Admin enters gender of new Vice Dean
         And Admin enters birth date of new Vice Dean
         And Admin enters phone number of new Vice Dean in the format(xxx-xxx-xxxx)
-        And Admin enters SSN number of new Vice Dean in the format(xxx-xx-xxxx)
+        And Admin enters new SSN number of new Vice Dean in the format(xxx-xx-xxxx)
         And Admin enters a username for new Vice Dean
         And Admin leaves the password field empty
         And Admin clicks the submit button
-        And Admin should see Vice Dean Saved message
-        And Admin should see the new Vice Dean in the Admin List
+        And Admin should NOT see the new Vice Dean in the Vice Dean List
         And close the browser
         
