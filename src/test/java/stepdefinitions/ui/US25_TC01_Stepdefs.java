@@ -13,27 +13,29 @@ public class US25_TC01_Stepdefs {
     StudentManagementPage studentManagementPage = new StudentManagementPage();
     @Given("Admin goes to website {string}")
     public void adminGoesToWebsite(String url) {
+
         Driver.getDriver().get(url);
     }
 
     @And("Admin clicks on the Log in button at the home page")
     public void adminClicksOnTheLogInButtonAtTheHomePage() {
+
         loginPage.loginButtonMainPage.click();
     }
 
     @And("Admin enters the  admin User Name")
     public void adminEntersTheAdminUserName() {
+
         loginPage.userName.sendKeys("AdminBatch197");
     }
 
     @And("Admin enters the  admin password")
     public void adminEntersTheAdminPassword() {
-        loginPage.password.sendKeys("Batch197+");
-
-    }
+        loginPage.password.sendKeys("Batch197+");}
 
     @And("Admin clicks on the Login button")
     public void adminClicksOnTheLoginButton() {
+
         loginPage.loginButton.click();
     }
 
