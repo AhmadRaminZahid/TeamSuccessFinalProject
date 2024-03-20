@@ -1,4 +1,4 @@
-@ui
+@us1 @ey
 Feature: Students login register
 
   Background:
@@ -13,10 +13,10 @@ Feature: Students login register
     And students write their ssn
     And students write their username
 
-#  Scenario: TC_01 The students register
-#    And students write their password
-#    And students click register button
-#    Then students must see "Guest User Registered" message
+  Scenario: TC_01 The students register
+    And students write their password
+    And students click register button
+    Then students must see "Guest User Registered" message
 
 
   Scenario: TC_02 The students should not register
