@@ -6,14 +6,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
 import pages.LoginPage;
 import pages.MeetManagementPage;
 import utilities.BrowserUtils;
 import utilities.JSUtils;
 import utilities.WaitUtils;
 
-public class US19_Stepdefs {
+public class US_19_StepDefs {
     MeetManagementPage meetManagementPage = new MeetManagementPage();
     LoginPage loginPage = new LoginPage();
 

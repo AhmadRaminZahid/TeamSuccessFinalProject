@@ -1,4 +1,4 @@
-@us12
+@us_12
 Feature: Assign lessons to teachers
   Background: Login part as a Vice Dean
     Given Admin goes to website "https://managementonschools.com/"

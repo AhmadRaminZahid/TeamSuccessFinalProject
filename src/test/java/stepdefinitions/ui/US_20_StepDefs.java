@@ -8,7 +8,7 @@ import pages.MeetManagementPage;
 import utilities.BrowserUtils;
 import utilities.WaitUtils;
 
-public class US20_Stepdefs {
+public class US_20_StepDefs {
 
     MeetManagementPage meetManagementPage = new MeetManagementPage();
 
@@ -33,8 +33,8 @@ public class US20_Stepdefs {
         WaitUtils.waitFor(1);
     }
 
-    @And("User clicks on Submit button")
-    public void userClicksOnSubmitButton() {
+    @And("teacher clicks on Submit button")
+    public void teacherClicksOnSubmitButton() {
         WaitUtils.waitFor(2);
         meetManagementPage.teacherMeetEditSubmitButton.click();
 
