@@ -162,9 +162,4 @@ public class US_15_StepDefs {
         WaitUtils.waitFor(2);
         studentManagementPage.invalidSsnMessage.isDisplayed();
     }
-
-    @And("close the driver")
-    public void closeTheDriver() {
-        Driver.closeDriver();
-    }
 }

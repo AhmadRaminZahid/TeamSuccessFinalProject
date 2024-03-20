@@ -25,6 +25,9 @@ public class StudentManagementPage {
     @FindBy (xpath = "//select")
     public WebElement chooseTeacher;
 
+    @FindBy (xpath = "//select[@id]")
+    public WebElement chooseTeacherLast;
+
     @FindBy (id = "name")
     public WebElement name;
 

@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -66,8 +67,12 @@ public class TeacherManagementPage {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement teacherManagementTeacherListSuccessMessageEdit;
 
-    @FindBy(id= "react-select-3-input")
+   // @FindBy(id= "react-select-3-input")
+
+    @FindBy(xpath = "//div[@class=' css-1xc3v61-indicatorContainer']")
     public WebElement chooseLessons;
+    @FindBy(id = "react-select-2-input")
+    public WebElement chooseLessonsLast;
 
     @FindBy(xpath = "//div[text()='Java']")
     public WebElement javaOption;
@@ -111,10 +116,15 @@ public class TeacherManagementPage {
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitButton;
 
+
     // pup up teacher box
 
     @FindBy(id = "react-select-12-input")
     public WebElement chooseLessonBox;
+
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public WebElement failSsnMessage;
+
 
 
 }

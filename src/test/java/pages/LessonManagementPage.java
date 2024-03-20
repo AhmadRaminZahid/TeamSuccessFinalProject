@@ -81,7 +81,7 @@ public class LessonManagementPage {
     public WebElement lessonsLessonListRightForwardButton;
     @FindBy(xpath = "(//span[@class='page-link'])[2]")
     public WebElement lessonsLessonListNumOfPages;
-    @FindBy(xpath = "//div[@class=' css-19bb58m']")
+    @FindBy(xpath = "//input[@id='react-select-2-input']")
     public WebElement lessonProgramChooseLessons;
     @FindBy(xpath = "//select[@id='educationTermId']")
     public WebElement lessonProgramChooseEducationTerm;
@@ -93,9 +93,9 @@ public class LessonManagementPage {
     public WebElement lessonProgramStopTime;
     @FindBy(xpath = "(//button[@type='button'])[30]")
     public WebElement lessonProgramSubmitButton;
-    @FindBy(id ="lessonProgramId")
+    @FindBy(xpath = "(//input[@type='checkbox'])[11]")
     public WebElement lessonProgramLessonProgramAssignmentChooseLesson;
-    @FindBy (id = "teacherId")
+    @FindBy (xpath = "//select[@id='teacherId']")
     public WebElement lessonProgramChooseTeacher;
     @FindBy(xpath = "(//button[@type='button'])[31]")
     public WebElement lessonProgramLessonProgramAssignmentSubmitButton;
@@ -105,8 +105,8 @@ public class LessonManagementPage {
     public WebElement lessonManagementEducationTermSuccessMessage;
     @FindBy(xpath = "(//div[.='Error: Lesson with lesson name maths already register'])[3]")
     public WebElement lessonManagementLessonsErrorMessage;
-    @FindBy(xpath = "(//div[.='Lesson Created'])[3]")
-    public WebElement lessonManagementLessonsSuccessMessage;
+    @FindBy(xpath = "//div[.='Lesson added to Teacher']")
+    public WebElement lessonManagementLessonsSuccessAssignedMessage;
     @FindBy(xpath = "(//button[@class='btn btn-danger'])[1]")
     public WebElement lessonManagementLessonsDeleteButton;
     @FindBy(xpath = "(//div[.='Created Lesson Program'])[3]")
