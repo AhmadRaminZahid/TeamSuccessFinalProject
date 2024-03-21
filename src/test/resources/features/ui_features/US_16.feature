@@ -13,6 +13,7 @@ Feature: View and Delete Messages by Vice Dean
       And The Vice Dean selects Contact Get All option
       Then The Vice Dean should see the Contact Message page
       And The Vice Dean should see Contact Messages
+      And  cclose driver
 
 
 #  Scenario: US_16 TC_02 - Vice Dean deletes messages sent by users
@@ -22,3 +23,4 @@ Feature: View and Delete Messages by Vice Dean
 #    And The Vice Dean should see Contact Messages
 #    But The Vice Dean cannot see the Delete button
 #    And The Vice Dean cannot delete messages
+#      And  cclose driver
