@@ -19,9 +19,9 @@ import java.util.List;
 public class US_22_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
-    public static String Adminssn="112-01-1202";
-    public static String Adminphonenumber="073-012-1121";
-    public static String Adminusername="AdminHekmatAmini1";
+    public static String Adminssn="112-01-1203";
+    public static String Adminphonenumber="073-012-1123";
+    public static String Adminusername="AdminHekmatAmini";
 
 
     @When("Admin enters the first name for new Admin")
@@ -79,6 +79,7 @@ public class US_22_StepDefs {
 
     @And("Admin should see Admin saved message")
     public void adminShouldSeeAdminSavedMessage() {
+        WaitUtils.waitFor(2);
         adminManagementPage.adminsavedMessage.isDisplayed();
     }
 
@@ -120,6 +121,7 @@ public class US_22_StepDefs {
 
     @And("Admin should see Please enter valid SSN number message")
     public void adminShouldSeePleaseEnterValidSSNNumberMessage() {
+        WaitUtils.waitFor(2);
         adminManagementPage.EnterValidSSNNumberMessage.isDisplayed();
     }
 

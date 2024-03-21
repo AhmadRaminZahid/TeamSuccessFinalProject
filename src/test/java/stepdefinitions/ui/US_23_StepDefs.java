@@ -23,9 +23,9 @@ public class US_23_StepDefs {
     AdminManagementPage adminManagementPage= new AdminManagementPage();
     MainMenuPage mainMenuPage= new MainMenuPage();
 
-    public static String vicedeanSsn="112-01-1216";
-    public static String vicedeanphoneNumber="073-012-1136";
-    public static String vivedeanUsername="HekmatAmini16";
+    public static String vicedeanSsn="112-01-1219";
+    public static String vicedeanphoneNumber="073-012-1139";
+    public static String vivedeanUsername="HekmatAminib";
 
 
     @When("Admin enters the first name for new Vice Dean")
