@@ -19,9 +19,9 @@ import java.util.List;
 public class US_22_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
-    public static String Adminssn="112-01-1201";
-    public static String Adminphonenumber="073-012-1120";
-    public static String Adminusername="AdminHekmatAmini";
+    public static String Adminssn="112-01-1202";
+    public static String Adminphonenumber="073-012-1121";
+    public static String Adminusername="AdminHekmatAmini1";
 
 
     @When("Admin enters the first name for new Admin")
@@ -73,7 +73,7 @@ public class US_22_StepDefs {
     @And("Admin clicks the Submit button")
     public void adminClicksTheSubmitButton() {
         BrowserUtils.clickWithTimeOut(adminManagementPage.submitButton,5);
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(4);
 
     }
 
