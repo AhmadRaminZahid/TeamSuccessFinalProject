@@ -55,6 +55,7 @@ public class US25_TC01_Stepdefs {
 
     @And("Admin enters a student name")
     public void adminEntersAStudentName() {
+
     }
 
     @And("Admin enters a student surname")
