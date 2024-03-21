@@ -1,4 +1,4 @@
-@us18
+@us_18
 Feature: View and Update Student Grades by Teacher
 
   Background: Login part as a Teacher

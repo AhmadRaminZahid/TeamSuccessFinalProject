@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,8 +12,8 @@ public class TeacherManagementPage {
     public TeacherManagementPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(id = "controlled-tab-example-tab-teachersList")
-    public WebElement teacherManagementTeacher;
+    @FindBy(xpath = "//a[text()='Teacher Management']")
+    public WebElement teacherManagement;
     @FindBy(xpath = "(//button[@type='button'])[8]")
     public WebElement teacherManagementAddTeacherEditButton; //the number change for different edit button
     @FindBy(xpath = "(//a[@class='page-link'])[1]")
@@ -27,7 +28,7 @@ public class TeacherManagementPage {
     public WebElement teacherManagementAddTeacherNameRequired;
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
     public WebElement teacherManagementAddTeacherSurnameRequired;
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[3]")
+    @FindBy(xpath = "//div[text()='Required']")
     public WebElement teacherManagementAddTeacherBirthPlaceRequired;
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[4]")
     public WebElement teacherManagementAddTeacherEmailRequired;
@@ -37,6 +38,8 @@ public class TeacherManagementPage {
     public WebElement teacherManagementAddTeacherDateOfBirthRequired;
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[7]")
     public WebElement teacherManagementAddTeacherSsnRequired;
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public WebElement invalidSsnmessage;
     @FindBy(id = "controlled-tab-example-tab-advisorTeachersList")
     public WebElement teacherManagementAdvisorTeacher;
     @FindBy(xpath = "(//tr//th)[5]")
@@ -53,15 +56,26 @@ public class TeacherManagementPage {
     public WebElement advisorTeacherAdvisorTeachersListRightForwardButton;
     @FindBy(xpath = "(//span[@class='page-link'])[2]")
     public WebElement advisorTeacherAdvisorTeachersListNumOfPage;
-    @FindBy(xpath = "//div[@role='alert']")
+    @FindBy(xpath = "//div[text()='Teacher saved successfully']")
     public WebElement teacherManagementAddTeacherSuccessMessage;
+
+    @FindBy(xpath = "(//button[@type='button'])[8]")
+    public WebElement teacherEditListButton;
+
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement teacherManagementTeacherListErrorMessageEdit;
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement teacherManagementTeacherListSuccessMessageEdit;
 
-    @FindBy(id = "react-select-2-placeholder")
+   // @FindBy(id= "react-select-3-input")
+
+    @FindBy(xpath = "//div[@class=' css-1xc3v61-indicatorContainer']")
     public WebElement chooseLessons;
+    @FindBy(id = "react-select-2-input")
+    public WebElement chooseLessonsLast;
+
+    @FindBy(xpath = "//div[text()='Java']")
+    public WebElement javaOption;
 
     @FindBy(id = "name")
     public WebElement teacherName;
@@ -101,6 +115,16 @@ public class TeacherManagementPage {
 
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitButton;
+
+
+    // pup up teacher box
+
+    @FindBy(id = "react-select-12-input")
+    public WebElement chooseLessonBox;
+
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public WebElement failSsnMessage;
+
 
 
 }
