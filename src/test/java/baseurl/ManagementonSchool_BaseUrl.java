@@ -12,7 +12,7 @@ public class ManagementonSchool_BaseUrl {
     public static RequestSpecification spec;
 
     public static void setUp(){
-        String baseUrl = "https://medunna.com";
+        String baseUrl = "https://managementonschools.com/";
 
         spec = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
