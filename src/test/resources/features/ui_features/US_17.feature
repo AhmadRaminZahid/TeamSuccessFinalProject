@@ -1,4 +1,4 @@
-@us17
+@us_17
 Feature: Grade Submission by Teacher
 
   Background: Login part as a Teacher

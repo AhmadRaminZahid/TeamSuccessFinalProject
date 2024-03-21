@@ -1,4 +1,4 @@
-@us16
+@us_16
 Feature: View and Delete Messages by Vice Dean
 
   Background: Login part as a Vice Dean
