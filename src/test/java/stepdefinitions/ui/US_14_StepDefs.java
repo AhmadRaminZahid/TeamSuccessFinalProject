@@ -63,7 +63,7 @@ public class US_14_StepDefs {
     @And("enters a valid email address on Edit Box")
     public void entersAValidEmailAddressOnEditBox() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.emailBox.sendKeys("rohl@gmail.com");
+        teacherManagementPage.emailBox.sendKeys("rohla@gmail.com");
     }
     @And("enters a valid Phone number on Edit Box")
     public void entersAValidPhoneNumberOnEditBox() {
@@ -73,7 +73,7 @@ public class US_14_StepDefs {
     @And("enters a valid SSN on Edit Box")
     public void entersAValidSSNOnEditBox() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.ssnEditBox.sendKeys("345-23-3456",Keys.TAB);
+        teacherManagementPage.ssnEditBox.sendKeys("345-23-3956",Keys.TAB);
     }
     @And("selects the Is Advisor Teacher box on Edit Box")
     public void selectsTheIsAdvisorTeacherBoxOnEditBox() {
@@ -98,7 +98,7 @@ public class US_14_StepDefs {
     @And("enters a valid Password on Edit Box")
     public void entersAValidPasswordOnEditBox() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.passwordBox.sendKeys("Abfgy456@");
+        teacherManagementPage.passwordBox.sendKeys("Abfll456@");
     }
     @And("clicks on Submit button on Edit Box")
     public void clicksOnSubmitButtonOnEditBox() {

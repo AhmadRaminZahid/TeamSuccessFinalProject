@@ -1,4 +1,4 @@
-@us25 @agu @smoke
+@us25 @agu @regression
 Feature:Admin_Add_Student
   Background: Login_Part
     Given Admin goes to website "https://managementonschools.com/"
@@ -6,6 +6,7 @@ Feature:Admin_Add_Student
     And Admin enters the  admin username
     And Admin enters the  admin password
     And Admin clicks on the Login button
+    @smoke
   Scenario: US_25 TC_01 Admin should be able to add Student
   When Admin clicks the Menu button
   And Admin clicks the Student Management option

@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.RegisterPage;
+import utilities.BrowserUtils;
 import utilities.Driver;
 import utilities.WaitUtils;
 
@@ -86,7 +87,7 @@ public class US_01_Stepdefs {
 
     @And("students click register button")
     public void studentsClickRegisterButton() {
-        registerPage.registerButton.click();
+        BrowserUtils.clickWithTimeOut(registerPage.registerButton,2);
         WaitUtils.waitFor(1);
     }
 
