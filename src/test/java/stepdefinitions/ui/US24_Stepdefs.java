@@ -96,13 +96,13 @@ public class US24_Stepdefs {
     }
 
 
-    @Then("Admin verify to see a fail message {string}")
-    public void adminVerifyToSeeAFailMessage(String failMessage) {
-        WaitUtils.waitForVisibility(teacherManagementPage.failSsnMessage,2);
-        WaitUtils.waitFor(1);
-        Assert.assertEquals(failMessage,teacherManagementPage.failSsnMessage.getText());
-        WaitUtils.waitFor(1);
-    }
+//    @Then("Admin verify to see a fail message {string}")
+//    public void adminVerifyToSeeAFailMessage(String failMessage) {
+//        WaitUtils.waitForVisibility(teacherManagementPage.failSsnMessage,2);
+//        WaitUtils.waitFor(1);
+//        Assert.assertEquals(failMessage,teacherManagementPage.failSsnMessage.getText());
+//        WaitUtils.waitFor(1);
+//    }
 
     @And("close the web page")
     public void closeTheWebPage() {

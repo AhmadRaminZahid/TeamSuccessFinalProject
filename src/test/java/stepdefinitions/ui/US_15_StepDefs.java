@@ -94,7 +94,7 @@ public class US_15_StepDefs {
     public void enters_a_valid_phone_number() {
         WaitUtils.waitFor(2);
         phoneNumber = Faker.instance().number().numberBetween(100,999);
-        studentManagementPage.phoneNumber.sendKeys(phoneNumber+"-987-6789");
+        studentManagementPage.phoneNumber.sendKeys(phoneNumber+"-987-6089");
     }
     @And("selects the student gender")
     public void selects_the_student_gender() {
@@ -104,13 +104,13 @@ public class US_15_StepDefs {
     @And("enters the Date of Birth")
     public void enters_the_date_of_birth() {
         WaitUtils.waitFor(2);
-        studentManagementPage.dateOfBirth.sendKeys("20/08/2009");
+        studentManagementPage.dateOfBirth.sendKeys("20/08/1989");
     }
     @And("enters a valid SSN number")
     public void enters_a_valid_ssn_number() {
         WaitUtils.waitFor(2);
         ssnNumber = Faker.instance().number().numberBetween(100,999);
-        studentManagementPage.ssn.sendKeys(ssnNumber+"-75-5987");
+        studentManagementPage.ssn.sendKeys(ssnNumber+"-75-5907");
     }
     @And("enters a valid User name")
     public void enters_a_valid_user_name() {
@@ -121,45 +121,49 @@ public class US_15_StepDefs {
     @And("enters the student Father's name")
     public void enters_the_student_father_s_name() {
         WaitUtils.waitFor(2);
-        studentManagementPage.fatherName.sendKeys("Pedro Marques");
+        studentManagementPage.fatherName.sendKeys("Pedrog Marques");
     }
     @And("enters the student Mother's name")
     public void enters_the_student_mother_s_name() {
         WaitUtils.waitFor(2);
-        studentManagementPage.motherName.sendKeys("Alice Marques");
+        studentManagementPage.motherName.sendKeys("Alices Marques");
     }
     @And("enters a valid Password")
     public void enters_a_valid_password() {
         WaitUtils.waitFor(2);
-        studentManagementPage.password.sendKeys("Am12345@");
+        studentManagementPage.password.sendKeys("Am1234r5@");
     }
     @And("clicks on Submit button")
     public void clicks_on_submit_button() {
         BrowserUtils.clickWithTimeOut(studentManagementPage.submitButton,5);
+        WaitUtils.waitFor(1);
     }
+
     @Then("sees the success message {string}")
-    public void sees_the_message(String valid_message) {
-        WaitUtils.waitFor(2);
-        studentManagementPage.successMessageStudentSaved.isDisplayed();
+    public void sees_the_message(String expectedResult) {
+        assertEquals(expectedResult, studentManagementPage.successMessageStudentSaved.getText() );
+        WaitUtils.waitFor(1);
+       // studentManagementPage.successMessageStudentSaved.isDisplayed();
     }
 
 // TC_02
 
     @And("enters a INVALID SSN number")
     public void entersAINVALIDSSNNumber() {
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
         studentManagementPage.ssn.sendKeys("345-4567891");
     }
 
     @And("enters a valid Username")
     public void entersAValidUsername() {
-        WaitUtils.waitFor(2);
-        studentManagementPage.username.sendKeys("Juliano");
+        WaitUtils.waitFor(1);
+        studentManagementPage.username.sendKeys("Julianor");
     }
 
     @Then("sees the failed message {string}")
-    public void seesTheFailedMessage(String failed_message) {
-        WaitUtils.waitFor(2);
-        studentManagementPage.invalidSsnMessage.isDisplayed();
+    public void seesTheFailedMessage(String message) {
+        assertEquals(message, studentManagementPage.invalidSsnMessage.getText() );
+        WaitUtils.waitFor(1);
+       // studentManagementPage.invalidSsnMessage.isDisplayed();
     }
 }
