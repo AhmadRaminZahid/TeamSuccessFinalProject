@@ -15,7 +15,7 @@ public class ViceDeanManagementPage {
     @FindBy (xpath = "//button[@id='controlled-tab-example-tab-lessonProgram']")
     public WebElement viceDeanLessonProgram;
 
-    @FindBy (xpath = "(//*[@id=\"lessonProgramId\"])[6]")
+    @FindBy (xpath = "(//*[@id=\"lessonProgramId\"])[8]")
     public WebElement viceDeanChooseLesson;
     // (//input[@id='lessonProgramId'])[5]
 
@@ -32,6 +32,11 @@ public class ViceDeanManagementPage {
 
     @FindBy (xpath = "//div[text()='Lesson added to Teacher']")
     public WebElement viceDeanLessonAddedToTeacherMessage;
+    @FindBy (xpath = "//div[text()='Lesson Created']")
+    public WebElement lessonCreated;
+
+    @FindBy (xpath = "//div[text()='Error: Lesson with lesson name c++ already register']")
+    public WebElement errorLessonNameAlreadyRegister;
 
 
     //MAIN THREE HEADERS EDUCATION TERM, LESSONS,LESSON PROGRAM
@@ -55,6 +60,9 @@ public class ViceDeanManagementPage {
     public WebElement lastRegistrationDate;
     @FindBy(xpath = "(//button[@type='button'])[8]")
     public WebElement submitButtonEducationTerm;
+
+    @FindBy(xpath = "//div[text()='Lesson Created']")
+    public WebElement alertMessage;
 
     //LESSON MANAGEMENT
     @FindBy(xpath = "//*[@id='lessonName']")
