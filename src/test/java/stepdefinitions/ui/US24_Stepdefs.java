@@ -14,7 +14,7 @@ import utilities.BrowserUtils;
 import utilities.Driver;
 import utilities.WaitUtils;
 
-public class US_24_Stepdefs {
+public class US24_Stepdefs {
     LoginPage loginPage = new LoginPage();
     TeacherManagementPage teacherManagementPage = new TeacherManagementPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
