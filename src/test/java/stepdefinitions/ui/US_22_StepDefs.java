@@ -19,9 +19,9 @@ import java.util.List;
 public class US_22_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
-    public static String Adminssn="112-01-1203";
-    public static String Adminphonenumber="073-012-1123";
-    public static String Adminusername="AdminHekmatAmini";
+    public static String Adminssn="119-01-1203";
+    public static String Adminphonenumber="079-012-1123";
+    public static String Adminusername="AdminHekmatAmni";
 
 
     @When("Admin enters the first name for new Admin")
