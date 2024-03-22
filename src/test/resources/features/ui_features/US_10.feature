@@ -1,4 +1,4 @@
-@US_10 @dimitris
+@US_10 @dimitris @smoke
 Feature: Vice Deans should be able to create a lesson schedule.
   Background: Login part as a vice dean
     Given User should navigate to "https://managementonschools.com/"

@@ -1,4 +1,4 @@
-@us3 @ey
+@us3 @ey @smoke
 Feature: Admin see the Guest user list
 
   Background:
@@ -13,6 +13,7 @@ Feature: Admin see the Guest user list
     And The user must type Message
     And The user must click Send Message button
     And The user see "Contact Message Created Successfully" message
+    And close the web page
 
 
 
@@ -23,6 +24,7 @@ Feature: Admin see the Guest user list
     And user must type Message
     And user must click Send Message button
     And user see "Please enter valid email" message
+    And close the web page
 
 
 

@@ -1,3 +1,4 @@
+@us07
 Feature: Deans should be able to see the messages sent by users
 Scenario: US_07 Test_Case01
 Given  admin goes to "https://managementonschools.com" homepage

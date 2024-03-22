@@ -1,4 +1,4 @@
-@us_17
+@us_17 @smoke
 Feature: Grade Submission by Teacher
 
   Background: Login part as a Teacher

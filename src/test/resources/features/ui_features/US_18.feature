@@ -1,4 +1,4 @@
-@us_18
+@us_18 @smoke
 Feature: View and Update Student Grades by Teacher
 
   Background: Login part as a Teacher
