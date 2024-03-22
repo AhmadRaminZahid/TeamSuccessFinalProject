@@ -103,7 +103,7 @@ public class US_10StepDefs {
         lessonManagementPage.lessonProgramChooseDay.sendKeys(ConfigReader.getProperty("day"));
         WaitUtils.waitFor(1);
     }
-    @And("User enters start \\/stop time")
+    @And("User enters start stop time")
     public void userEntersStartStopTime() {
         lessonManagementPage.lessonProgramStartTime.sendKeys(ConfigReader.getProperty("start_time"));
         lessonManagementPage.lessonProgramStopTime.sendKeys(ConfigReader.getProperty("stop_time"));
@@ -153,7 +153,7 @@ public class US_10StepDefs {
         WaitUtils.waitFor(1);
     }
 
-    @And("User enters start \\/stop same time")
+    @And("User enters start stop same time")
     public void userEntersStartStopSameTime() {
         lessonManagementPage.lessonProgramStartTime.sendKeys(ConfigReader.getProperty("start_time"));
         lessonManagementPage.lessonProgramStopTime.sendKeys(ConfigReader.getProperty("start_time"));

@@ -1,9 +1,9 @@
-@us_04
+@us_04 @regression
 Feature: US_04 Add Dean
   Background: Login as a Admin
     Given Admin goes to website "https://managementonschools.com/"
     And Admin clicks on the Log in button at the home page
-    And Admin enters the  admin User Name
+    And Admin enters the  admin username
     And Admin enters the  admin password
     And Admin clicks on the Login button
 

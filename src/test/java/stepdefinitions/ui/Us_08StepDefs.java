@@ -1,23 +1,30 @@
 package stepdefinitions.ui;
 
+
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.LoginPage;
 import pages.ViceDeanManagementPage;
+import utilities.BrowserUtils;
 import utilities.ConfigReader;
+import utilities.WaitUtils;
+
+import static org.junit.Assert.assertEquals;
 
 public class Us_08StepDefs {
+    public static String className="c1Aclalsm";
     ViceDeanManagementPage viceDeanManagementPage = new ViceDeanManagementPage();
     LoginPage loginPage= new LoginPage();
     @And("User enters a valid Vice Dean User name")
     public void userEntersAValidViceDeanUserName() {
-    loginPage.userName.sendKeys(ConfigReader.getProperty("ViceDeanUsername"));
+        loginPage.userName.sendKeys(ConfigReader.getProperty("ViceDeanUsername"));
     }
 
     @And("User enters a valid Vice Dean password")
     public void userEntersAValidViceDeanPassword() {
-        loginPage.userName.sendKeys(ConfigReader.getProperty("ViceDeanPassword"));
+        loginPage.password.sendKeys(ConfigReader.getProperty("ViceDeanPassword"));
     }
 
     @When("User clicks on Lessons top center of the page")
@@ -27,7 +34,7 @@ public class Us_08StepDefs {
 
     @And("User enters lesson name on Lesson Name field")
     public void userEntersLessonNameOnLessonNameField() {
-        viceDeanManagementPage.lessonName.sendKeys(Faker.instance().app().name());
+        viceDeanManagementPage.lessonName.sendKeys(className);
     }
 
     @And("User select compulsory button")
@@ -38,22 +45,37 @@ public class Us_08StepDefs {
     @And("User enters credit score for lesson on Credit Score field")
     public void userEntersCreditScoreForLessonOnCreditScoreField() {
 
- viceDeanManagementPage.creditScore.sendKeys("4");
+        viceDeanManagementPage.creditScore.sendKeys("4");
     }
 
     @And("User clicks Submit button")
     public void userClicksSubmitButton() {
-    }
-
-    @And("User sees a success message {string}")
-    public void userSeesASuccessMessage(String arg0) {
+        viceDeanManagementPage.submitButtonLessonManagement.click();
     }
 
     @And("User enters same lesson name that already created on Lesson Name field")
     public void userEntersSameLessonNameThatAlreadyCreatedOnLessonNameField() {
+        viceDeanManagementPage.lessonName.sendKeys("c++");
     }
 
-    @And("User sees a error message {string}")
-    public void userSeesAErrorMessage(String arg0) {
+
+    @And("User sees a error message")
+    public void userSeesAErrorMessage() {
+        WaitUtils.waitFor(1);
+        BrowserUtils.verifyElementDisplayed(viceDeanManagementPage.errorLessonNameAlreadyRegister);
+//        String text = viceDeanManagementPage.alertMessage.getText();
+//        String expectedText = "Error: Lesson with lesson name c++ already registered";
+//        Assert.assertEquals(expectedText,text);
     }
+
+    @And("User sees a success message")
+    public void userSeesASuccessMessage() {
+        WaitUtils.waitFor(1);
+        BrowserUtils.verifyElementDisplayed(viceDeanManagementPage.lessonCreated);
+
+//        String text = viceDeanManagementPage.lessonCreated.getText();
+//        String expectedText = "Lesson Created";
+//        Assert.assertEquals(expectedText,text);
+    }
+
 }

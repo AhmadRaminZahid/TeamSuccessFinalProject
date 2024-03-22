@@ -1,4 +1,4 @@
-@us_19
+@us_19 @regression
 Feature: Create meetings with students
   Background: Login part as a Teacher
     Given Admin goes to website "https://managementonschools.com/"

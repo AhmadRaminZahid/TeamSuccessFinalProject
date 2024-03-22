@@ -23,7 +23,15 @@ import static stepdefinitions.ui.US_15_StepDefs.*;
 
 public class US_13_StepDefs {
 
+    public static String teacherName = "Rlllonndas";
+    public static String teacherUsername = "Mcclhnefl";
+
+    public static String teacherSurname = "Mcrlqnj";
+    public  static String teacherSsn = "284-22-2992";
     Actions action;
+
+
+
 
     LoginPage loginPage = new LoginPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
@@ -31,21 +39,18 @@ public class US_13_StepDefs {
 
     @And("selects Teacher Management on the menu")
     public void selectsTeacherManagementOnTheMenu() {
-        WaitUtils.waitForVisibility(teacherManagementPage.teacherManagement,2);
+        WaitUtils.waitFor(3);
+       // WaitUtils.waitForVisibility(teacherManagementPage.teacherManagement,2);
         JSUtils.JSclickWithTimeout(teacherManagementPage.teacherManagement);
     }
 
     @And("selects lesson on Choose Lessons dropdown list")
     public void selectsLessonOnChooseLessonsDropdownList() {
-      //  WaitUtils.waitFor(2);
-       // teacherManagementPage.chooseLessons.click();
         WaitUtils.waitFor(2);
-       teacherManagementPage.chooseLessons.sendKeys("Flying", Keys.ENTER);
-       WaitUtils.waitFor(2);
+        teacherManagementPage.chooseLessons.click();
+        action = new Actions(Driver.getDriver());
 
-        WaitUtils.waitFor(2);
-
-         action = new Actions(Driver.getDriver());
+        BrowserUtils.sendKeysWithTimeout(teacherManagementPage.chooseLessons,"Flying"+Keys.ENTER, 2);
         action.doubleClick(teacherManagementPage.chooseLessons);
         teacherManagementPage.chooseLessons.sendKeys("C#",Keys.TAB);
 
@@ -58,14 +63,14 @@ public class US_13_StepDefs {
     @And("enters a valid teacher Name")
     public void entersAValidTeacherName() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.teacherName.sendKeys("HAlanjhne");
+        teacherManagementPage.teacherName.sendKeys(teacherName);
         WaitUtils.waitFor(2);
     }
 
     @And("enters a valid teacher Surname")
     public void entersAValidTeacherSurname() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.teacherSurname.sendKeys("Marques");
+        teacherManagementPage.teacherSurname.sendKeys(teacherSurname);
         WaitUtils.waitFor(2);
     }
 
@@ -96,13 +101,13 @@ public class US_13_StepDefs {
     @And("enters a valid SSN")
     public void entersAValidSSN() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.teacherSsn.sendKeys("567-31-8678");
+        teacherManagementPage.teacherSsn.sendKeys(teacherSsn);
     }
 
     @And("enters a valid UserName")
     public void entersAValidUserName() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.teacherUsername.sendKeys("alahunedf");
+        teacherManagementPage.teacherUsername.sendKeys(teacherUsername);
     }
 
     @Then("sees the message {string}")
@@ -121,8 +126,12 @@ public class US_13_StepDefs {
 
     @Then("sees the error message {string}")
     public void seesTheErrorMessage(String error_message) {
-        WaitUtils.waitForVisibility(teacherManagementPage.invalidSsnmessage,4);
-        WaitUtils.waitFor(2);
-        teacherManagementPage.invalidSsnmessage.isDisplayed();
+//        WaitUtils.waitForVisibility(teacherManagementPage.invalidSsnmessage,4);
+//        WaitUtils.waitFor(2);
+//        teacherManagementPage.invalidSsnmessage.isDisplayed();
+//        WaitUtils.waitFor(1);
+
+        assertEquals(error_message, teacherManagementPage.invalidSsnmessage.getText());
+        WaitUtils.waitFor(1);
     }
 }
