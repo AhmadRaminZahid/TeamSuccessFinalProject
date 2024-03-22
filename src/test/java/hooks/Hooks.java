@@ -11,10 +11,6 @@ import static baseurl.ManagementonSchool_BaseUrl.setUp;
 
 public class Hooks {
 
-    @Before ("@api")
-    public void beforeApi(){
-        setUp();
-    }
 
     @After
     public void tearDown(Scenario scenario){

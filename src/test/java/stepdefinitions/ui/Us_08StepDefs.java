@@ -32,7 +32,7 @@ public class Us_08StepDefs {
 
     @And("User enters lesson name on Lesson Name field")
     public void userEntersLessonNameOnLessonNameField() {
-        viceDeanManagementPage.lessonName.sendKeys(Faker.instance().app().name());
+        viceDeanManagementPage.lessonName.sendKeys("Cc+");
     }
 
     @And("User select compulsory button")

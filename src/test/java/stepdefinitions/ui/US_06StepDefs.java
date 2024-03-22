@@ -46,17 +46,17 @@ public class US_06StepDefs {
 
     @When("User enters name in name field")
     public void userEntersNameInNameField() {
-deanManagementPage.name.sendKeys(instance().name().firstName());
+deanManagementPage.name.sendKeys("Naim");
     }
 
     @And("User enters last name in the Surname field")
     public void userEntersLastNameInTheSurnameField() {
-deanManagementPage.surname.sendKeys(instance().name().lastName());
+deanManagementPage.surname.sendKeys("last");
     }
 
     @And("User enters place of birth in the Birth Place field")
     public void userEntersPlaceOfBirthInTheBirthPlaceField() {
-deanManagementPage.birthPlace.sendKeys(instance().address().city().substring(5));
+deanManagementPage.birthPlace.sendKeys("Ankara");
     }
 
     @And("User select gender")
@@ -71,17 +71,17 @@ deanManagementPage.maleGender.click();
 
     @And("User enters phone number in the phone number field")
     public void userEntersPhoneNumberInThePhoneNumberField() {
-deanManagementPage.phoneNumber.sendKeys(instance().numerify("###-###-####"));
+deanManagementPage.phoneNumber.sendKeys("444-444-4445");
     }
 
     @And("User enters social security number in the SSN field")
     public void userEntersSocialSecurityNumberInTheSSNField() {
-deanManagementPage.ssn.sendKeys(instance().numerify("545-10-##39"));
+deanManagementPage.ssn.sendKeys(("545-10-1039"));
     }
 
     @And("User enters user name in the User Name field")
     public void userEntersUserNameInTheUserNameField() {
-deanManagementPage.username.sendKeys(instance().name().username().substring(0,6));
+deanManagementPage.username.sendKeys("user1000");
     }
 
     @And("User enters valid password in the Password field")
@@ -103,7 +103,7 @@ deanManagementPage.password.sendKeys("123456789Ae");
 
     @And("User enters phone number that not contains - in the phone number field")
     public void userEntersPhoneNumberThatNotContainsInThePhoneNumberField() {
-        deanManagementPage.phoneNumber.sendKeys(Faker.instance().numerify("############"));
+        deanManagementPage.phoneNumber.sendKeys(("444444444445"));
     }
 
 

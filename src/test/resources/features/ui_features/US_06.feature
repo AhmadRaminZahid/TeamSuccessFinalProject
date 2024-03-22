@@ -7,7 +7,7 @@ Feature: Admin creates Dean Account
     And User enters a valid password
     And User clicks on Login button
 
-  Scenario: Dean account creation
+  Scenario: US_06 Test_Case01
     When User enters name in name field
     And User enters last name in the Surname field
     And User enters place of birth in the Birth Place field
@@ -20,7 +20,7 @@ Feature: Admin creates Dean Account
     And User clicks the Submit button
     Then User sees a completed message
 
-  Scenario: Deans should not able to create a Vice Dean account.
+  Scenario: US_06 Test_Case02
     When User enters name in name field
     And User enters last name in the Surname field
     And User enters place of birth in the Birth Place field
