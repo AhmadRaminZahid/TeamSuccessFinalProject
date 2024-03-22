@@ -1,4 +1,4 @@
-@us_14
+@us_14 @regression
 Feature: See and update teacher
   Background: Login as a Vice Dean
     Given Vice Dean goes to "https://managementonschools.com/" homepage

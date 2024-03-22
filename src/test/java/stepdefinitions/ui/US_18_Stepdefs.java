@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import pages.LoginPage;
 import pages.MainMenuPage;
 import pages.StudentInfoManagementPage;
+import utilities.BrowserUtils;
 import utilities.Driver;
 import utilities.WaitUtils;
 
@@ -84,7 +85,7 @@ public class US_18_Stepdefs {
 
     @And("Thet teacher clicks Edit button")
     public void thetTeacherClicksEditButton() {
-        studentInfoManagementPage.chooseButtonEditStudentInfoManagement.click();
+        BrowserUtils.clickWithTimeOut(studentInfoManagementPage.chooseButtonEditStudentInfoManagement,2);
         WaitUtils.waitFor(2);
     }
 
@@ -183,7 +184,7 @@ public class US_18_Stepdefs {
 
     @And("Theti teacher clicks Edit button")
     public void thetiTeacherClicksEditButton() {
-        studentInfoManagementPage.chooseButtonEditStudentInfoManagement.click();
+        BrowserUtils.clickWithTimeOut(studentInfoManagementPage.chooseButtonEditStudentInfoManagement,2);
         WaitUtils.waitFor(2);
     }
     @And("Theti teacher sees Edit Student Info Menu")

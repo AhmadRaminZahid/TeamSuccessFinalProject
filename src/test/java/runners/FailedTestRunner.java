@@ -11,15 +11,12 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-reports/cucumber.xml",
-                "rerun:target/failedRerun.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                "rerun:target/failedRerun.txt"
         },
-        features = "./src/test/resources/features",
-        glue = {"stepdefinitions", "hooks" },
-        dryRun =false,
-        tags = "@regression"
+        features = "@target/failedRerun.txt",  // provides path of the features folder
+        glue = "stepdefinitions",  // provides path of the stepdefinitions folder
+        dryRun =false,    // generates the missing step definitions, without running the existing step definitions
+        monochrome = true
 )
-
-public class Runner {
-
+public class FailedTestRunner {
 }
