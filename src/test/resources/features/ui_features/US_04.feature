@@ -1,4 +1,4 @@
-@us_04 @smoke
+@us_04 @regression
 Feature: US_04 Add Dean
   Background: Login as a Admin
     Given Admin goes to website "https://managementonschools.com/"

@@ -1,4 +1,4 @@
-@us1 @ey @smoke
+@us1 @ey @regression
 Feature: Students login register
 
   Background:

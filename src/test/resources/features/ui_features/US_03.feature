@@ -1,4 +1,4 @@
-@us3 @ey @smoke
+@us3 @ey @regression
 Feature: Admin see the Guest user list
 
   Background:

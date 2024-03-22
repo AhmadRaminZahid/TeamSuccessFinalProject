@@ -1,4 +1,4 @@
-@US_10 @dimitris @smoke
+@US_10 @dimitris @regression
 Feature: Vice Deans should be able to create a lesson schedule.
   Background: Login part as a vice dean
     Given User should navigate to "https://managementonschools.com/"
@@ -15,7 +15,7 @@ Feature: Vice Deans should be able to create a lesson schedule.
     And User clicks on choose lesson
     And User clicks on choose education term
     And User choose day
-    And User enters start /stop time
+    And User enters start stop time
     And User clicks clicks on Submit button
     Then User sees success message
     And User close the web page
@@ -28,7 +28,7 @@ Feature: Vice Deans should be able to create a lesson schedule.
     And User clicks on choose lesson
     And User clicks on choose education term
     And User choose day
-    And User enters start /stop same time
+    And User enters start stop same time
     And User clicks on Submit button
     Then User sees error message
     And User close the web page

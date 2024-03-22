@@ -1,4 +1,4 @@
-@us_20 @smoke
+@us_20 @regression
 Feature: Update meetings with students
   Background: Login part as a Teacher
     Given Admin goes to website "https://managementonschools.com/"

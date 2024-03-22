@@ -1,4 +1,4 @@
-@us_17 @smoke
+@us_17 @regression
 Feature: Grade Submission by Teacher
 
   Background: Login part as a Teacher

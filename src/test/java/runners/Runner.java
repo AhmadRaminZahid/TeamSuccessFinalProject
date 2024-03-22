@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks" },
         dryRun =false,
 
-        tags = "@US_11"
+        tags = "@ey"
 )
 
 public class Runner {

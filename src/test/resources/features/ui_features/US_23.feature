@@ -1,4 +1,4 @@
-@us_23 @smoke
+@us_23 @regression
 
   Feature: admin creates vice dean
 
@@ -11,6 +11,7 @@
       And admin clicks the menuButton
       And admin click the Vice Dean Management
 
+@smoke
       Scenario: US_23_TC_01
         When Admin enters the first name for new Vice Dean
         And Admin enters the surname for new Vice Dean

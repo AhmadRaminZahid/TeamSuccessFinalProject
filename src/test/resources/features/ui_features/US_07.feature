@@ -9,4 +9,5 @@ Given  admin goes to "https://managementonschools.com" homepage
   And User clicks on Menu button right corner of the page
   And User clicks on Contact Get All left side of the page
   Then User sees Messages, authors, emails, sending dates, and subject information
+  And close the web page
 

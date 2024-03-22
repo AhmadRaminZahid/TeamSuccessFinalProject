@@ -1,4 +1,4 @@
-@US_21 @dimitris
+@US_21 @dimitris @regression
   Feature:Students, choose lesson, grades and announcement
     Scenario: Students, Choose Lessons, Grades and Announcements (positive scenario)
       Given User should navigate to "https://managementonschools.com/"

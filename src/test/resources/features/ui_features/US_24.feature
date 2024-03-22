@@ -1,4 +1,4 @@
-@agu @us24 @smoke
+@agu @us24 @regression
 Feature: Admin_Adds_Teacher
   Background: Admin_Login
 
@@ -7,7 +7,7 @@ Feature: Admin_Adds_Teacher
     And Admin enters the  admin username
     And Admin enters the  admin password
     And Admin clicks on the Login button
-    @tc01
+    @smoke
     Scenario:US_24 TC_01 Admin should be able to add Teacher
       When Admin clicks the Menu button
       And Admin clicks on the Teacher Management option
