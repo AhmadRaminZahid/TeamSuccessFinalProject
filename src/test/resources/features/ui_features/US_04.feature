@@ -1,14 +1,14 @@
 @us_04
-Feature: Add Dean
+Feature: US_04 Add Dean
   Background: Login as a Admin
-    Given admin goes to "https://managementonschools.com/" homepage
-    And clicks on Login button
-    And enters "<username>" in the Username input field
-    And enters "<password>" in the password input field
-    Then clicks on Login button
+    Given Admin goes to website "https://managementonschools.com/"
+    And Admin clicks on the Log in button at the home page
+    And Admin enters the  admin User Name
+    And Admin enters the  admin password
+    And Admin clicks on the Login button
 
   Scenario: US_04 TC_01 Admin should be able to add Dean
-    When clicks Menu button
+    When Admin clicks the Menu button
     And clicks Dean Management option
     And enters Dean’s Name
     And enters Dean’s Surname
@@ -21,10 +21,12 @@ Feature: Add Dean
     And enters password
     And clicks Submit button
     Then see Dean Saved message
-
+    When Admin clicks the Menu button
+    And clicks logout option and clicks yes
+    Then close the webpage
 
   Scenario: US_04 TC_02 Admin should NOT be able to add Dean
-    When clicks Menu button
+    When Admin clicks the Menu button
     And clicks Dean Management option
     And enters Dean’s Name
     And enters Dean’s Surname
@@ -37,3 +39,4 @@ Feature: Add Dean
     And enters password
     And clicks Submit button
     Then see Please enter valid SSN number message
+    And close the webpage

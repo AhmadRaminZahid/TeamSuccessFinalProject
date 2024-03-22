@@ -11,8 +11,9 @@ public class ManagementonSchool_BaseUrl {
 
     public static RequestSpecification spec;
 
-    public static void setUp(String userName, String password){
-        String baseUrl = "https://managementonschools.com/app";
+
+    public static void setUp(){
+        String baseUrl = "https://managementonschools.com/";
 
         spec = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)

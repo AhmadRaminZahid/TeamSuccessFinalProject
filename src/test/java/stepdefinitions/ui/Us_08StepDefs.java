@@ -13,6 +13,7 @@ import utilities.WaitUtils;
 import static org.junit.Assert.assertEquals;
 
 public class Us_08StepDefs {
+    public static String className="c1Aclass";
     ViceDeanManagementPage viceDeanManagementPage = new ViceDeanManagementPage();
     LoginPage loginPage= new LoginPage();
     @And("User enters a valid Vice Dean User name")
@@ -32,7 +33,7 @@ public class Us_08StepDefs {
 
     @And("User enters lesson name on Lesson Name field")
     public void userEntersLessonNameOnLessonNameField() {
-        viceDeanManagementPage.lessonName.sendKeys("Cc+");
+        viceDeanManagementPage.lessonName.sendKeys(className);
     }
 
     @And("User select compulsory button")
@@ -70,6 +71,7 @@ public class Us_08StepDefs {
     public void userSeesASuccessMessage() {
         WaitUtils.waitFor(1);
         BrowserUtils.verifyElementDisplayed(viceDeanManagementPage.lessonCreated);
+
 //        String text = viceDeanManagementPage.lessonCreated.getText();
 //        String expectedText = "Lesson Created";
 //        Assert.assertEquals(expectedText,text);

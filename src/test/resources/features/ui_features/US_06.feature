@@ -1,4 +1,4 @@
-@DeanAccountCreation
+@US_06 @EP
 Feature: Admin creates Dean Account
   Background:
     Given admin goes to "https://managementonschools.com" homepage
@@ -19,6 +19,7 @@ Feature: Admin creates Dean Account
     And User enters valid password in the Password field
     And User clicks the Submit button
     Then User sees a completed message
+    And close the browser
 
   Scenario: US_06 Test_Case02
     When User enters name in name field
@@ -32,3 +33,4 @@ Feature: Admin creates Dean Account
     And User enters valid password in the Password field
     And User clicks the Submit button
     Then User sees a error message phone number
+    And close the browser

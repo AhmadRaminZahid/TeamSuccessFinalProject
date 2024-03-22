@@ -15,9 +15,15 @@ public class LoginPage {
 
     @FindBy(id = "username")
     public  WebElement userName;
+
     @FindBy(id = "password")
     public WebElement password;
+
     @FindBy(xpath = "(//button[@type='button'])[3]")
     public WebElement loginButton;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/div/form/div[3]/button")
+    public WebElement loginButtonBlue;
+
 }
 
