@@ -9,6 +9,8 @@ public class ContactGetAllPage {
 
     public ContactGetAllPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
+    @FindBy(xpath = "//h5")    public WebElement contactGetAllContactMessagePage;
+
     @FindBy(xpath = "(//tr/th)[1]")
     public WebElement contactGetAllContactMessageName;
     @FindBy(xpath = "(//tr/th)[2]")
@@ -30,4 +32,11 @@ public class ContactGetAllPage {
     @FindBy(xpath = "//span[@class='page-link']")
     public WebElement contactGetAllContactMessageNumOfPage;
 
+    @FindBy(xpath = "(//span[text()='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'])[1]")
+    public WebElement contactGetAllContactMessageInMessage;
+
+
 }
+
+
+

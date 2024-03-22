@@ -1,4 +1,5 @@
-@us1 @ey
+@us1 @ey @regression
+
 Feature: US_01 Students login register
 
   Background:
@@ -17,11 +18,13 @@ Feature: US_01 Students login register
     And students write their password
     And students click register button
     Then students must see "Guest User Registered" message
+    And close the web page
 
 
   Scenario: TC_02 The students should not register
     And student writes their password
     Then students must see the "One uppercase character" message
     Then students should not click register button
+    And close the web page
 
 

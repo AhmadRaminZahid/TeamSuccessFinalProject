@@ -1,4 +1,4 @@
-@us2 @ey
+@us2 @ey @regression
 
 Feature: US_02 Admin see the Guest user list
 

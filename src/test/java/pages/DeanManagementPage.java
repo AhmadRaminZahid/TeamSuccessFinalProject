@@ -59,6 +59,10 @@ public class DeanManagementPage {
     public  WebElement invalidSsnMessageDeanSaved;
     @FindBy(xpath = "//div[text()='Phone number should be exact 12 characters']")
     public  WebElement invalidPhoneMessageDeanSaved;
+    @FindBy(xpath = "(//div[text()='Please enter valid phone number'])[1]")
+    public  WebElement invalidPhoneMessageDean;
+    @FindBy(xpath = "//*[text()='Vice dean Saved']")
+    public WebElement alertMessage;
 
     //Edit Part
     @FindBy(xpath = "(//input[@id='name'])[2]")
@@ -96,5 +100,5 @@ public class DeanManagementPage {
 
 
 
-
+//div[@class='Toastify__toast-container Toastify__toast-container--top-center']
 }

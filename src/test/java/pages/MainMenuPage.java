@@ -49,7 +49,7 @@ public class MainMenuPage {
     @FindBy(xpath = "//a[text()='Logout']")
     public WebElement logoutInsideMenu;
 
-    @FindBy(xpath = "(//a[@role='button'])[11]")
+    @FindBy(xpath = "//a[.='Grades and Announcements']")
     public WebElement gradeAndAnnouncementsInsideMainMenuOfStudent;
 
     @FindBy(xpath = "//button[text()='Yes']")

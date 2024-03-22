@@ -1,5 +1,8 @@
-@us3 @ey
-Feature: US_03 Admin see the Guest user list
+
+@us3 @ey @regression
+
+Feature: Admin see the Guest user list
+
 
   Background:
     Given Student goes to website "https://managementonschools.com/"
@@ -13,6 +16,7 @@ Feature: US_03 Admin see the Guest user list
     And The user must type Message
     And The user must click Send Message button
     And The user see "Contact Message Created Successfully" message
+    And close the web page
 
 
 
@@ -23,6 +27,7 @@ Feature: US_03 Admin see the Guest user list
     And user must type Message
     And user must click Send Message button
     And user see "Please enter valid email" message
+    And close the web page
 
 
 

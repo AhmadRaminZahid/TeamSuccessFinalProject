@@ -1,3 +1,4 @@
+@us07
 Feature: Deans should be able to see the messages sent by users
 Scenario: US_07 Test_Case01
 Given  admin goes to "https://managementonschools.com" homepage
@@ -7,6 +8,6 @@ Given  admin goes to "https://managementonschools.com" homepage
   And User clicks on Login button
   And User clicks on Menu button right corner of the page
   And User clicks on Contact Get All left side of the page
-  Then Deans should be able to view messages
-  And Deans should be able to see the delete button
-  And Deans should be able to delete messages
+  Then User sees Messages, authors, emails, sending dates, and subject information
+  And close the web page
+

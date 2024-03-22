@@ -34,5 +34,9 @@ public class ContactPage {
     @FindBy(xpath = "//*[text()='Please enter valid email']")
     public WebElement contactMessageIsNotCreated;
 
+    public WebElement messageOfTheContact;
+
+    @FindBy (xpath = "//table[@class='table table-striped table-bordered table-hover']")
+    public WebElement contactTable;
 
 }

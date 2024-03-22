@@ -6,6 +6,7 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
+import utilities.WaitUtils;
 
 import static baseurl.ManagementonSchool_BaseUrl.setUp;
 
@@ -24,7 +25,6 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", "screenshot of failed step");
             Driver.closeDriver();
         }
-
     }
 
 

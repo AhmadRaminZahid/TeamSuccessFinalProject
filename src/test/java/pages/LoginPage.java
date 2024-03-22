@@ -21,5 +21,9 @@ public class LoginPage {
 
     @FindBy(xpath = "(//button[@type='button'])[3]")
     public WebElement loginButton;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/div/form/div[3]/button")
+    public WebElement loginButtonBlue;
+
 }
 

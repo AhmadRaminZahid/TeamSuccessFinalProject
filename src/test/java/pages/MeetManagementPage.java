@@ -21,7 +21,7 @@ public class MeetManagementPage {
     @FindBy(xpath = "//*[text()='Meet List']")
     public WebElement teacherMeetListText;
 
-    @FindBy(xpath = "//div[@class=' css-19bb58m']")
+    @FindBy(xpath = "//*[@id='react-select-2-input']")
     public WebElement teacherMeetSelectStudentButton;
 
     @FindBy(xpath = "//input[@id='date']")
@@ -48,7 +48,7 @@ public class MeetManagementPage {
     @FindBy(xpath = "(//input[@id='date'])[2]")
     public WebElement teacherMeetEditDateBox;
 
-    @FindBy(xpath = "((//*[text()='Submit'])[2]")
+    @FindBy(xpath = "(//*[text()='Submit'])[2]")
     public WebElement teacherMeetEditSubmitButton;
 
     @FindBy(xpath = "(//*[text()='Meet Updated Successfully'])[1]")
@@ -56,6 +56,13 @@ public class MeetManagementPage {
 
     @FindBy(xpath = "(//*[text()='ileri bir tarih olmalı'])[1]")
     public WebElement teacherMeetEditMustBeFutureDateMessage;
+
+    @FindBy(xpath = "//div[text()='ileri bir tarih olmalı']")
+    public WebElement teacherMeetMustBeFutureDateMessage;
+
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/div[1]/div/h3")
+    public WebElement getTeacherMeetManagementTextVisible;
 
 
 }
