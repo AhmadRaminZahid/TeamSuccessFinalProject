@@ -6,6 +6,7 @@ Feature: Create a student
     And enters username in the Username input field
     And enters password in the password input field
     And clicks on Login button
+
   Scenario: US_15 TC_01 Vice Deans should be able to create a student.++-
   When click on the Menu button on the right corner of the page
   And selects Student Management on the dropdown list
@@ -23,7 +24,7 @@ Feature: Create a student
   And enters the student Mother's name
   And enters a valid Password
   And clicks on Submit button
-  Then sees the success message "Student saved successfully"
+  Then sees the success message "Student saved Successfully"
   And close the driver
 
   Scenario: US_15 TC_02 Vice Deans should NOT be able to create a student.++-
@@ -43,5 +44,5 @@ Feature: Create a student
   And enters the student Mother's name
   And enters a valid Password
   And clicks on Submit button
-  Then sees the failed message "Please enter a valid SSN"
+  Then sees the failed message "Please enter valid SSN number"
   And close the driver

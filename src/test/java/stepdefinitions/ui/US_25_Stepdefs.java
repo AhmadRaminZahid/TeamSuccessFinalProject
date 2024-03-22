@@ -10,7 +10,7 @@ import utilities.BrowserUtils;
 import utilities.JSUtils;
 import utilities.WaitUtils;
 
-public class US25_Stepdefs {
+public class US_25_Stepdefs {
     StudentManagementPage studentManagementPage = new StudentManagementPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
 

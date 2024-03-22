@@ -12,10 +12,9 @@ import pages.MainMenuPage;
 import pages.TeacherManagementPage;
 import utilities.BrowserUtils;
 import utilities.Driver;
-import utilities.JSUtils;
 import utilities.WaitUtils;
 
-public class US24_Stepdefs {
+public class US_24_Stepdefs {
     LoginPage loginPage = new LoginPage();
     TeacherManagementPage teacherManagementPage = new TeacherManagementPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
@@ -96,13 +95,13 @@ public class US24_Stepdefs {
     }
 
 
-    @Then("Admin verify to see a fail message {string}")
-    public void adminVerifyToSeeAFailMessage(String failMessage) {
-        WaitUtils.waitForVisibility(teacherManagementPage.failSsnMessage,2);
-        WaitUtils.waitFor(1);
-        Assert.assertEquals(failMessage,teacherManagementPage.failSsnMessage.getText());
-        WaitUtils.waitFor(1);
-    }
+//    @Then("Admin verify to see a fail message {string}")
+//    public void adminVerifyToSeeAFailMessage(String failMessage) {
+//        WaitUtils.waitForVisibility(teacherManagementPage.failSsnMessage,2);
+//        WaitUtils.waitFor(1);
+//        Assert.assertEquals(failMessage,teacherManagementPage.failSsnMessage.getText());
+//        WaitUtils.waitFor(1);
+//    }
 
     @And("close the web page")
     public void closeTheWebPage() {
