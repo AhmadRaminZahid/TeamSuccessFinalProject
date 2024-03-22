@@ -161,6 +161,4 @@ public class US_23_StepDefs {
     public void adminEntersNewSSNNumberOfNewViceDeanInTheFormatXxxXxXxxx() {
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,"112-01-1225",2);
     }
-    //hello
-    //this is Ahmad
 }
