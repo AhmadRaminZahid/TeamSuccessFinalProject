@@ -12,12 +12,19 @@ public class StudentManagementPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "//button[text()='Menu']")
+    public WebElement menuButton;
+
+    @FindBy(xpath = "//a[text()='Student Management']")
+    public WebElement studentManagementOption;
+
     @FindBy(xpath = "//h3[text()='Student Management']")
     public WebElement headOfStudentManagement;
 
     //Add Student
-    @FindBy (id = "advisorTeacherId")
+    @FindBy (xpath = "//select")
     public WebElement chooseTeacher;
+
     @FindBy (xpath = "//select[@id]")
     public WebElement chooseTeacherLast;
 

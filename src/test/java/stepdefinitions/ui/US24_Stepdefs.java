@@ -12,7 +12,6 @@ import pages.MainMenuPage;
 import pages.TeacherManagementPage;
 import utilities.BrowserUtils;
 import utilities.Driver;
-import utilities.JSUtils;
 import utilities.WaitUtils;
 
 public class US24_Stepdefs {
@@ -71,7 +70,7 @@ public class US24_Stepdefs {
         teacherManagementPage.inputLessons.sendKeys("Flying",Keys.ENTER);
         WaitUtils.waitFor(3);
         teacherManagementPage.inputLessons.sendKeys(Keys.ENTER);
-        WaitUtils.waitFor(20);
+        WaitUtils.waitFor(3);
     }
 
 
