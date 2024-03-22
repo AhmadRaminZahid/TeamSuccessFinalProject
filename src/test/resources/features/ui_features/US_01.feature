@@ -1,5 +1,5 @@
 @us1 @ey
-Feature: Students login register
+Feature: US_01 Students login register
 
   Background:
     Given Student goes to website "https://managementonschools.com/"

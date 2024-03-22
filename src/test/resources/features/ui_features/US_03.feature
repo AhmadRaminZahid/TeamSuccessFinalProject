@@ -1,5 +1,5 @@
 @us3 @ey
-Feature: Admin see the Guest user list
+Feature: US_03 Admin see the Guest user list
 
   Background:
     Given Student goes to website "https://managementonschools.com/"
