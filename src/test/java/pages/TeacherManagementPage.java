@@ -107,6 +107,8 @@ public class TeacherManagementPage {
 
     @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
     public WebElement failSsnMessage;
+    @FindBy(xpath = "//*[text()='Choose Lessons']/following-sibling::div/div/div[1]//input")
+    public WebElement inputLessons;
 
 
 }
