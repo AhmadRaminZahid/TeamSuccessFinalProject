@@ -73,13 +73,13 @@ public class US_22_StepDefs {
     @And("Admin clicks the Submit button")
     public void adminClicksTheSubmitButton() {
         BrowserUtils.clickWithTimeOut(adminManagementPage.submitButton,5);
-        WaitUtils.waitFor(4);
+        WaitUtils.waitFor(1);
 
     }
 
     @And("Admin should see Admin saved message")
     public void adminShouldSeeAdminSavedMessage() {
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
         adminManagementPage.adminsavedMessage.isDisplayed();
     }
 
