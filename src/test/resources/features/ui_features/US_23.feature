@@ -1,4 +1,4 @@
-@us_23 @regression
+@us_23 @regression @ahmad
 
   Feature: admin creates vice dean
 

@@ -1,4 +1,4 @@
-@us_22 @regression
+@us_22 @regression @ahmad
 
   Feature: admin creates new admin
     Background: Login_Part
