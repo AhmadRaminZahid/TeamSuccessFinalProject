@@ -5,9 +5,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import pojos.DeanPojo;
-import pojos.DeanPostPojo;
-import pojos.ObjectPojo;
+import pojos.Us4_5.DeanPojo;
+import pojos.Us4_5.DeanPostPojo;
+import pojos.Us4_5.ObjectPojo;
 
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class US_04_StepDefs {
             case "dean":
                 setUp("DeanEmre","DeanEmre1");
                 break;
-            case "viceDean":
+            case "vicedean":
                 setUp("ViceDeanIrfan","ViceIrfan05");
                 break;
             case "teacher":
