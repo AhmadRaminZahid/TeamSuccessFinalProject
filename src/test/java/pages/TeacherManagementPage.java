@@ -117,6 +117,11 @@ public class TeacherManagementPage {
     public WebElement submitButton;
 
 
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public WebElement failSsnMessage;
+    @FindBy(xpath = "//*[text()='Choose Lessons']/following-sibling::div/div/div[1]//input")
+    public WebElement inputLessons;
+
     // pup up teacher box
 
     @FindBy(xpath = "//span[text()='Rolandas']")
