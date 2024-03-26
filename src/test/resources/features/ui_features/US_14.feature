@@ -1,4 +1,4 @@
-@us_14
+@1
 Feature: See and update teacher
   Background: Login as a Vice Dean
     Given Vice Dean goes to "https://managementonschools.com/" homepage

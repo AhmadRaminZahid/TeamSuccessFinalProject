@@ -1,4 +1,4 @@
-@us_15
+@1
 Feature: Create a student
   Background: Login as a Vice Dean
     Given Vice Dean goes to "https://managementonschools.com/" homepage

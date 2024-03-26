@@ -23,11 +23,11 @@ import static stepdefinitions.ui.US_15_StepDefs.*;
 
 public class US_13_StepDefs {
 
-    public static String teacherName = "Rolandas";
-    public static String teacherUsername = "Machefl";
+    public static String teacherName = "Biribiri";
+    public static String teacherUsername = "Boroboro";
 
-    public static String teacherSurname = "Marqj";
-    public  static String teacherSsn = "234-41-2782";
+    public static String teacherSurname = "Meeee";
+    public  static String teacherSsn = "219-38-2199";
     Actions action;
 
 

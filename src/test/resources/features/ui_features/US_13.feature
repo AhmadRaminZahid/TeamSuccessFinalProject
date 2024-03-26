@@ -1,4 +1,4 @@
-@us_13
+@1
 Feature: Create a teacher
   Background: Login as a Vice Dean
     Given Vice Dean goes to "https://managementonschools.com/" homepage

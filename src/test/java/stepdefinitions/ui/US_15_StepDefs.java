@@ -21,7 +21,7 @@ public class US_15_StepDefs {
     StudentManagementPage studentManagementPage = new StudentManagementPage();
 
     public static String name;
-    public static String userName;
+    public static String userName = "xname";
     public static String EmailAddress;
     public static int phoneNumber;
     public static int ssnNumber;
