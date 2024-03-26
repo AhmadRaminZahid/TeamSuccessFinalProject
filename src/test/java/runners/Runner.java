@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks" },
         dryRun =false,
 
-        tags = "@regression"
+        tags = "@smoke"
 )
 
 public class Runner {
