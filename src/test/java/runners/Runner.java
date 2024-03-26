@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks" },
         dryRun =false,
 
-        tags = "@ey"
+        tags = "@regression"
 )
 
 public class Runner {
