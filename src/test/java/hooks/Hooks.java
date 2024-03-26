@@ -12,10 +12,10 @@ import static baseurl.ManagementonSchool_BaseUrl.setUp;
 
 public class Hooks {
 
-    @Before ("@api")
-    public void beforeApi(){
-        setUp();
-    }
+//    @Before ("@api")
+//    public void beforeApi(){
+//        setUp();
+//    }
 
     @After
     public void tearDown(Scenario scenario){
@@ -25,7 +25,6 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", "screenshot of failed step");
             Driver.closeDriver();
         }
-
     }
 
 

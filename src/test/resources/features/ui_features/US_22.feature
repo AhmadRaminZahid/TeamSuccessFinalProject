@@ -1,10 +1,10 @@
-@us_22
+@us_22 @regression @ahmad
 
   Feature: admin creates new admin
     Background: Login_Part
       Given Admin goes to website "https://managementonschools.com/"
       And Admin clicks on the Log in button at the home page
-      And Admin enters the  admin User Name
+      And Admin enters the  admin username
       And Admin enters the  admin password
       And Admin clicks on the Login button
 

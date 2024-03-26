@@ -33,7 +33,7 @@ public class US_11StepDefs {
     @And("User clicks on choose teacher dropdown")
     public void userClicksOnChooseTeacherDropdown() {
         Select select = new Select(lessonManagementPage.lessonProgramChooseTeacher);
-        select.selectByValue("5324");
+        select.selectByValue("5435");
         WaitUtils.waitFor(2);
     }
     @And("User clicks on Assignment Submit button")

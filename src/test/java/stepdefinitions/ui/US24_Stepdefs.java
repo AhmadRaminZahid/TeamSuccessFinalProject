@@ -12,7 +12,6 @@ import pages.MainMenuPage;
 import pages.TeacherManagementPage;
 import utilities.BrowserUtils;
 import utilities.Driver;
-import utilities.JSUtils;
 import utilities.WaitUtils;
 
 public class US24_Stepdefs {
@@ -25,13 +24,14 @@ public class US24_Stepdefs {
         Driver.getDriver().get(url);
     }
 
+
     @And("Admin clicks on the Log in button at the home page")
     public void adminClicksOnTheLogInButtonAtTheHomePage() {
 
         BrowserUtils.clickWithTimeOut(loginPage.loginButtonMainPage,1);
     }
 
-    @And("Admin enters the  admin User Name")
+    @And("Admin enters the  admin username")
     public void adminEntersTheAdminUserName() {
         loginPage.userName.sendKeys("AdminBatch197");
         WaitUtils.waitFor(2);
@@ -63,9 +63,14 @@ public class US24_Stepdefs {
 
     @And("Admin selects first lesson from lessons option")
     public void adminSelectsFirstLessonFromLessonsOption() {
-        Actions actions = new Actions(Driver.getDriver());
-        actions.doubleClick(teacherManagementPage.chooseLessonsLast);
-       teacherManagementPage.chooseLessonsLast.sendKeys("Flying",Keys.TAB);
+//        Actions actions = new Actions(Driver.getDriver());
+//        actions.doubleClick(teacherManagementPage.chooseLessonsLast);
+//       teacherManagementPage.chooseLessonsLast.sendKeys("Flying",Keys.TAB);
+        teacherManagementPage.inputLessons.click();
+        teacherManagementPage.inputLessons.sendKeys("Flying",Keys.ENTER);
+        WaitUtils.waitFor(3);
+        teacherManagementPage.inputLessons.sendKeys(Keys.ENTER);
+        WaitUtils.waitFor(3);
     }
 
 
