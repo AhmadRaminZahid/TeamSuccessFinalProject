@@ -37,7 +37,7 @@ public class US_04_StepDefs {
             case "dean":
                 setUp("DeanEmre","DeanEmre1");
                 break;
-            case "viceDean":
+            case "vice dean":
                 setUp("ViceDeanIrfan","ViceIrfan05");
                 break;
             case "teacher":
