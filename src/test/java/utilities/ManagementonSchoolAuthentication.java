@@ -7,16 +7,23 @@ import static io.restassured.RestAssured.given;
 
 public class ManagementonSchoolAuthentication {
 
-    public static void main(String[] args) {
-        System.out.println("Token = " + generateToken());
-    }
-    public static String generateToken(){
+//    public static void main(String[] args) {
+//        System.out.println("Token = " + generateToken());
+//    }
 
-        String credentials = "{\"password\": \"Mark.123\",\"rememberMe\": true,\"username\": \"mark_twain\"}";
+    public static String generateToken(String userName, String password){
 
-        Response response = given().when().contentType(ContentType.JSON).body(credentials).post("https://medunna.com/api/authenticate");
+        String url = "https://managementonschools.com/app/auth/login";
 
-        return response.jsonPath().getString("id_token");
+        String payload = "{\n" +
+                "  \"password\": \""+password+"\",\n" +
+                "  \"username\": \""+userName+"\"\n" +
+                "}";
+
+        Response response = given().body(payload).contentType(ContentType.JSON).when().post(url);
+
+        return response.jsonPath().getString("token");
+
     }
 }
 

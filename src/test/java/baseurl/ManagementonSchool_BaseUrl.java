@@ -11,13 +11,13 @@ public class ManagementonSchool_BaseUrl {
 
     public static RequestSpecification spec;
 
-    public static void setUp(){
-        String baseUrl = "https://managementonschools.com/";
+    public static void setUp(String userName, String password){
+        String baseUrl = "https://managementonschools.com/app";
 
         spec = new RequestSpecBuilder()
-                .setContentType(ContentType.JSON)
-                .addHeader("Authorization", "Bearer "+ generateToken())
                 .setBaseUri(baseUrl)
+                .setContentType(ContentType.JSON)
+                .addHeader("Authorization", generateToken(userName,password))
                 .build();
     }
 
