@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import pojos.Us4_5.DeanPojo;
 import pojos.Us4_5.DeanPostPojo;
 import pojos.Us4_5.ObjectPojo;
+import utilities.WaitUtils;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import static baseurl.ManagementonSchool_BaseUrl.setUp;
 import static baseurl.ManagementonSchool_BaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
+import static stepdefinitions.ui.US_04_StepDefs.*;
 
 public class US_04_StepDefs {
 
@@ -85,6 +87,7 @@ public class US_04_StepDefs {
 
     @And("User gets id of the Dean with username {string}")
     public void userGetsIdOfTheDeanWithUsername(String username) {
+        WaitUtils.waitFor(3);
         spec.pathParams("first", "dean", "second", "getAll");
         response = given(spec).get("{first}/{second}");
         List<Integer> idList =  response.jsonPath().getList("findAll{it.username == '"+username+"' }.userId");
@@ -101,6 +104,9 @@ public class US_04_StepDefs {
     public void setsTheExpectedDataForGetDeanById() {
         objectPojo = new ObjectPojo(userId, "AliCancan", "Ali", "Can", "1990-09-24", "882-22-2881", "TR", "226-662-2261", "MALE");
         expectedData = new DeanPojo(objectPojo, "Dean successfully found", "OK");
+
+        //phoneNum
+        // ssnNumber =
     }
 
     @When("sends GET request and get response")

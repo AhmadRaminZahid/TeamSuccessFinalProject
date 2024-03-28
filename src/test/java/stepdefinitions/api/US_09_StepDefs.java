@@ -12,10 +12,7 @@ import static baseurl.ManagementonSchool_BaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
-
 public class US_09_StepDefs {
-
     LessonPostPojo payload;
     Response response;
     public static int userId;
@@ -57,13 +54,11 @@ public class US_09_StepDefs {
         userId = idList.get(0);
         System.out.println("userId = " + userId);
     }
-
     @And("Vice Dean sets the Url for Get Lesson By id")
     public void viceDeanSetsTheUrlForGetLessonById() {
         spec.pathParams("first", "lessons", "second", "getAllLessonByLessonId","third", userId);
         response = given(spec).get("{first}/{second}/{third}");
     }
-
     @And("Vice Dean deletes the added Lesson")
     public void viceDeanDeletesTheAddedLesson() {
         spec.pathParams("first","lessons", "second", "delete", "third", userId);
@@ -71,5 +66,4 @@ public class US_09_StepDefs {
 
         response.then().statusCode(200);
     }
-
 }

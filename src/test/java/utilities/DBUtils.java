@@ -16,9 +16,9 @@ public class DBUtils {
      * DBUtils.createConnection(); -> to connect to the database
      */
     public static void createConnection() {
-        String url = "jdbc:postgresql://157.230.48.97:5432/gmibank_db";
-        String username="techprodb_user";
-        String password="Techpro_@126";
+        String url = "jdbc:postgresql://managementonschools.com:5432/school_management";
+        String username="select_user";
+        String password="43w5ijfso";
         try {
             connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connected successfully!");
@@ -27,6 +27,7 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
     /**
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
      * STATEMENT : is used to write query
@@ -62,6 +63,28 @@ public class DBUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public static Connection connectToDatabase() {
+
+        try {
+            connection = DriverManager.getConnection("jdbc:postgresql://managementonschools.com:5432/school_management", "select_user", "43w5ijfso");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return connection;
+    }
+
+    public static Statement createStatement() {
+
+        try {
+            statement = connectToDatabase().createStatement();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return statement;
+
     }
 
     //used to get statement

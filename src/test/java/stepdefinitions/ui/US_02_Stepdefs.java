@@ -21,7 +21,6 @@ public class US_02_Stepdefs {
     public void theStudentsClicksLoginButton() {
         loginPage.loginButtonMainPage.click();
         WaitUtils.waitFor(1);
-
     }
 
     @And("Admin types the username")
