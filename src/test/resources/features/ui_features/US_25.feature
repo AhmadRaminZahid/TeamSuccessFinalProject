@@ -6,7 +6,7 @@ Feature:Admin_Add_Student
     And Admin enters the  admin username
     And Admin enters the  admin password
     And Admin clicks on the Login button
-    @smoke
+    @smoke @tc01
   Scenario: US_25 TC_01 Admin should be able to add Student
   When Admin clicks the Menu button
   And Admin clicks the Student Management option
