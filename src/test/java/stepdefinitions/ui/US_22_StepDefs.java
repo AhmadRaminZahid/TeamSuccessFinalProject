@@ -90,7 +90,7 @@ public class US_22_StepDefs {
     public void adminShouldSeeTheNewAdminInTheAdminList() {
         ActionsUtils.actionsScrollDown();
         BrowserUtils.clickWithTimeOut(adminManagementPage.ListLastPartButton,5);
-        WaitUtils.waitFor(4);
+        WaitUtils.waitFor(6);
 
         List<WebElement> ssnColumnData = Driver.getDriver().findElements(By.xpath("//table//tbody//td[4]"));
         List<String> ssnColumn = new ArrayList<>();

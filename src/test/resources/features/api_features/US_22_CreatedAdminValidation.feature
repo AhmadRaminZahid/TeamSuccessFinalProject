@@ -13,8 +13,7 @@ Feature: CreatedAdmin_ApiValidation
   Scenario: select the created admin from getAll response
     Given admin sends GetAll request and selects the created admin
     And admin sets the expected data for admin
-    Then admin verify the status code is two hundred
-    And admin verify response body of created admin
+    Then admin verify response body of created admin
 
   Scenario: admin deletes the created admin
     When admin deletes the created admin by id

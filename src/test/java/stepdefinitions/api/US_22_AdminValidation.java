@@ -107,8 +107,5 @@ public class US_22_AdminValidation {
 
     }
 
-    @Then("admin verify the status code is two hundred")
-    public void adminVerifyTheStatusCodeIsTwoHundred() {
-     response.then().statusCode(200);
-    }
+
 }

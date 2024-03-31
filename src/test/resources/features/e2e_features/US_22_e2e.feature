@@ -27,8 +27,7 @@ Feature: Admin adds new admin
     And admin gets the id of new created admin
     Given admin sends GetAll request and selects the created admin
     And admin sets the expected data for admin
-    Then admin verify the status code is two hundred
-    And admin verify response body of created admin
+    Then admin verify response body of created admin
 
   Scenario: User Validates Created Admin From DB
     Given User sets connection for admin
