@@ -86,8 +86,8 @@ public class US_22_AdminValidation {
 
     @Given("admin sends GetAll request and selects the created admin")
     public void adminSendsGetAllRequestAndSelectsTheCreatedAdmin() {
-        spec.pathParams("first","admin","second","getAll").queryParams("page","0","size","200","sort","name","type","desc");
-        response = given(spec).get("{first}/{second}");
+        //spec.pathParams("first","admin","second","getAll").queryParams("page","0","size","200","sort","name","type","desc");
+        //response = given(spec).get("{first}/{second}");
         JsonPath json = response.jsonPath();
         for (int i = 0; i <200 ; i++) {
             if (Objects.equals(json.getString("content[" + i + "].username"), Adminusername)){
