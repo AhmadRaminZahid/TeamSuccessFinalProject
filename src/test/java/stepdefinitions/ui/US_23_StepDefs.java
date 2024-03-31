@@ -24,10 +24,11 @@ public class US_23_StepDefs {
     AdminManagementPage adminManagementPage= new AdminManagementPage();
     MainMenuPage mainMenuPage= new MainMenuPage();
 
+
     public static String vicedeanSsn="111-23-0002";
     public static String vicedeanphoneNumber="079-012-0002";
     public static String vicedeanUsername="AhmadRaminaaa";
-    Faker faker= new Faker();
+
 
     @When("Admin enters the first name for new Vice Dean")
     public void adminEntersTheFirstNameForNewViceDean() {

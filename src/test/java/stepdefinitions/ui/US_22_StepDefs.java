@@ -23,7 +23,6 @@ public class US_22_StepDefs {
     public static String Adminssn="111-24-0001";
     public static String Adminphonenumber="079-013-0001";
     public static String Adminusername="HekmatAminiaaa";
-    Faker faker= new Faker();
 
     @When("Admin enters the first name for new Admin")
     public void adminEntersTheFirstNameForNewAdmin() {

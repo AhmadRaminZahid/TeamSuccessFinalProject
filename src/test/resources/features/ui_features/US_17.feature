@@ -8,7 +8,7 @@ Feature: Grade Submission by Teacher
     And The teacher enters the password
     And The teacher clicks on Login button
 
-
+@smoke
   Scenario: US_17 TC_01 - Teacher gives grades to students (Add Student Info)
     When The teacher sees Student Info Management page
     And The teacher clicks Choose Lesson
