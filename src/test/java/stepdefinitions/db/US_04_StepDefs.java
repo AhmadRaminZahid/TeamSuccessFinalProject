@@ -14,9 +14,6 @@ import static stepdefinitions.api.US_04_StepDefs.userId;
 
 
 public class US_04_StepDefs {
-//    Connection connection;
-//    Statement statement;
-//    ResultSet resultSet;
 
     Connection connection;
     Statement statement;
