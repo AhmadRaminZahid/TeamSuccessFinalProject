@@ -24,9 +24,9 @@ public class US_23_StepDefs {
     AdminManagementPage adminManagementPage= new AdminManagementPage();
     MainMenuPage mainMenuPage= new MainMenuPage();
 
-    public static String vicedeanSsn;
-    public static String vicedeanphoneNumber;
-    public static String vicedeanUsername;
+    public static String vicedeanSsn="111-23-0002";
+    public static String vicedeanphoneNumber="079-012-0002";
+    public static String vicedeanUsername="AhmadRaminaaa";
     Faker faker= new Faker();
 
     @When("Admin enters the first name for new Vice Dean")
@@ -56,19 +56,19 @@ public class US_23_StepDefs {
 
     @And("Admin enters phone number of new Vice Dean in the format\\(xxx-xxx-xxxx)")
     public void adminEntersPhoneNumberOfNewViceDeanInTheFormatXxxXxxXxxx() {
-        vicedeanphoneNumber="079-012-"+faker.number().numberBetween(1000,9999);
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.phoneNumber,vicedeanphoneNumber,2);
     }
 
     @And("Admin enters SSN number of new Vice Dean in the format\\(xxx-xx-xxxx)")
     public void adminEntersSSNNumberOfNewViceDeanInTheFormatXxxXxXxxx() {
-        vicedeanSsn=faker.number().numberBetween(100,999)+"-23-5674";
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,vicedeanSsn,2);
     }
 
     @And("Admin enters a username for new Vice Dean")
     public void adminEntersAUsernameForNewViceDean() {
-        vicedeanUsername=faker.name().username();
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,vicedeanUsername,2);
     }
 
