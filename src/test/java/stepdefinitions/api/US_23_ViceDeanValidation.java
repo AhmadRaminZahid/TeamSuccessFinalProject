@@ -23,7 +23,7 @@ public class US_23_ViceDeanValidation {
     ViceDeanActualDataPojo viceDeanActualData;
     Response response;
     String Id;
-    @Given("admin sets the url to send the getAll request for vice deans")
+    @When("admin sets the url to send the getAll request for vice deans")
     public void adminSetsTheUrlToSendTheGetAllRequestForViceDeans() {
 
         spec.pathParams("first", "vicedean", "second", "getAll");
@@ -53,7 +53,7 @@ public class US_23_ViceDeanValidation {
         }
     }
 
-    @Given("admin sends GET request for the vice dean by its id")
+    @When("admin sends GET request for the vice dean by its id")
     public void adminSendsGETRequestForTheViceDeanByItsId() {
 
         spec.pathParams("first","vicedean","second","getViceDeanById","third",userId);

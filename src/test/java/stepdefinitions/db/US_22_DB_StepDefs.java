@@ -53,6 +53,7 @@ public class US_22_DB_StepDefs {
 
     @And("User terminates connection for admin")
     public void userTerminatesConnectionForAdmin() {
+
         DBUtils.closeConnection();
     }
 }
