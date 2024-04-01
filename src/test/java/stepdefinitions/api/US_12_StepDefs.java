@@ -1,12 +1,17 @@
 package stepdefinitions.api;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import pojos.US_12.GetAllResponsePojo;
 import pojos.US_12.LessonPostpojo;
 import pojos.US_12.Lessonpojo;
+import pojos.US_20_Pojos.MeetEditResponsePojo;
 
 import java.util.List;
 import java.util.Objects;
@@ -15,9 +20,11 @@ import static baseurl.ManagementonSchool_BaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static stepdefinitions.api.US_19_StepDefs.description;
 
 public class US_12_StepDefs {
 
+    ObjectMapper objectMapper = new ObjectMapper();
     Response response;
     Lessonpojo payload;
     //public static int lessonProgramId;
@@ -58,18 +65,20 @@ public class US_12_StepDefs {
     }
 
     @And("Vice Dean gets the id of the assigned lesson")
-    public void viceDeanGetsTheIdOfTheAssignedLesson() {
+    public void viceDeanGetsTheIdOfTheAssignedLesson() throws JsonProcessingException {
         spec.pathParams("first","lessonPrograms", "second","getAllAssigned");
         response = given(spec).get("{first}/{second}");
 
-        JsonPath json = response.jsonPath();
+        String resultList = response.asString();
 
-        for (int i = 0; i<10; i++) {
-            if (Objects.equals(json.getString("$[" + i + "].lessonName[0].lessonId"), "4030") && Objects.equals(json.getString("$[" + i + "].teachers[0].userId"), "5915")){
-                id = json.getString("$["+i+"].lessonProgramId");
-                System.out.println("Id = " + id);
-                lessonProgramId = Integer.valueOf(id);
-                break;
+        List<GetAllResponsePojo> pojoList = objectMapper.readValue(resultList, new TypeReference<List<GetAllResponsePojo>>() {});
+
+        for (GetAllResponsePojo getIdLoop : pojoList)
+        {
+            if (Objects.equals(getIdLoop.getDescription(), description)) {
+                lessonProgramId = getIdLoop.getId();
+                System.out.println(lessonProgramId);
+
             }
         }
 

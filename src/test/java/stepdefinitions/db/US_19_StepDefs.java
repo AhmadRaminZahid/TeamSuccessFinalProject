@@ -46,7 +46,7 @@ public class US_19_StepDefs {
     public void userValidatesResultSetUS_19() throws SQLException {
 
         resultSet.next();
-        payload = new MeetPostpojo("2025-01-17", description, "15:00:00", "16:00:00",studentId);
+        payload = new MeetPostpojo("2025-01-24", description, "13:00:00", "14:00:00",studentId);
         assertEquals(payload.getDate(),resultSet.getString("date"));
         assertEquals(payload.getDescription(),resultSet.getString("description"));
         assertEquals(payload.getStartTime(),resultSet.getString("start_time"));

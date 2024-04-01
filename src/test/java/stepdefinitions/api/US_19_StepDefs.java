@@ -28,7 +28,7 @@ public class US_19_StepDefs {
     @And("sets the payload to create meeting with students")
     public void setsThePayloadToCreateMeetingWithStudents() {
 
-    payload = new MeetPostpojo("2025-01-23", description, "13:00", "14:00",studentId);
+    payload = new MeetPostpojo("2025-01-24", description, "13:00", "14:00",studentId);
 
     }
 
@@ -51,6 +51,5 @@ public class US_19_StepDefs {
         //assertEquals(payload.getStartTime(),actualData.getObject().getStartTime());
         //assertEquals(payload.getStopTime(),actualData.getObject().getStopTime());
     }
-
 
 }

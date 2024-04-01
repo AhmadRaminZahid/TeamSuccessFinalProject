@@ -7,4 +7,3 @@ Feature: US_19 Teacher should be able to add meetings with students
     When sends POST request and GETS response for creating meetings
     Then verifies status code is 200 for creating meeting
     Then verifies response body for creating meeting
-

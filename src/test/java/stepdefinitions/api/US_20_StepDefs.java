@@ -29,7 +29,7 @@ public class US_20_StepDefs {
     //public static Map<String, Object> payload;
 
     ObjectMapper objectMapper = new ObjectMapper();
-    public static String date = "2025-01-23";
+    public static String date = "2025-01-24";
 
 
     @When("gets id of the created meeting")
