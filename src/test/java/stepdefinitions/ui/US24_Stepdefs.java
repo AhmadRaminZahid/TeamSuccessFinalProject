@@ -68,9 +68,9 @@ public class US24_Stepdefs {
 //       teacherManagementPage.chooseLessonsLast.sendKeys("Flying",Keys.TAB);
         teacherManagementPage.inputLessons.click();
         teacherManagementPage.inputLessons.sendKeys("Flying",Keys.ENTER);
-        WaitUtils.waitFor(3);
+        WaitUtils.waitFor(2);
         teacherManagementPage.inputLessons.sendKeys(Keys.ENTER);
-        WaitUtils.waitFor(3);
+        WaitUtils.waitFor(2);
     }
 
 

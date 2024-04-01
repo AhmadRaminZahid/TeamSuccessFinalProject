@@ -93,7 +93,7 @@ public class LessonManagementPage {
     public WebElement lessonProgramStopTime;
     @FindBy(xpath = "(//button[@type='button'])[30]")
     public WebElement lessonProgramSubmitButton;
-    @FindBy(xpath = "(//input[@type='checkbox'])[29]")// change this number
+    @FindBy(xpath = "(//input[@type='checkbox'])[25]")// change this number
     public WebElement lessonProgramLessonProgramAssignmentChooseLesson;
     @FindBy (xpath = "//select[@id='teacherId']")
     public WebElement lessonProgramChooseTeacher;
