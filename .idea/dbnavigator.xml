@@ -17,7 +17,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="50d765bc-f813-48af-be74-00832628af98">
-      <console name="TeamSuccess" type="STANDARD" schema="" session="Main" />
+      <console name="TeamSuccess" type="STANDARD" schema="" session="Main"><![CDATA[select * from contact_message where email='Kadıbaba@gmail.com']]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -102,7 +102,6 @@
           <debugger-type value="ASK" />
         </debugger>
         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false" hide-audit-columns="false">
-          <object-filters />
           <object-type-filter use-master-settings="true">
             <object-type name="SCHEMA" enabled="true" />
             <object-type name="USER" enabled="true" />
@@ -130,6 +129,7 @@
             <object-type name="CLUSTER" enabled="true" />
             <object-type name="DBLINK" enabled="true" />
           </object-type-filter>
+          <object-name-filters />
         </object-filters>
       </connection>
     </connections>
