@@ -6,7 +6,7 @@ Feature: US_04 Add Dean
     And Admin enters the  admin username
     And Admin enters the  admin password
     And Admin clicks on the Login button
-
+@smoke
   Scenario: US_04 TC_01 Admin should be able to add Dean
     When Admin clicks the Menu button
     And clicks Dean Management option

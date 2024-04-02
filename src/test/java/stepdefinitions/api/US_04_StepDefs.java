@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import pojos.Us4_5.DeanPojo;
 import pojos.Us4_5.DeanPostPojo;
@@ -15,6 +16,7 @@ import java.util.List;
 import static baseurl.ManagementonSchool_BaseUrl.setUp;
 import static baseurl.ManagementonSchool_BaseUrl.spec;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static stepdefinitions.ui.US_04_StepDefs.*;
 
@@ -51,13 +53,13 @@ public class US_04_StepDefs {
     }
 
     @And("User sets the Url for Dean Save")
-    public void userSetsTheUrlForDeanSave() {
-        spec.pathParams("first", "dean", "second", "save");
+    public void userSetsTheUrlForDeanSave() {spec.pathParams("first", "dean", "second", "save");
     }
 
     @And("sets the payload for Dean Save")
     public void setsThePayloadForDeanSave() {
         payload = new DeanPostPojo("1990-09-24", "TR", "MALE", "Ali", "Ali_3434", "226-662-2261", "882-22-2881", "Can", "AliCancan");
+//        System.out.println("payload = " + payload);
     }
 
     @When("sends POST request and get response")
@@ -83,6 +85,21 @@ public class US_04_StepDefs {
         assertEquals(payload.getSsn(), actualData.getObject().getSsn());
         assertEquals(payload.getSurname(), actualData.getObject().getSurname());
         assertEquals(payload.getUsername(), actualData.getObject().getUsername());
+        assertEquals("Dean Saved",actualData.getMessage());
+        assertEquals("CREATED",actualData.getHttpStatus());
+
+//        //2. way for assertion
+//        response.
+//                then().
+//                body("object.username",equalTo(payload.getUsername()),
+//                        "object.name",equalTo(payload.getName()),
+//                        "message",equalTo("Dean Saved"),
+//                        "httpStatus",equalTo("CREATED"));
+
+//        //3. way for assertion
+//        JsonPath jsonPath = response.jsonPath();
+//        assertEquals(payload.getUsername(),jsonPath.getString("object.username"));
+//        assertEquals(payload.getPhoneNumber(),jsonPath.getString("object.phoneNumber"));
     }
 
     @And("User gets id of the Dean with username {string}")
@@ -105,8 +122,6 @@ public class US_04_StepDefs {
         objectPojo = new ObjectPojo(userId, "AliCancan", "Ali", "Can", "1990-09-24", "882-22-2881", "TR", "226-662-2261", "MALE");
         expectedData = new DeanPojo(objectPojo, "Dean successfully found", "OK");
 
-        //phoneNum
-        // ssnNumber =
     }
 
     @When("sends GET request and get response")
