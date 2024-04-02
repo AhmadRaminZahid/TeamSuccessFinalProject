@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @us08 @regression
+=======
+@US_08 @EP
+>>>>>>> origin/emrepolat
 Feature:Vice Deans should be able to create a lesson (Lessons - Add Lesson)
 
   Background:
@@ -15,7 +19,12 @@ Feature:Vice Deans should be able to create a lesson (Lessons - Add Lesson)
     And User enters credit score for lesson on Credit Score field
     And User clicks Submit button
     Then User sees a success message
+<<<<<<< HEAD
     And close the web page
+=======
+    And close the browser
+
+>>>>>>> origin/emrepolat
 
   Scenario:US_08 Test_Case02
     And User clicks on Lessons top center of the page
@@ -24,4 +33,8 @@ Feature:Vice Deans should be able to create a lesson (Lessons - Add Lesson)
     And User enters credit score for lesson on Credit Score field
     And User clicks Submit button
     Then User sees a error message
+<<<<<<< HEAD
     And close the web page
+=======
+    And close the browser
+>>>>>>> origin/emrepolat

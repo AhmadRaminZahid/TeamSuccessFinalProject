@@ -15,6 +15,7 @@ public class ManagementonSchool_BaseUrl {
         String baseUrl = "https://managementonschools.com/app";
 
         spec = new RequestSpecBuilder()
+
                 .setBaseUri(baseUrl)
                 .setContentType(ContentType.JSON)
                 .addHeader("Authorization", generateToken(userName,password))
