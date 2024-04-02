@@ -32,7 +32,7 @@ public class ContactGetAllPage {
     @FindBy(xpath = "//span[@class='page-link']")
     public WebElement contactGetAllContactMessageNumOfPage;
 
-    @FindBy(xpath = "(//span[text()='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'])[1]")
+    @FindBy(xpath = "(//span[text()='about team management'])[1]")
     public WebElement contactGetAllContactMessageInMessage;
 
 

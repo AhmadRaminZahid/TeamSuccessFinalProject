@@ -2,9 +2,15 @@
 Feature: Admin_Adds_Teacher
   Background: Admin_Login
 
+    Given admin goes to "https://managementonschools.com" homepage
+    And User clicks on Login button right corner of the page
+    And Admin enters the  admin User Name
+
+
     Given Admin goes to website "https://managementonschools.com/"
     And Admin clicks on the Log in button at the home page
     And Admin enters the  admin username
+
     And Admin enters the  admin password
     And Admin clicks on the Login button
     @smoke
@@ -45,8 +51,5 @@ Feature: Admin_Adds_Teacher
     And Admin clicks on Submit button
     Then Admin verify to see a fail message "Please enter valid SSN number"
     And close the web page
-
-
-
 
 

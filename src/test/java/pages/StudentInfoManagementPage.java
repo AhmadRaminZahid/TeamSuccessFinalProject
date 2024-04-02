@@ -21,10 +21,10 @@ public class StudentInfoManagementPage {
     
     //@FindBy(xpath = "//div[text()='Edit Student Info']") public WebElement editStudentInfoMenu;
 
-    @FindBy(xpath = "//option[@value='4452']") public WebElement chooseLessonStudentInfoManagement;
+    @FindBy(xpath = "//select[@id='lessonId']") public WebElement chooseLessonStudentInfoManagement;
     
     
-    @FindBy(xpath = "//option[@value='3290']") public WebElement chooseStudentFromDropDownStudentInfoManagement;
+    @FindBy(xpath = "//select[@id='studentId']") public WebElement chooseStudentFromDropDownStudentInfoManagement;
     
      //option[@value='3288']=Adam Smith
 
