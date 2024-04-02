@@ -6,7 +6,7 @@ Feature: Vice Deans should be able to create a lesson schedule.
     And User enters User Name
     And User enters Password
     And User clicks on login button (submit)
-
+@smoke
   Scenario: US_10 TC1_01 Vice Dean should be able to create a lesson schedule
     When User clicks on Menu
     And User sees Lesson Management, teacher Management, student management, contact get all and log out

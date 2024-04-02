@@ -6,7 +6,7 @@ Feature: See and update teacher
     And enters username in the Username input field
     And enters password in the password input field
     And clicks on Login button
-
+@smoke
   Scenario: UA_14 TC_01 Vice Dean should be able to see and update teachers.
     When click on the Menu button on the right corner of the page
     And selects Teacher Management on the menu

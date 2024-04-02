@@ -12,17 +12,17 @@ Feature: Admin_Adds_Teacher
       When Admin clicks the Menu button
       And Admin clicks on the Teacher Management option
       And Admin selects first lesson from lessons option
-      And Admin enters a teacher name as "Namik"
+      And Admin enters a teacher name as "namık"
       And Admin enters a teacher surname as "Selimm"
       And Admin enters a Birth Place as "Urfa"
-      And Admin enters a teacher email as "Namkok@gmail.com"
-      And Admin enters a phone number "669-669-6233"
+      And Admin enters a teacher email as "NMkk@gmail.com"
+      And Admin enters a phone number "639-677-3233"
       And Admin clicks on the Is Adviser Teacher box
       And Admin clicks on one option from Gender boxes
       And Admin enters Date of Birth in Date of Birth field as "01.01.2013"
-      And Admin enters a teacher Ssn number as "669-26-5299"
-      And Admin enters a User Name "Namkok"
-      And Admin enters a password "Namkok197"
+      And Admin enters a teacher Ssn number as "639-77-5399"
+      And Admin enters a User Name "Namıkok"
+      And Admin enters a password "Namıkk197"
       And Admin clicks on Submit button
      Then Admin verify to see a success message "Teacher saved successfully"
       And close the web page
@@ -31,17 +31,17 @@ Feature: Admin_Adds_Teacher
     When Admin clicks the Menu button
     And Admin clicks on the Teacher Management option
     And Admin selects first lesson from lessons option
-    And Admin enters a teacher name as "Namik"
+    And Admin enters a teacher name as "Namık"
     And Admin enters a teacher surname as "Selimm"
     And Admin enters a Birth Place as "Urfa"
-    And Admin enters an email as "Namkkk@gmail.com"
+    And Admin enters an email as "Namk@gmail.com"
     And Admin enters a phone number "699-669-6333"
     And Admin clicks on the Is Adviser Teacher box
     And Admin clicks on one option from Gender boxes
     And Admin enters Date of Birth in Date of Birth field as "01.01.2013"
     And Admin enters a Ssn number as "63563365399"
-    And Admin enters a User Name "Namikcann"
-    And Admin enters a password "Namikcann197"
+    And Admin enters a User Name "Namıkcann"
+    And Admin enters a password "Namıkcann197"
     And Admin clicks on Submit button
     Then Admin verify to see a fail message "Please enter valid SSN number"
     And close the web page
