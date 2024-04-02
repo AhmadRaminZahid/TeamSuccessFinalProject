@@ -5,9 +5,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import pojos.DeanPojo;
-import pojos.DeanPostPojo;
-import pojos.ObjectPojo;
+import org.bouncycastle.cms.jcajce.JcaX509CertSelectorConverter;
+import pojos.Us4_5.DeanPojo;
+import pojos.Us4_5.DeanPostPojo;
+import pojos.Us4_5.ObjectPojo;
 
 import java.util.List;
 
@@ -37,11 +38,14 @@ public class US_04_StepDefs {
             case "dean":
                 setUp("DeanEmre","DeanEmre1");
                 break;
-            case "vice dean":
-                setUp("ViceDeanIrfan","ViceIrfan05");
+            case "vicedean":
+                setUp("ViceCaptainZoro","Nikolas2022!!");
                 break;
             case "teacher":
                 setUp("SemaTeacher","SemaTeacher1");
+                break;
+            case "student":
+                setUp("CaptainKid","Nikolas2022!!");
                 break;
             default:
                 System.out.println("Please provide valid credentials for your role");

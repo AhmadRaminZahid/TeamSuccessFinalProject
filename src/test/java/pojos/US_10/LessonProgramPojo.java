@@ -1,20 +1,13 @@
-package pojos;
+package pojos.US_10;
+
+import pojos.US_11.ObjectPojo;
 
 import java.io.Serializable;
 
-public class DeanPojo implements Serializable {
+public class LessonProgramPojo implements Serializable {
 	private ObjectPojo object;
 	private String message;
 	private String httpStatus;
-
-	public DeanPojo() {
-	}
-
-	public DeanPojo(ObjectPojo object, String message, String httpStatus) {
-		this.object = object;
-		this.message = message;
-		this.httpStatus = httpStatus;
-	}
 
 	public void setObject(ObjectPojo object){
 		this.object = object;
@@ -40,10 +33,19 @@ public class DeanPojo implements Serializable {
 		return httpStatus;
 	}
 
+	public LessonProgramPojo() {
+	}
+
+	public LessonProgramPojo(ObjectPojo object, String message, String httpStatus) {
+		this.object = object;
+		this.message = message;
+		this.httpStatus = httpStatus;
+	}
+
 	@Override
  	public String toString(){
 		return 
-			"DeanPojo{" + 
+			"LessonProgramPojo{" + 
 			"object = '" + object + '\'' + 
 			",message = '" + message + '\'' + 
 			",httpStatus = '" + httpStatus + '\'' + 

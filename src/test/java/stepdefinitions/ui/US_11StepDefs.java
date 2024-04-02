@@ -42,10 +42,4 @@ public class US_11StepDefs {
         WaitUtils.waitFor(2);
     }
 
-    @Then("User must see success message")
-    public void userMustSeeSuccessMessage() {
-        Assert.assertTrue(lessonManagementPage.lessonManagementLessonsSuccessAssignedMessage.isDisplayed());
-        WaitUtils.waitFor(1);
-    }
-
 }
