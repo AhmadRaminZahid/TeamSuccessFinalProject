@@ -82,7 +82,7 @@ public class US_17_Stepdefs {
     @And("The teacher clicks Choose Lesson")
     public void theTeacherClicksChooseLesson() {
         Select selectlesson  =new Select(studentInfoManagementPage.chooseLessonStudentInfoManagement);
-        selectlesson.selectByIndex(1);
+        selectlesson.selectByVisibleText("C#");
 //        studentInfoManagementPage.chooseLessonStudentInfoManagement.click();
  
         WaitUtils.waitFor(2);
@@ -92,14 +92,16 @@ public class US_17_Stepdefs {
     @And("The teacher clicks Choose Student")
     public void theTeacherClicksChooseStudent() {
         Select selectStudent=new Select(studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement);
-        selectStudent.selectByIndex(7);
+        selectStudent.selectByValue("3361");
 //        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
         WaitUtils.waitFor(2);
     }
 
     @And("The teacher clicks Choose Education Term")
     public void theTeacherClicksChooseEducationTerm() {
-        studentInfoManagementPage.chooseEducationTermInfoManagement.click();
+        Select selectEducationTerm=new Select(studentInfoManagementPage.chooseEducationTermInfoManagement);
+        selectEducationTerm.selectByValue("47");
+        
     }
 
     @And("The teacher enters Absentee")
@@ -123,7 +125,7 @@ public class US_17_Stepdefs {
 
     @And("The teacher enters Info Note")
     public void theTeacherEntersInfoNote() {
-        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("CC + dersten geçti", Keys.TAB);
+        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("hello world, this is a test", Keys.TAB);
         WaitUtils.waitFor(5);
     }
     
@@ -171,8 +173,8 @@ public class US_17_Stepdefs {
     
     @And("teacher clicks Choose Education Term")
     public void teacherClicksChooseEducationTerm() {
-        studentInfoManagementPage.chooseEducationTermInfoManagement.click();
-        WaitUtils.waitFor(2);
+        Select selectEducationTerm=new Select(studentInfoManagementPage.chooseEducationTermInfoManagement);
+        selectEducationTerm.selectByValue("47");
         
         
     }
@@ -197,7 +199,7 @@ public class US_17_Stepdefs {
     
     @And("teacher enters Info Note")
     public void teacherEntersInfoNote() {
-        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("dd + dersten geçti", Keys.TAB);
+        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("hello world, this is a test", Keys.TAB);
         WaitUtils.waitFor(5);
     }
     @And("tteacher clicks submit button")
