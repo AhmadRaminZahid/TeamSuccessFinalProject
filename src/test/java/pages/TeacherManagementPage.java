@@ -66,8 +66,8 @@ public class TeacherManagementPage {
     public WebElement teacherManagementTeacherListErrorMessageEdit;
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement teacherManagementTeacherListSuccessMessageEdit;
-
-   // @FindBy(id= "react-select-3-input")
+    @FindBy(xpath = "//*[text()='Choose Lessons']/following-sibling::div/div/div[1]//input")
+    public WebElement inputLessons;
 
     @FindBy(xpath = "//div//input[@id='react-select-3-input']")
     public WebElement chooseLessons;
@@ -119,8 +119,6 @@ public class TeacherManagementPage {
 
     @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
     public WebElement failSsnMessage;
-    @FindBy(xpath = "//*[text()='Choose Lessons']/following-sibling::div/div/div[1]//input")
-    public WebElement inputLessons;
 
     // pup up teacher box
 

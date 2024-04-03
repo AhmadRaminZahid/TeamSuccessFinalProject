@@ -16,7 +16,9 @@ public class US_04_StepDefs {
     MainMenuPage mainMenuPage = new MainMenuPage();
     public static String deanUserName;
     public static int phoneNumber;
+    public static String fullPhoneNumber;
     public static int ssnNumber;
+    public static String fullssnNumber;
     public static String deanPassword;
 
     @And("clicks Dean Management option")
@@ -37,7 +39,7 @@ public class US_04_StepDefs {
 
     @And("enters Dean’s Birth Place")
     public void entersDeanSBirthPlace() {
-        deanManagementPage.birthPlace.sendKeys("USA");
+        deanManagementPage.birthPlace.sendKeys("TR");
     }
 
     @And("selects Dean’s Gender")
@@ -47,25 +49,28 @@ public class US_04_StepDefs {
 
     @And("enters Dean’s Date of Birth")
     public void entersDeanSDateOfBirth() {
-        deanManagementPage.dateOfBirth.sendKeys("01.01.1999");
+        deanManagementPage.dateOfBirth.sendKeys("24.09.1990");
     }
+    //01.01.1999
 
     @And("enters Dean’s Phone Number")
     public void entersDeanSPhoneNumber() {
         phoneNumber = Faker.instance().number().numberBetween(100,999);
-        deanManagementPage.phoneNumber.sendKeys(phoneNumber+"-456-1233");
+        deanManagementPage.phoneNumber.sendKeys("226-662-2261");
     }
 
     @When("enters SSN Number")
     public void entersSSNNumber() {
         ssnNumber = Faker.instance().number().numberBetween(100,999);
-        deanManagementPage.ssn.sendKeys(ssnNumber+"-45-6780");
+        deanManagementPage.ssn.sendKeys("882-22-2881");
     }
 
     @And("enters user name")
     public void entersUserName() {
-        deanUserName=Faker.instance().name().username();
-        deanManagementPage.username.sendKeys(deanUserName);
+        //deanUserName=Faker.instance().name().username();
+        //   deanManagementPage.username.sendKeys(deanUserName);
+        deanManagementPage.username.sendKeys("AliCancan");
+
     }
 
     @And("enters password")
@@ -92,7 +97,7 @@ public class US_04_StepDefs {
 
     @When("enters invalid SSN Number")
     public void entersInvalidSSNNumber() {
-        deanManagementPage.ssn.sendKeys(ssnNumber+"11111111");
+        deanManagementPage.ssn.sendKeys("882-2282881");
     }
 
     @Then("see Please enter valid SSN number message")

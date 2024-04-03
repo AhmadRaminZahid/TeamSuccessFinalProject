@@ -6,7 +6,7 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -16,8 +16,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="55182c46-b60e-4c8e-a7cf-b04be9b10c65">
-      <console name="SchoolManagement" type="STANDARD" schema="" session="Main"><![CDATA[SELECT * FROM lesson where lesson_name = 'swordsmanship']]></console>
+    <connection id="50d765bc-f813-48af-be74-00832628af98">
+      <console name="TeamSuccess" type="STANDARD" schema="" session="Main"><![CDATA[select * from contact_message where email='Kadıbaba@gmail.com']]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -27,7 +27,7 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="55182c46-b60e-4c8e-a7cf-b04be9b10c65" />
+    <connection id="50d765bc-f813-48af-be74-00832628af98" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -38,9 +38,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="55182c46-b60e-4c8e-a7cf-b04be9b10c65" active="true" signed="true">
+      <connection id="50d765bc-f813-48af-be74-00832628af98" active="true" signed="true">
         <database>
-          <name value="SchoolManagement" />
+          <name value="TeamSuccess" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
@@ -264,6 +264,7 @@
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
           <content-type name="Groovy" enabled="true" />
+          <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Manifest" enabled="true" />
         </content-types>

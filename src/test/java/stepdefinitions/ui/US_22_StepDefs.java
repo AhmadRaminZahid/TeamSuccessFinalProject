@@ -20,10 +20,9 @@ import java.util.List;
 public class US_22_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
-    public static String Adminssn;
-    public static String Adminphonenumber;
-    public static String Adminusername;
-    Faker faker= new Faker();
+    public static String Adminssn="111-24-0001";
+    public static String Adminphonenumber="079-013-0001";
+    public static String Adminusername="HekmatAminiaaa";
 
     @When("Admin enters the first name for new Admin")
     public void adminEntersTheFirstNameForNewAdmin() {
@@ -53,19 +52,19 @@ public class US_22_StepDefs {
 
     @And("Admin enters phone number of new Admin in the format\\(xxx-xxx-xxxx)")
     public void adminEntersPhoneNumberOfNewAdminInTheFormatXxxXxxXxxx() {
-        Adminphonenumber="079-012-"+faker.number().numberBetween(1000,9999);
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.phoneNumber,Adminphonenumber,2);
     }
 
     @And("Admin enters SSN number of new Admin in the format\\(xxx-xx-xxxx)")
     public void adminEntersSSNNumberOfNewAdminInTheFormatXxxXxXxxx() {
-        Adminssn=faker.number().numberBetween(100,999)+"-23-5674";
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,Adminssn,2);
     }
 
     @And("Admin enters a username for new Admin")
     public void adminEntersAUsernameForNewAdmin() {
-        Adminusername=faker.name().username();
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,Adminusername,2);
     }
 
@@ -91,7 +90,7 @@ public class US_22_StepDefs {
     public void adminShouldSeeTheNewAdminInTheAdminList() {
         ActionsUtils.actionsScrollDown();
         BrowserUtils.clickWithTimeOut(adminManagementPage.ListLastPartButton,5);
-        WaitUtils.waitFor(4);
+        WaitUtils.waitFor(6);
 
         List<WebElement> ssnColumnData = Driver.getDriver().findElements(By.xpath("//table//tbody//td[4]"));
         List<String> ssnColumn = new ArrayList<>();

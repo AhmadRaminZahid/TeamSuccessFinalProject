@@ -65,7 +65,7 @@ public class US_16_Stepdefs {
     @And("The Vice Dean selects Contact Get All option")
     public void theViceDeanSelectsContactGetAllOption() {
         mainMenuPAge.contactGetAllInsideMenu.click();
-        WaitUtils.waitFor(1);
+        WaitUtils.waitFor(3);
     }
 
 
@@ -73,15 +73,14 @@ public class US_16_Stepdefs {
     public void theViceDeanShouldSeeTheContactMessagePage() {
         assertTrue(contactGetAllPage.contactGetAllContactMessagePage.isDisplayed());
 
-        WaitUtils.waitFor(1);
+        WaitUtils.waitFor(3);
 
 
     }
 
     @And("The Vice Dean should see Contact Messages")
     public void theViceDeanShouldSeeContactMessages() {
-        assertTrue(contactGetAllPage.contactGetAllContactMessageInMessage.isDisplayed());
-
+        assertTrue(contactGetAllPage.contactGetAllContactMessageInMessage.getText().contains("about team management"));
         WaitUtils.waitFor(1);
 
 

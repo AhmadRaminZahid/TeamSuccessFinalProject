@@ -2,7 +2,7 @@
 Feature: US_04 Add Dean
   Background: Login as an Admin
     Given User is authorized as "Admin"
-
+  @createAlican
   Scenario: Admin Creates Dean Test
     And User sets the Url for Dean Save
     And sets the payload for Dean Save
@@ -18,10 +18,11 @@ Feature: US_04 Add Dean
     Then verifies status code is 200
     And verifies response body for Get Dean By id
 
+  @deleteAlican
   Scenario: Admin deletes created Dean Test
     And User gets id of the Dean with username "AliCancan"
-    And User sets the Url for Get Dean By id
-    And User deletes the created dean
+     And User sets the Url for Get Dean By id
+     And User deletes the created dean
 
 
 
