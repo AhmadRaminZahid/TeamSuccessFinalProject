@@ -5,6 +5,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.LoginPage;
 import pages.MainMenuPage;
 import pages.StudentInfoManagementPage;
@@ -23,6 +26,13 @@ public class US_17_Stepdefs {
 
 
     StudentInfoManagementPage studentInfoManagementPage=new StudentInfoManagementPage();
+
+    Actions actions = new Actions(Driver.getDriver());
+
+
+
+
+
 
 
     @Given("The teacher navigates to {string}")
@@ -71,7 +81,9 @@ public class US_17_Stepdefs {
 
     @And("The teacher clicks Choose Lesson")
     public void theTeacherClicksChooseLesson() {
-        studentInfoManagementPage.chooseLessonStudentInfoManagement.click();
+        Select selectlesson  =new Select(studentInfoManagementPage.chooseLessonStudentInfoManagement);
+        selectlesson.selectByIndex(1);
+//        studentInfoManagementPage.chooseLessonStudentInfoManagement.click();
  
         WaitUtils.waitFor(2);
     }
@@ -79,7 +91,9 @@ public class US_17_Stepdefs {
 
     @And("The teacher clicks Choose Student")
     public void theTeacherClicksChooseStudent() {
-        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
+        Select selectStudent=new Select(studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement);
+        selectStudent.selectByIndex(7);
+//        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
         WaitUtils.waitFor(2);
     }
 
@@ -143,13 +157,15 @@ public class US_17_Stepdefs {
     
     @And("teacher clicks Choose Lesson")
     public void teacherClicksChooseLesson() {
-        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
+        Select selectlesson1  =new Select(studentInfoManagementPage.chooseLessonStudentInfoManagement);
+        selectlesson1.selectByIndex(1);
         WaitUtils.waitFor(2);
     }
     
     @And("teacher clicks Choose Student")
     public void teacherClicksChooseStudent() {
-        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
+        Select selectStudent1=new Select(studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement);
+        selectStudent1.selectByIndex(6);
         WaitUtils.waitFor(2);
     }
     

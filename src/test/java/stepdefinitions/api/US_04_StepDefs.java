@@ -53,7 +53,8 @@ public class US_04_StepDefs {
     }
 
     @And("User sets the Url for Dean Save")
-    public void userSetsTheUrlForDeanSave() {spec.pathParams("first", "dean", "second", "save");
+    public void userSetsTheUrlForDeanSave() {
+        spec.pathParams("first", "dean", "second", "save");
     }
 
     @And("sets the payload for Dean Save")
