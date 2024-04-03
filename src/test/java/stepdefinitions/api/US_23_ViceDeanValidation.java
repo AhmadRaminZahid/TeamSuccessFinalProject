@@ -32,25 +32,14 @@ public class US_23_ViceDeanValidation {
     @And("admin sends GET request for all vice deans")
     public void adminSendsGETRequestForAllViceDeans() {
         response = given(spec).get("{first}/{second}");
-      //  response.prettyPrint();
+        //response.prettyPrint();
     }
 
     @And("admin gets the id of new created vice dean")
     public void adminGetsTheIdOfNewCreatedViceDean() {
-//        List<Integer> idList =  response.jsonPath().getList("findAll{it.username == '"+vicedeanUsername+"' }.userId");
-//        userId = idList.get(0);
-//        System.out.println("userId = " + userId);
-
-        JsonPath json = response.jsonPath();
-
-        for (int i = 0; i <200 ; i++) {
-            if (Objects.equals(json.getString("content[" + i + "].username"), Adminusername)){
-                Id= json.getString("content["+i+"].id");
-                System.out.println("Id = " + Id);
-                userId= Integer.valueOf(Id);
-                break;
-            }
-        }
+        List<Integer> idList =  response.jsonPath().getList("findAll{it.username == '"+vicedeanUsername+"' }.userId");
+        userId = idList.get(0);
+        System.out.println("userId = " + userId);
     }
 
     @When("admin sends GET request for the vice dean by its id")

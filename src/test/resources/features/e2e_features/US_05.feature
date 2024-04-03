@@ -1,7 +1,7 @@
-@us05_e2e
-Feature: US_04_05 Add and delete Dean
+@us05_e2e @serife
+Feature: US_05 Add and delete Dean e2e
 
-  Scenario: US_04 TC_01 Admin should be able to add Dean  (UI)
+  Scenario: Admin should be able to add Dean  (UI)
     Given Admin goes to website "https://managementonschools.com/"
     And Admin clicks on the Log in button at the home page
     And Admin enters the  admin username

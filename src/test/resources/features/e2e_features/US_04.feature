@@ -1,6 +1,6 @@
-@us04_e2e
-Feature: Dean Creation Validation e2e
-  Scenario: US_04 TC_01 Admin should be able to add Dean  (UI)
+@us04_e2e @serife
+Feature: US_04 Dean Creation Validation e2e
+  Scenario: Admin should be able to add Dean  (UI)
     Given Admin goes to website "https://managementonschools.com/"
     And Admin clicks on the Log in button at the home page
     And Admin enters the  admin username
