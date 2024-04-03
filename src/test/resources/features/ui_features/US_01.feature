@@ -13,7 +13,7 @@ Feature: US_01 Students login register
     And students write their date of birth
     And students write their ssn
     And students write their username
-
+@smoke
   Scenario: TC_01 The students register
     And students write their password
     And students click register button

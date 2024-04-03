@@ -13,11 +13,13 @@ import static baseurl.RegisterBaseUrl.setupRegister;
 
 public class Hooks {
 
+
     @Before ("@api") //bu method spec atamanızı yapıyor. Yorumdan çıkarınca sorun çzöüldü
     public void beforeApi(){
         setUp("AdminBatch197","Batch197+");
         setupRegister();
     }
+
 
     @After
     public void tearDown(Scenario scenario){

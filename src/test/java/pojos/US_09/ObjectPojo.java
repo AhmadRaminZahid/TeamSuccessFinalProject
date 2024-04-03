@@ -1,5 +1,7 @@
 package pojos.US_09;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
 public class ObjectPojo implements Serializable {
@@ -52,12 +54,13 @@ public class ObjectPojo implements Serializable {
 
 	@Override
  	public String toString(){
-		return 
-			"ObjectPojo{" + 
-			"lessonId = '" + lessonId + '\'' + 
-			",lessonName = '" + lessonName + '\'' + 
-			",creditScore = '" + creditScore + '\'' + 
-			",compulsory = '" + compulsory + '\'' + 
+		return
+			"ObjectPojo{" +
+			"lessonId = '" + lessonId + '\'' +
+			",lessonName = '" + lessonName + '\'' +
+			",creditScore = '" + creditScore + '\'' +
+			",compulsory = '" + compulsory + '\'' +
 			"}";
 		}
+
 }

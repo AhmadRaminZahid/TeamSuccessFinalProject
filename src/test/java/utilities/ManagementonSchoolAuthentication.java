@@ -1,3 +1,4 @@
+
 package utilities;
 
 import io.restassured.http.ContentType;
@@ -25,4 +26,10 @@ public class ManagementonSchoolAuthentication {
         return response.jsonPath().getString("token");
 
     }
+
+
+
 }
+
+// {"password": "Mark.123","rememberMe": true,"username": "mark_twain"}
+

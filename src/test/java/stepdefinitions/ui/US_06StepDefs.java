@@ -17,9 +17,10 @@ import utilities.WaitUtils;
 import static com.github.javafaker.Faker.instance;
 
 public class US_06StepDefs {
-    public static String viceDeanCreateUserName ="aAbhc1k";
-    public static  String viceDeanCreateSSN= "415-11-2099";
-    public static  String viceDeanPhoneNumb= "415-410-1099";
+
+    public static String viceDeanCreateUserName ="aAbCc1";
+    public static  String viceDeanCreateSSN= "495-11-2039";
+    public static  String viceDeanPhoneNumb= "445-410-1039";
     LoginPage loginPage = new LoginPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
 
@@ -49,17 +50,23 @@ public class US_06StepDefs {
 
     @When("User enters name in name field")
     public void userEntersNameInNameField() {
-        deanManagementPage.name.sendKeys("Naim");
+
+deanManagementPage.name.sendKeys("Naim");
+
     }
 
     @And("User enters last name in the Surname field")
     public void userEntersLastNameInTheSurnameField() {
-        deanManagementPage.surname.sendKeys("last");
+
+deanManagementPage.surname.sendKeys("last");
+
     }
 
     @And("User enters place of birth in the Birth Place field")
     public void userEntersPlaceOfBirthInTheBirthPlaceField() {
-        deanManagementPage.birthPlace.sendKeys("Ankara");
+
+deanManagementPage.birthPlace.sendKeys("Ankara");
+
     }
 
     @And("User select gender")
@@ -74,17 +81,22 @@ public class US_06StepDefs {
 
     @And("User enters phone number in the phone number field")
     public void userEntersPhoneNumberInThePhoneNumberField() {
-        deanManagementPage.phoneNumber.sendKeys(viceDeanPhoneNumb);
+
+deanManagementPage.phoneNumber.sendKeys(viceDeanPhoneNumb);
     }
 
     @And("User enters social security number in the SSN field")
     public void userEntersSocialSecurityNumberInTheSSNField() {
-        deanManagementPage.ssn.sendKeys(viceDeanCreateSSN);
+
+deanManagementPage.ssn.sendKeys(viceDeanCreateSSN);
+
     }
 
     @And("User enters user name in the User Name field")
     public void userEntersUserNameInTheUserNameField() {
-        deanManagementPage.username.sendKeys(viceDeanCreateUserName);
+
+deanManagementPage.username.sendKeys(viceDeanCreateUserName);
+
     }
 
     @And("User enters valid password in the Password field")
