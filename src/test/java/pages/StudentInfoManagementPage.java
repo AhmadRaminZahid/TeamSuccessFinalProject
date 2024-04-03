@@ -29,7 +29,7 @@ public class StudentInfoManagementPage {
      //option[@value='3288']=Adam Smith
 
     @FindBy(xpath = "//select[@id='studentId']") public WebElement chooseStudentStudentInfoManagement;
-    @FindBy(xpath = "//option[@value='45']") public WebElement chooseEducationTermInfoManagement;
+    @FindBy(xpath = "//select[@id='educationTermId']") public WebElement chooseEducationTermInfoManagement;
 
     @FindBy(id = "absentee") public WebElement chooseAbsenteeStudentTermInfoManagement;
 

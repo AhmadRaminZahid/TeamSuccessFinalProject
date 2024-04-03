@@ -82,7 +82,7 @@ public class US_17_Stepdefs {
     @And("The teacher clicks Choose Lesson")
     public void theTeacherClicksChooseLesson() {
         Select selectlesson  =new Select(studentInfoManagementPage.chooseLessonStudentInfoManagement);
-        selectlesson.selectByIndex(1);
+        selectlesson.selectByVisibleText("C#");
 //        studentInfoManagementPage.chooseLessonStudentInfoManagement.click();
  
         WaitUtils.waitFor(2);
@@ -92,14 +92,16 @@ public class US_17_Stepdefs {
     @And("The teacher clicks Choose Student")
     public void theTeacherClicksChooseStudent() {
         Select selectStudent=new Select(studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement);
-        selectStudent.selectByIndex(7);
+        selectStudent.selectByValue("3361");
 //        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
         WaitUtils.waitFor(2);
     }
 
     @And("The teacher clicks Choose Education Term")
     public void theTeacherClicksChooseEducationTerm() {
-        studentInfoManagementPage.chooseEducationTermInfoManagement.click();
+        Select selectEducationTerm=new Select(studentInfoManagementPage.chooseEducationTermInfoManagement);
+        selectEducationTerm.selectByValue("47");
+        
     }
 
     @And("The teacher enters Absentee")
@@ -171,8 +173,8 @@ public class US_17_Stepdefs {
     
     @And("teacher clicks Choose Education Term")
     public void teacherClicksChooseEducationTerm() {
-        studentInfoManagementPage.chooseEducationTermInfoManagement.click();
-        WaitUtils.waitFor(2);
+        Select selectEducationTerm=new Select(studentInfoManagementPage.chooseEducationTermInfoManagement);
+        selectEducationTerm.selectByValue("47");
         
         
     }
