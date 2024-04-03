@@ -32,25 +32,25 @@ public class US_01_Stepdefs {
 
     @And("students write their name")
     public void studentsWriteTheirName() {
-        registerPage.nameOfTheRegisterField.sendKeys("Johjgn", Keys.TAB);
+        registerPage.nameOfTheRegisterField.sendKeys("John", Keys.TAB);
         WaitUtils.waitFor(1);
     }
 
     @And("students write their surname")
     public void studentsWriteTheirSurname() {
-        registerPage.surnameField.sendKeys("Doer", Keys.TAB);
+        registerPage.surnameField.sendKeys("Doe", Keys.TAB);
         WaitUtils.waitFor(1);
     }
 
     @And("students write their birth place")
     public void studentsWriteTheirBirthPlace() {
-        registerPage.birthPlaceField.sendKeys("Istanbul", Keys.TAB);
+        registerPage.birthPlaceField.sendKeys("New york", Keys.TAB);
         WaitUtils.waitFor(1);
     }
 
     @And("students write their phone number")
     public void studentsWriteTheirPhoneNumber() {
-        registerPage.phoneNumberField.sendKeys("509-501-7478", Keys.TAB);
+        registerPage.phoneNumberField.sendKeys("171-569-5896", Keys.TAB);
         WaitUtils.waitFor(1);
     }
 
@@ -62,26 +62,26 @@ public class US_01_Stepdefs {
 
     @And("students write their date of birth")
     public void studentsWriteTheirDateOfBirth() {
-        registerPage.birthDayField.sendKeys("12/21/1996");
+        registerPage.birthDayField.sendKeys("06/07/1978");
         WaitUtils.waitFor(1);
     }
 
     @And("students write their ssn")
     public void studentsWriteTheirSsn() {
-        registerPage.ssnField.sendKeys("406-07-9014");
+        registerPage.ssnField.sendKeys("456-89-8569");
         WaitUtils.waitFor(1);
     }
 
     @And("students write their username")
     public void studentsWriteTheirUsername() {
-        registerPage.userNameOfTheRegisterField.sendKeys("JohDj12");
+        registerPage.userNameOfTheRegisterField.sendKeys("Johndoe");
         WaitUtils.waitFor(1);
     }
 
     //TC_01
     @And("students write their password")
     public void studentsWriteTheirPassword() {
-        registerPage.passwordField.sendKeys("Nasilsijn012");
+        registerPage.passwordField.sendKeys("SecurePwd1");
         WaitUtils.waitFor(1);
     }
 

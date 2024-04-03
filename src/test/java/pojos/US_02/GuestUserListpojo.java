@@ -1,8 +1,8 @@
-package pojos;
+package pojos.US_02;
 
 import java.io.Serializable;
 
-public class DeanPostPojo implements Serializable {
+public class GuestUserListpojo implements Serializable {
 	private String birthDay;
 	private String birthPlace;
 	private String gender;
@@ -13,10 +13,10 @@ public class DeanPostPojo implements Serializable {
 	private String surname;
 	private String username;
 
-	public DeanPostPojo() {
+	public GuestUserListpojo() {
 	}
 
-	public DeanPostPojo(String birthDay, String birthPlace, String gender, String name, String password, String phoneNumber, String ssn, String surname, String username) {
+	public GuestUserListpojo(String birthDay, String birthPlace, String gender, String name, String password, String phoneNumber, String ssn, String surname, String username) {
 		this.birthDay = birthDay;
 		this.birthPlace = birthPlace;
 		this.gender = gender;
@@ -103,7 +103,7 @@ public class DeanPostPojo implements Serializable {
 	@Override
  	public String toString(){
 		return 
-			"DeanPostPojo{" + 
+			"GuestUserListpojo{" + 
 			"birthDay = '" + birthDay + '\'' + 
 			",birthPlace = '" + birthPlace + '\'' + 
 			",gender = '" + gender + '\'' + 

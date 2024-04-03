@@ -1,8 +1,8 @@
-package pojos;
+package pojos.US_01;
 
 import java.io.Serializable;
 
-public class ObjectPojo implements Serializable {
+public class ObjectInner implements Serializable {
 	private int userId;
 	private String username;
 	private String name;
@@ -13,10 +13,10 @@ public class ObjectPojo implements Serializable {
 	private String phoneNumber;
 	private String gender;
 
-	public ObjectPojo() {
+	public ObjectInner() {
 	}
 
-	public ObjectPojo(int userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
+	public ObjectInner(int userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
 		this.userId = userId;
 		this.username = username;
 		this.name = name;
@@ -103,7 +103,7 @@ public class ObjectPojo implements Serializable {
 	@Override
  	public String toString(){
 		return 
-			"ObjectPojo{" + 
+			"Objectpojo{" + 
 			"userId = '" + userId + '\'' + 
 			",username = '" + username + '\'' + 
 			",name = '" + name + '\'' + 
