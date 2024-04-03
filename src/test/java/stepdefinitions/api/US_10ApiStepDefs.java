@@ -4,9 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
+import org.openqa.selenium.support.ui.Wait;
 import pojos.US_10.LessonProgramPojo;
 import pojos.US_10.LessonProgramPostPojo;
 import pojos.US_11.ObjectPojo;
+import utilities.WaitUtils;
 
 import java.util.List;
 
@@ -27,6 +29,7 @@ public class US_10ApiStepDefs {
 
     @And("User sets the Url to create Lesson Program")
     public void userSetsTheUrlToCreateLessonProgram() {
+        WaitUtils.waitFor(2);
         spec.pathParams("first", "lessonPrograms", "second", "save");
     }
 
