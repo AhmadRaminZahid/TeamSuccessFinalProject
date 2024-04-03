@@ -1,24 +1,12 @@
-package pojos.US_09;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+package pojos.US_10;
 
 import java.io.Serializable;
 
-public class ObjectPojo implements Serializable {
+public class LessonNamePojo implements Serializable {
 	private int lessonId;
 	private String lessonName;
 	private int creditScore;
 	private boolean compulsory;
-
-	public ObjectPojo() {
-	}
-
-	public ObjectPojo(int lessonId, String lessonName, int creditScore, boolean compulsory) {
-		this.lessonId = lessonId;
-		this.lessonName = lessonName;
-		this.creditScore = creditScore;
-		this.compulsory = compulsory;
-	}
 
 	public void setLessonId(int lessonId){
 		this.lessonId = lessonId;
@@ -52,15 +40,24 @@ public class ObjectPojo implements Serializable {
 		return compulsory;
 	}
 
+	public LessonNamePojo() {
+	}
+
+	public LessonNamePojo(int lessonId, String lessonName, int creditScore, boolean compulsory) {
+		this.lessonId = lessonId;
+		this.lessonName = lessonName;
+		this.creditScore = creditScore;
+		this.compulsory = compulsory;
+	}
+
 	@Override
  	public String toString(){
-		return
-			"ObjectPojo{" +
-			"lessonId = '" + lessonId + '\'' +
-			",lessonName = '" + lessonName + '\'' +
-			",creditScore = '" + creditScore + '\'' +
-			",compulsory = '" + compulsory + '\'' +
+		return 
+			"LessonNamePojo{" + 
+			"lessonId = '" + lessonId + '\'' + 
+			",lessonName = '" + lessonName + '\'' + 
+			",creditScore = '" + creditScore + '\'' + 
+			",compulsory = '" + compulsory + '\'' + 
 			"}";
 		}
-
 }
