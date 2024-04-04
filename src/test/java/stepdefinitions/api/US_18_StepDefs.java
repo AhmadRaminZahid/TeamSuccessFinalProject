@@ -10,6 +10,7 @@ import pojos.US_17.StudentInfoExpectedDataPojo;
 import utilities.WaitUtils;
 
 import static baseurl.ManagementonSchool_BaseUrl.spec;
+
 import static io.restassured.RestAssured.given;
 import static stepdefinitions.api.US_17_StepDefs.studentInfoId;
 
@@ -22,7 +23,6 @@ public class US_18_StepDefs {
     @When("Teacher sets the Url for GetId Student info for teacher")
     public void teacherSetsTheUrlForGetIdStudentInfoForTeacher() {
         spec.pathParams("first","studentInfo","second","get","third",studentInfoId);
-        WaitUtils.waitFor(2);
     }
     
     @And("Teacher sets the expected data for to updated Student info")
@@ -35,6 +35,7 @@ public class US_18_StepDefs {
     public void teacherSendsGETIdRequestAndGetResponse() {
         response = given(spec).get("{first}/{second}/{third}");
         response.prettyPrint();
+        response.then().statusCode(200);
     }
     
     @And("Teacher set the url to update Student info")
@@ -53,23 +54,22 @@ public class US_18_StepDefs {
         
     }
     
-    @Then("Teacher verifies status code for update")
-    public void teacherVerifiesStatusCodeForUpdate() {
-        Double expectedMidterm=updatedData.getMidtermExam();
-        Double expectedfinalExam=updatedData.getFinalExam();
-        Integer expectedAbseentee=updatedData.getAbsentee();
-        Integer expectedLessonId=updatedData.getLessonId();
-        Integer expectedStudentId=updatedData.getStudentId();
-        Integer expectedEducationTermId=updatedData.getEducationTermId();
+    @Then("Teacher verifies new body for update")
+    public void teacherVerifiesNewBodyForUpdate() {
+        String expectedMidterm=String.valueOf(updatedData.getMidtermExam());
+        String expectedfinalExam=String.valueOf(updatedData.getFinalExam());
+        String expectedAbseentee=String.valueOf(updatedData.getAbsentee());
+        String expectedLessonId=String.valueOf(updatedData.getLessonId());
+        String expectedStudentId=String.valueOf(updatedData.getStudentId());
+        String expectedEducationTermId=String.valueOf(updatedData.getEducationTermId());
         JsonPath actualData=response.jsonPath();
         
-        
-        Assert.assertEquals(expectedMidterm,Double.valueOf(actualData.getString("object.midtermExam")));
-        Assert.assertEquals(expectedfinalExam,Double.valueOf(actualData.getString("object.finalExam")));
-        Assert.assertEquals(expectedAbseentee,Integer.valueOf(actualData.getString("object.absentee")));
-        Assert.assertEquals(updatedData.getInfoNote(),(actualData.getString("object.infoNote")));
-        Assert.assertEquals(expectedLessonId,Integer.valueOf(actualData.getString("object.lessonId")));
-        Assert.assertEquals(expectedStudentId,Integer.valueOf(actualData.getString("object.studentResponse.userId")));
-        Assert.assertEquals(expectedEducationTermId,Integer.valueOf(actualData.getString("object.educationTermId")));
+        Assert.assertEquals(expectedMidterm,actualData.getString("object.midtermExam"));
+        Assert.assertEquals(expectedfinalExam,actualData.getString("object.finalExam"));
+        Assert.assertEquals(expectedAbseentee,actualData.getString("object.absentee"));
+        Assert.assertEquals(updatedData.getInfoNote(),actualData.getString("object.infoNote"));
+        Assert.assertEquals(expectedLessonId,actualData.getString("object.lessonId"));
+        Assert.assertEquals(expectedStudentId,actualData.getString("object.studentResponse.userId"));
+        Assert.assertEquals(expectedEducationTermId,actualData.getString("object.educationTermId"));
     }
 }

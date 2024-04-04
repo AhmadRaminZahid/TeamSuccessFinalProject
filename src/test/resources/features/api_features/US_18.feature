@@ -9,7 +9,7 @@ Feature: US_18 Get Update and Delete Student info
     And Teacher sends GETId request and get response
     And Teacher set the url to update Student info
     And Teacher set update request for student info
-    Then Teacher verifies status code for update
+    Then Teacher verifies new body for update
 
 
 

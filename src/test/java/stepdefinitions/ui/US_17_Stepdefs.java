@@ -24,16 +24,9 @@ public class US_17_Stepdefs {
 
     MainMenuPage mainMenuPAge =new MainMenuPage();
 
-
     StudentInfoManagementPage studentInfoManagementPage=new StudentInfoManagementPage();
 
     Actions actions = new Actions(Driver.getDriver());
-
-
-
-
-
-
 
     @Given("The teacher navigates to {string}")
     public void theTeacherNavigatesTo(String HomeUrl) {
@@ -221,7 +214,3 @@ public class US_17_Stepdefs {
         Driver.closeDriver();
     }
 }
-    
-    
-    
-    
