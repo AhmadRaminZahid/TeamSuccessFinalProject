@@ -94,8 +94,8 @@ public class US_01_Stepdefs {
     @And("User sets the Url for delete guest user By id")
     public void userSetsTheUrlForDeleteGuestUserById() {
 
-//        spec.pathParams("first", "guestUser", "second", "delete", "third", userId); // url
-//        response = given(spec).delete("{first}/{second}/{third}"); // request
+        spec.pathParams("first", "guestUser", "second", "delete", "third", userId); // url
+        response = given(spec).delete("{first}/{second}/{third}"); // request
 
 
     }

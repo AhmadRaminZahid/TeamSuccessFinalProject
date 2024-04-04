@@ -28,12 +28,12 @@ Feature: US_01 User register on the page
 #    Then students must see "Guest User Registered" message
 #    And close the web page
 
-  Scenario: User Register guest user list validation (DB)
-    Given User sets connection
-    And User creates statement
+  Scenario: User Register guest user list validation
+    Given User sets connection for guest user
+    And User creates statement for guest user
     When User executes query for created email
-    Then validates result set
-    And User terminates connection
+    Then user validates result set for guest user
+    And User terminates connection for guest user
 
 
   Scenario: User deletes created guest user (API)
