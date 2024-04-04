@@ -19,7 +19,7 @@ public class US_19_StepDefs {
     public static List<String> studentId = List.of("3631","3653");
     Response response;
 
-    public static String description = "Meet Bahar";
+    public static String description = "Meet Bahar New";
 
     @And("sets the Url for creating meeting with students")
     public void setsTheUrlForCreatingMeetingWithStudents() {
@@ -28,7 +28,7 @@ public class US_19_StepDefs {
     @And("sets the payload to create meeting with students")
     public void setsThePayloadToCreateMeetingWithStudents() {
 
-    payload = new MeetPostpojo("2025-01-24", description, "13:00", "14:00",studentId);
+    payload = new MeetPostpojo("2025-01-25", description, "13:00", "14:00",studentId);
 
     }
 
