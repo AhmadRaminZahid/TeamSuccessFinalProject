@@ -28,8 +28,6 @@ public class Us_24_Stepdefs {
     Actualpojo actualData;
     ObjectMapper objectMapper = new ObjectMapper();
 
-
-
 //   Map<String,Object> listOfActualData;
 
 

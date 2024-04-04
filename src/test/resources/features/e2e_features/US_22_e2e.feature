@@ -36,6 +36,7 @@ Feature: Admin adds new admin
     Then validates result set for admin
     And User terminates connection for admin
 
+
   Scenario: admin deletes the created admin
     Given User is authorized as "Admin"
     When admin deletes the created admin by id

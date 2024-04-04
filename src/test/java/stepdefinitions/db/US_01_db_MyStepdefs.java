@@ -1,11 +1,12 @@
-package stepdefinitions.Db;
+package stepdefinitions.db;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pojos.US_01.GuestUserpojo;
+
 import pojos.US_01.ObjectInner;
+import utilities.DBUtils;
 
 import java.sql.*;
 
@@ -13,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 import static stepdefinitions.api.US_01_Stepdefs.userId;
 import static stepdefinitions.api.US_01_Stepdefs.username;
 
-public class US_01_Db_MyStepdefs {
+public class US_01_db_MyStepdefs {
 
     Connection connection;
     Statement statement;
@@ -22,25 +23,25 @@ public class US_01_Db_MyStepdefs {
     ObjectInner objectInner;
 
 
-    @Given("User sets connection")
-    public void userSetsConnection() throws SQLException {
-        connection = DriverManager.getConnection("jdbc:postgresql://managementonschools.com:5432/school_management","select_user","43w5ijfso");
+    @Given("User sets connection for guest user")
+    public void userSetsConnectionforguestuser() throws SQLException {
+        connection =  DriverManager.getConnection("jdbc:postgresql://managementonschools.com:5432/school_management","select_user","43w5ijfso");
     }
 
-    @And("User creates statement")
-    public void userCreatesStatement() throws SQLException {
+    @And("User creates statement for guest user")
+    public void userCreatesStatementForGuestUser() throws SQLException {
         statement = connection.createStatement();
     }
 
     @When("User executes query for created email")
     public void userExecutesQueryForCreatedEmail() throws SQLException {
-        String query = "select * from guest_user where name = 'John'";
+        String query = "select * from guest_user where username ='"+username+"'";
         resultSet = statement.executeQuery(query);
 
     }
 
-    @Then("validates result set")
-    public void validatesResultSet() throws SQLException {
+    @Then("user validates result set for guest user")
+    public void uservalidatesResultSetforguestuser() throws SQLException {
         resultSet.next();
         objectInner = new ObjectInner(userId, "Johndoe", "John", "Doe", "1978-07-06", "456-89-8569", "New york", "171-569-5896", "MALE");
 
@@ -58,11 +59,10 @@ public class US_01_Db_MyStepdefs {
 
     }
 
-    @And("User terminates connection")
-    public void userTerminatesConnection() throws SQLException {
-        resultSet.close();
-        connection.close();
+    @And("User terminates connection for guest user")
+    public void userTerminatesConnectionforguestuser() throws SQLException {
 
+        DBUtils.closeConnection();
 
     }
 }

@@ -56,6 +56,7 @@ public class US_16_DB_StepDefs {
 
     @Then("User terminates connection US_16")
     public void userTerminatesConnectionUS_16() {
+
         DBUtils.closeConnection();
     }
 }
