@@ -103,8 +103,8 @@ public class US_17_StepDefs {
     @When("Teacher deletes Student info by id")
     public void teacherDeletesStudentInfoById() {
 
-//        spec.pathParams("first","studentInfo", "second", "delete", "third", studentInfoId);
-//        response = given(spec).delete("{first}/{second}/{third}");
-//        response.then().statusCode(200);
+        spec.pathParams("first","studentInfo", "second", "delete", "third", studentInfoId);
+        response = given(spec).delete("{first}/{second}/{third}");
+        response.then().statusCode(200);
     }
 }
