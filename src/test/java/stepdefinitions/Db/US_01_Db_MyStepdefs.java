@@ -35,7 +35,7 @@ public class US_01_Db_MyStepdefs {
 
     @When("User executes query for created email")
     public void userExecutesQueryForCreatedEmail() throws SQLException {
-        String query = "select * from guest_user where name = 'John'";
+        String query = "select * from guest_user where username ='"+username+"'";
         resultSet = statement.executeQuery(query);
 
     }

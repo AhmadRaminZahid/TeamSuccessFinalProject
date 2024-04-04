@@ -134,8 +134,8 @@ public class US_17_Stepdefs {
         studentInfoManagementPage.chooseButtonSTudentTermInfoManagement.click();
     }
     
-    @And("teachers must see {string} message")
-    public void teachersMustSeeMessage(String expectedResult) {
+    @And("teachers must see Student Info saved Successfully message")
+    public void teachersMustSeeMessage() {
         studentInfoManagementPage.studentinfosavedMessage.isDisplayed();
         WaitUtils.waitFor(1);
     }

@@ -19,7 +19,7 @@ Feature: Grade Submission by Teacher
     And The teacher enters Final Exam
     And The teacher enters Info Note
     And  teacher clicks Submit Button
-    And teachers must see "Student Info Saved Succesfully" message
+    And teachers must see Student Info saved Successfully message
     And Close driver
 
 
