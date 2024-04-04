@@ -17,7 +17,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="50d765bc-f813-48af-be74-00832628af98">
-      <console name="TeamSuccess" type="STANDARD" schema="" session="Main"><![CDATA[select * from student_info where id='6188']]></console>
+      <console name="TeamSuccess" type="STANDARD" schema="" session="Main"><![CDATA[select * from guest_user where name = 'John']]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
