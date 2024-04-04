@@ -31,7 +31,7 @@ public class US_03_MyStepdefs {
     Response response1;
 
 
-
+    //post
     @Given("User sets the Url for contact message")
     public void userSetsTheUrlForContactMessage() {
         spec_1.pathParams("first", "contactMessages", "second", "save");
@@ -70,7 +70,7 @@ public class US_03_MyStepdefs {
     // GetAll
     @Given("admin sets the Url for contact messages getAll")
     public void adminSetsTheUrlForContactMessagesGetAll() {
-        spec.pathParams("first", "contactMessages", "second", "getAll").queryParams("sort","","Date","","type","","desc", "");
+        spec.pathParams("first", "contactMessages", "second", "getAll").queryParams("sort", "", "Date", "", "type", "", "desc", "");
     }
 
     @When("admin sets the expected data for contact messages getAll")
@@ -80,8 +80,8 @@ public class US_03_MyStepdefs {
 
     @And("admin sent the request and get the respond for contact messages getAll")
     public void adminSentTheRequestAndGetTheRespondForContactMessagesGetAll() {
-       response1 =  given(spec).body(expectedData).get("{first}/{second}");
-         actuallData1 = response1.as(GetActuallDatapojo.class);
+        response1 = given(spec).body(expectedData).get("{first}/{second}");
+        actuallData1 = response1.as(GetActuallDatapojo.class);
 
     }
 

@@ -12,14 +12,14 @@ Feature: Admin see the contact message
     And The user must type the Subject
     And The user must type Message
     And The user must click Send Message button
-#    And The user see "Contact Message Created Successfully" message
+    And The user see "Contact Message Created Successfully" message
     And close the web page
 
 
 
     #post
   Scenario: user sends message from contact (API)
-    Given User is authorized as "Admin"
+#    Given User is authorized as "Admin"
     Given User sets the Url for contact message
     And user sets the payload for contact message
     And user sends POST request and get response for contact message
@@ -29,7 +29,8 @@ Feature: Admin see the contact message
 
 #getAll
   Scenario: Admin seems message information (API)
-    Given admin sets the Url for contact messages getAll
+    Given User is authorized as "Admin"
+    When admin sets the Url for contact messages getAll
     When admin sets the expected data for contact messages getAll
     And admin sent the request and get the respond for contact messages getAll
     Then admin verifies status code is 200 for contact message getAll
