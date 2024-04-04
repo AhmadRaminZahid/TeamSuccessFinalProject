@@ -28,7 +28,7 @@ public class US_09_StepDefs {
     @And("Vice Dean sends POST request and get response")
     public void viceDeanSendsPOSTRequestAndGetResponse() {
         response = given(spec).body(payload).post("{first}/{second}");
-        response.prettyPrint();
+     //   response.prettyPrint();
     }
 
     @Then("verifies status code is {int} for added Lesson")
@@ -51,7 +51,7 @@ public class US_09_StepDefs {
         response = given(spec).get("{first}/{second}");
         List<Integer> idList =  response.jsonPath().getList("findAll{it.lessonName == 'newLesson' }.lessonId");
         userId = idList.get(0);
-        System.out.println("userId = " + userId);
+     //   System.out.println("userId = " + userId);
     }
     @And("Vice Dean sets the Url for Get Lesson By id")
     public void viceDeanSetsTheUrlForGetLessonById() {

@@ -74,7 +74,7 @@ public class US_04_StepDefs {
     @When("sends POST request and get response")
     public void sendsPOSTRequestAndGetResponse() {
         response = given(spec).body(payload).post("{first}/{second}");
-        response.prettyPrint();
+       // response.prettyPrint();
     }
 
     @Then("verifies status code is {int}")
@@ -118,7 +118,7 @@ public class US_04_StepDefs {
         response = given(spec).get("{first}/{second}");
         List<Integer> idList =  response.jsonPath().getList("findAll{it.username == '"+username+"' }.userId");
         userId = idList.get(0);
-        System.out.println("userId = " + userId);
+     //   System.out.println("userId = " + userId);
     }
 
     @And("User sets the Url for Get Dean By id")
@@ -136,7 +136,7 @@ public class US_04_StepDefs {
     @When("sends GET request and get response")
     public void sendsGETRequestAndGetResponse() {
         response = given(spec).get("{first}/{second}/{third}");
-        response.prettyPrint();
+        //    response.prettyPrint();
     }
 
     @And("verifies response body for Get Dean By id")

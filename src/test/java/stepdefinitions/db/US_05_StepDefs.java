@@ -33,7 +33,7 @@ public class US_05_StepDefs {
         while (resultSet.next()) {
             listOfUserId.add(resultSet.getObject("id"));
         }
-        System.out.println("listOfUserId = " + listOfUserId);
+     //   System.out.println("listOfUserId = " + listOfUserId);
     }
     @Then("verify deletion")
     public void verifyDeletion() {
@@ -41,7 +41,7 @@ public class US_05_StepDefs {
     //    Assert.assertFalse(listOfUserId.contains(userId));  // This doesn't work, I couldn't find the cause. When I try to verify an userId already exist in the list , It passed again.
 
         int lastIndexOfArray = listOfUserId.size();
-        System.out.println("Last userId of the listOfUserId = " + listOfUserId.get(lastIndexOfArray-1));  // this returns me last user id of the list
+    //    System.out.println("Last userId of the listOfUserId = " + listOfUserId.get(lastIndexOfArray-1));  // this returns me last user id of the list
 
         Assert.assertNotEquals(userId,listOfUserId.get(lastIndexOfArray-1));
     }

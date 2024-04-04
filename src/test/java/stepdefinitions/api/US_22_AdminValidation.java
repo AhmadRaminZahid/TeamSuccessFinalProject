@@ -8,6 +8,8 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import pojos.US_22_Pojos.AdminExpectedDataPojo;
+import utilities.WaitUtils;
+
 import java.util.Objects;
 import static baseurl.ManagementonSchool_BaseUrl.spec;
 import static io.restassured.RestAssured.given;
@@ -31,6 +33,7 @@ public class US_22_AdminValidation {
     public void adminSetsTheUrlToSendTheGetAllRequestForAdmins() {
 
         spec.pathParams("first","admin","second","getAll").queryParams("page","0","size","200","sort","name","type","desc");
+        WaitUtils.waitFor(3);
     }
 
     @And("admin sends GET request for all admins")
@@ -89,9 +92,9 @@ public class US_22_AdminValidation {
         //spec.pathParams("first","admin","second","getAll").queryParams("page","0","size","200","sort","name","type","desc");
         //response = given(spec).get("{first}/{second}");
         JsonPath json = response.jsonPath();
+
         for (int i = 0; i <200 ; i++) {
             if (Objects.equals(json.getString("content[" + i + "].username"), Adminusername)){
-
                 createdAdminUsername=json.getString("content["+i+"].username");
                 createdAdminSsn=json.getString("content["+i+"].ssn");
                 createdAdminName=json.getString("content["+i+"].name");
@@ -103,6 +106,7 @@ public class US_22_AdminValidation {
                 createdAdminbuilt_in=json.getString("content["+i+"].built_in");
                 break;
             }
+
         }
 
     }
