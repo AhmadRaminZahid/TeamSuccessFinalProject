@@ -18,8 +18,7 @@ public class US_09_StepDefs {
     public static int userId;
     @And("Vice Dean sets the Url to add Lesson")
     public void viceDeanSetsTheUrlToAddLesson() {
-        spec.pathParams("first", "lessons", "second", "save");
-    }
+        spec.pathParams("first", "lessons", "second", "save");}
 
     @And("Vice Dean sets the payload to add Lesson")
     public void viceDeanSetsThePayloadToAddLesson() {

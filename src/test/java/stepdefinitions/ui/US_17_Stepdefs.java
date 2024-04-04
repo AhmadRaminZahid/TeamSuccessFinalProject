@@ -136,8 +136,8 @@ public class US_17_Stepdefs {
     
     @And("teachers must see {string} message")
     public void teachersMustSeeMessage(String expectedResult) {
-        assertEquals(expectedResult,"Student Info Saved Succesfully");
-        WaitUtils.waitFor(5);
+        studentInfoManagementPage.studentinfosavedMessage.isDisplayed();
+        WaitUtils.waitFor(1);
     }
     
     @And("Close driver")

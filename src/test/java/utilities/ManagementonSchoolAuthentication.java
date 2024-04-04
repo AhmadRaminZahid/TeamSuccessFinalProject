@@ -12,13 +12,13 @@ public class ManagementonSchoolAuthentication {
 //        System.out.println("Token = " + generateToken());
 //    }
 
-    public static String generateToken(String userName, String password){
+    public static String generateToken(String userName, String password) {
 
         String url = "https://managementonschools.com/app/auth/login";
 
         String payload = "{\n" +
-                "  \"password\": \""+password+"\",\n" +
-                "  \"username\": \""+userName+"\"\n" +
+                "  \"password\": \"" + password + "\",\n" +
+                "  \"username\": \"" + userName + "\"\n" +
                 "}";
 
         Response response = given().body(payload).contentType(ContentType.JSON).when().post(url);
@@ -26,6 +26,10 @@ public class ManagementonSchoolAuthentication {
         return response.jsonPath().getString("token");
 
     }
+
+
+
 }
 
 // {"password": "Mark.123","rememberMe": true,"username": "mark_twain"}
+

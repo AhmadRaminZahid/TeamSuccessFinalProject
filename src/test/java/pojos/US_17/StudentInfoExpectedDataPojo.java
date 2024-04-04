@@ -5,16 +5,16 @@ import java.io.Serializable;
 public class StudentInfoExpectedDataPojo implements Serializable {
 	private int absentee;
 	private int educationTermId;
-	private int finalExam;
+	private double finalExam;
 	private String infoNote;
 	private int lessonId;
-	private int midtermExam;
+	private double midtermExam;
 	private int studentId;
 	
 	public StudentInfoExpectedDataPojo() {
 	}
 	
-	public StudentInfoExpectedDataPojo(int absentee, int educationTermId, int finalExam, String infoNote, int lessonId, int midtermExam, int studentId) {
+	public StudentInfoExpectedDataPojo(int absentee, int educationTermId, double finalExam, String infoNote, int lessonId, double midtermExam, int studentId) {
 		this.absentee = absentee;
 		this.educationTermId = educationTermId;
 		this.finalExam = finalExam;
@@ -44,7 +44,7 @@ public class StudentInfoExpectedDataPojo implements Serializable {
 		this.finalExam = finalExam;
 	}
 
-	public int getFinalExam(){
+	public double getFinalExam(){
 		return finalExam;
 	}
 
@@ -68,7 +68,7 @@ public class StudentInfoExpectedDataPojo implements Serializable {
 		this.midtermExam = midtermExam;
 	}
 
-	public int getMidtermExam(){
+	public double getMidtermExam(){
 		return midtermExam;
 	}
 

@@ -3,13 +3,13 @@ package stepdefinitions.db;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pojos.US_16.ContactMesasgePostPojo;
 import pojos.US_17.StudentInfoExpectedDataPojo;
 import utilities.DBUtils;
 
 import java.sql.*;
 
 import static org.junit.Assert.assertEquals;
+import static stepdefinitions.api.US_17_StepDefs.studentInfoId;
 
 public class US_17_DB_StepDefs {
 
@@ -33,13 +33,14 @@ public class US_17_DB_StepDefs {
 
     @And("teacher executes query for created meet US_17")
     public void teacherExecutesQueryForCreatedMeetUS_17() throws SQLException {
-        query ="select * from student_info where id='6188'";
+        query ="select * from student_info where id='"+studentInfoId+"'";
         resultSet = statement.executeQuery(query);
         System.out.println("resultSet = " + resultSet);
     }
 
     @Then("teacher validates result set US_17")
     public void teacherValidatesResultSetUS_17() throws SQLException {
+        expectedData= new StudentInfoExpectedDataPojo(10,47,56,"hello world, this is a test",4451,40,3361);
         String expectedMidterm=String.valueOf(expectedData.getMidtermExam());
         String expectedfinalExam=String.valueOf(expectedData.getFinalExam());
         String expectedAbsentee=String.valueOf(expectedData.getAbsentee());
@@ -47,18 +48,18 @@ public class US_17_DB_StepDefs {
         String expectedStudentId=String.valueOf(expectedData.getStudentId());
         String expectedEducationTermId=String.valueOf(expectedData.getEducationTermId());
         resultSet.next();
-        expectedData= new StudentInfoExpectedDataPojo(10,47,56,"hello world, this is a test",4451,40,3361);
         assertEquals(expectedAbsentee,resultSet.getString("absentee"));
         assertEquals(expectedEducationTermId,resultSet.getString("education_term_id"));
-        assertEquals(expectedfinalExam,resultSet.getString("final_exam"));
+        assertEquals(expectedfinalExam,resultSet.getString("final_exam")+".0");
         assertEquals(expectedData.getInfoNote(),resultSet.getString("info_note"));
         assertEquals(expectedLessonId,resultSet.getString("lesson_lesson_id"));
-        assertEquals(expectedMidterm,resultSet.getString("midterm_exam"));
+        assertEquals(expectedMidterm,resultSet.getString("midterm_exam")+".0");
         assertEquals(expectedStudentId,resultSet.getString("student_id"));
     }
 
     @And("teacher terminates connection US_17")
     public void teacherTerminatesConnectionUS_17() {
+
         DBUtils.closeConnection();
     }
 }
