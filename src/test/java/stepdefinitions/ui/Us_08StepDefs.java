@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Us_08StepDefs {
 
-    public static String className="c1Aclass";
+    public static String className="CplusSs";
 
     ViceDeanManagementPage viceDeanManagementPage = new ViceDeanManagementPage();
     LoginPage loginPage= new LoginPage();

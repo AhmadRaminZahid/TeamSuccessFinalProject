@@ -18,9 +18,9 @@ import static com.github.javafaker.Faker.instance;
 
 public class US_06StepDefs {
 
-    public static String viceDeanCreateUserName ="aAbCc1";
-    public static  String viceDeanCreateSSN= "495-11-2039";
-    public static  String viceDeanPhoneNumb= "445-410-1039";
+    public static String viceDeanCreateUserName ="aAbCc11";
+    public static  String viceDeanCreateSSN= "496-11-2039";
+    public static  String viceDeanPhoneNumb= "441-410-1039";
     LoginPage loginPage = new LoginPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
 
