@@ -1,5 +1,8 @@
+
 @us3 @ey @regression
+
 Feature: Admin see the Guest user list
+
 
   Background:
     Given Student goes to website "https://managementonschools.com/"
