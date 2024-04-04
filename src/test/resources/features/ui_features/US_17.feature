@@ -1,4 +1,4 @@
-@us_17
+@us_17 @regression
 Feature: Grade Submission by Teacher
 
   Background: Login part as a Teacher
@@ -8,7 +8,7 @@ Feature: Grade Submission by Teacher
     And The teacher enters the password
     And The teacher clicks on Login button
 
-
+@smoke
   Scenario: US_17 TC_01 - Teacher gives grades to students (Add Student Info)
     When The teacher sees Student Info Management page
     And The teacher clicks Choose Lesson

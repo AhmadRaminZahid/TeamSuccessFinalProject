@@ -1,5 +1,7 @@
 package baseurl;
 
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
@@ -12,15 +14,17 @@ public class ManagementonSchool_BaseUrl {
     public static RequestSpecification spec;
 
 
-    public static void setUp(){
-        String baseUrl = "https://managementonschools.com/";
+
+    public static void setUp(String userName, String password){
+        String baseUrl = "https://managementonschools.com/app";
 
         spec = new RequestSpecBuilder()
-                .setContentType(ContentType.JSON)
-                .addHeader("Authorization", generateToken())
+
                 .setBaseUri(baseUrl)
+                .setContentType(ContentType.JSON)
+                .addHeader("Authorization", generateToken(userName,password))
                 .build();
-    }
+}
 
 }
 

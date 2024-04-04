@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.RegisterPage;
+import utilities.BrowserUtils;
 import utilities.Driver;
 import utilities.WaitUtils;
 
@@ -37,19 +38,19 @@ public class US_01_Stepdefs {
 
     @And("students write their surname")
     public void studentsWriteTheirSurname() {
-        registerPage.surnameField.sendKeys("Doer", Keys.TAB);
+        registerPage.surnameField.sendKeys("Doe", Keys.TAB);
         WaitUtils.waitFor(1);
     }
 
     @And("students write their birth place")
     public void studentsWriteTheirBirthPlace() {
-        registerPage.birthPlaceField.sendKeys("Istanbul", Keys.TAB);
+        registerPage.birthPlaceField.sendKeys("New york", Keys.TAB);
         WaitUtils.waitFor(1);
     }
 
     @And("students write their phone number")
     public void studentsWriteTheirPhoneNumber() {
-        registerPage.phoneNumberField.sendKeys("509-501-7458", Keys.TAB);
+        registerPage.phoneNumberField.sendKeys("171-569-5896", Keys.TAB);
         WaitUtils.waitFor(1);
     }
 
@@ -61,32 +62,32 @@ public class US_01_Stepdefs {
 
     @And("students write their date of birth")
     public void studentsWriteTheirDateOfBirth() {
-        registerPage.birthDayField.sendKeys("12/25/1994");
+        registerPage.birthDayField.sendKeys("06/07/1978");
         WaitUtils.waitFor(1);
     }
 
     @And("students write their ssn")
     public void studentsWriteTheirSsn() {
-        registerPage.ssnField.sendKeys("406-07-9004");
+        registerPage.ssnField.sendKeys("456-89-8569");
         WaitUtils.waitFor(1);
     }
 
     @And("students write their username")
     public void studentsWriteTheirUsername() {
-        registerPage.userNameOfTheRegisterField.sendKeys("JohD12");
+        registerPage.userNameOfTheRegisterField.sendKeys("Johndoe");
         WaitUtils.waitFor(1);
     }
 
     //TC_01
     @And("students write their password")
     public void studentsWriteTheirPassword() {
-        registerPage.passwordField.sendKeys("Nasilsin012");
+        registerPage.passwordField.sendKeys("SecurePwd1");
         WaitUtils.waitFor(1);
     }
 
     @And("students click register button")
     public void studentsClickRegisterButton() {
-        registerPage.registerButton.click();
+        BrowserUtils.clickWithTimeOut(registerPage.registerButton,2);
         WaitUtils.waitFor(1);
     }
 

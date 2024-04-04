@@ -8,7 +8,7 @@ Feature: View and Update Student Grades by Teacher
     And Thet teacher enters the password
     And Thet teacher clicks on Login button
 
-
+@smoke
   Scenario: US_18 TC_01 - Teacher views and updates grades for students (Student Info List)
      When Thet teacher sees Student Info Management page
      And Thet teacher sees Student Info List

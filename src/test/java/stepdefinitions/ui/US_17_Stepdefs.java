@@ -5,6 +5,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.LoginPage;
 import pages.MainMenuPage;
 import pages.StudentInfoManagementPage;
@@ -23,6 +26,13 @@ public class US_17_Stepdefs {
 
 
     StudentInfoManagementPage studentInfoManagementPage=new StudentInfoManagementPage();
+
+    Actions actions = new Actions(Driver.getDriver());
+
+
+
+
+
 
 
     @Given("The teacher navigates to {string}")
@@ -71,7 +81,9 @@ public class US_17_Stepdefs {
 
     @And("The teacher clicks Choose Lesson")
     public void theTeacherClicksChooseLesson() {
-        studentInfoManagementPage.chooseLessonStudentInfoManagement.click();
+        Select selectlesson  =new Select(studentInfoManagementPage.chooseLessonStudentInfoManagement);
+        selectlesson.selectByVisibleText("C#");
+//        studentInfoManagementPage.chooseLessonStudentInfoManagement.click();
  
         WaitUtils.waitFor(2);
     }
@@ -79,13 +91,17 @@ public class US_17_Stepdefs {
 
     @And("The teacher clicks Choose Student")
     public void theTeacherClicksChooseStudent() {
-        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
+        Select selectStudent=new Select(studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement);
+        selectStudent.selectByValue("3361");
+//        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
         WaitUtils.waitFor(2);
     }
 
     @And("The teacher clicks Choose Education Term")
     public void theTeacherClicksChooseEducationTerm() {
-        studentInfoManagementPage.chooseEducationTermInfoManagement.click();
+        Select selectEducationTerm=new Select(studentInfoManagementPage.chooseEducationTermInfoManagement);
+        selectEducationTerm.selectByValue("47");
+        
     }
 
     @And("The teacher enters Absentee")
@@ -109,7 +125,7 @@ public class US_17_Stepdefs {
 
     @And("The teacher enters Info Note")
     public void theTeacherEntersInfoNote() {
-        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("CC + dersten geçti", Keys.TAB);
+        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("hello world, this is a test", Keys.TAB);
         WaitUtils.waitFor(5);
     }
     
@@ -120,8 +136,8 @@ public class US_17_Stepdefs {
     
     @And("teachers must see {string} message")
     public void teachersMustSeeMessage(String expectedResult) {
-        assertEquals(expectedResult,"Student Info Saved Succesfully");
-        WaitUtils.waitFor(5);
+        studentInfoManagementPage.studentinfosavedMessage.isDisplayed();
+        WaitUtils.waitFor(1);
     }
     
     @And("Close driver")
@@ -143,20 +159,22 @@ public class US_17_Stepdefs {
     
     @And("teacher clicks Choose Lesson")
     public void teacherClicksChooseLesson() {
-        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
+        Select selectlesson1  =new Select(studentInfoManagementPage.chooseLessonStudentInfoManagement);
+        selectlesson1.selectByIndex(1);
         WaitUtils.waitFor(2);
     }
     
     @And("teacher clicks Choose Student")
     public void teacherClicksChooseStudent() {
-        studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement.click();
+        Select selectStudent1=new Select(studentInfoManagementPage.chooseStudentFromDropDownStudentInfoManagement);
+        selectStudent1.selectByIndex(6);
         WaitUtils.waitFor(2);
     }
     
     @And("teacher clicks Choose Education Term")
     public void teacherClicksChooseEducationTerm() {
-        studentInfoManagementPage.chooseEducationTermInfoManagement.click();
-        WaitUtils.waitFor(2);
+        Select selectEducationTerm=new Select(studentInfoManagementPage.chooseEducationTermInfoManagement);
+        selectEducationTerm.selectByValue("47");
         
         
     }
@@ -181,7 +199,7 @@ public class US_17_Stepdefs {
     
     @And("teacher enters Info Note")
     public void teacherEntersInfoNote() {
-        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("dd + dersten geçti", Keys.TAB);
+        studentInfoManagementPage.chooseinfoNoteStudentInfoManagement.sendKeys("hello world, this is a test", Keys.TAB);
         WaitUtils.waitFor(5);
     }
     @And("tteacher clicks submit button")

@@ -1,4 +1,4 @@
-@us_22 @smoke
+@us_22 @regression
 
   Feature: admin creates new admin
     Background: Login_Part

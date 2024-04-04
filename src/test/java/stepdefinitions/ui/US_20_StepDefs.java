@@ -19,7 +19,7 @@ public class US_20_StepDefs {
 
     @And("User clicks on the edit button of a student")
     public void userClicksOnTheEditButtonOfAStudent() {
-        meetManagementPage.teacherMeetEditButton.click();
+        BrowserUtils.clickWithTimeOut(meetManagementPage.teacherMeetEditButton,2);
         WaitUtils.waitFor(1);
     }
 

@@ -1,5 +1,6 @@
-@us1 @ey
-Feature: Students login register
+@us1 @ey @regression
+
+Feature: US_01 Students login register
 
   Background:
     Given Student goes to website "https://managementonschools.com/"
@@ -12,16 +13,18 @@ Feature: Students login register
     And students write their date of birth
     And students write their ssn
     And students write their username
-
+@smoke
   Scenario: TC_01 The students register
     And students write their password
     And students click register button
     Then students must see "Guest User Registered" message
+    And close the web page
 
 
   Scenario: TC_02 The students should not register
     And student writes their password
     Then students must see the "One uppercase character" message
     Then students should not click register button
+    And close the web page
 
 

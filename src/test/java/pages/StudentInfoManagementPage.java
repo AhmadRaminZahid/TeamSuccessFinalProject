@@ -21,15 +21,15 @@ public class StudentInfoManagementPage {
     
     //@FindBy(xpath = "//div[text()='Edit Student Info']") public WebElement editStudentInfoMenu;
 
-    @FindBy(xpath = "//option[@value='4452']") public WebElement chooseLessonStudentInfoManagement;
+    @FindBy(xpath = "//select[@id='lessonId']") public WebElement chooseLessonStudentInfoManagement;
     
     
-    @FindBy(xpath = "//option[@value='3290']") public WebElement chooseStudentFromDropDownStudentInfoManagement;
+    @FindBy(xpath = "//select[@id='studentId']") public WebElement chooseStudentFromDropDownStudentInfoManagement;
     
      //option[@value='3288']=Adam Smith
 
     @FindBy(xpath = "//select[@id='studentId']") public WebElement chooseStudentStudentInfoManagement;
-    @FindBy(xpath = "//option[@value='45']") public WebElement chooseEducationTermInfoManagement;
+    @FindBy(xpath = "//select[@id='educationTermId']") public WebElement chooseEducationTermInfoManagement;
 
     @FindBy(id = "absentee") public WebElement chooseAbsenteeStudentTermInfoManagement;
 
@@ -95,7 +95,8 @@ public class StudentInfoManagementPage {
     @FindBy(xpath = "//span[@class='page-link']")
     public WebElement studentInfoManagementNumOfPage;
 
-
+    @FindBy(xpath = "//div[text()='Student Info saved Successfully']")
+    public WebElement studentinfosavedMessage;
 
 }
 

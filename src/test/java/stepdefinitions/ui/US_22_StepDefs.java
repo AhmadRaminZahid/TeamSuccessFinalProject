@@ -1,5 +1,6 @@
 package stepdefinitions.ui;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,10 +20,9 @@ import java.util.List;
 public class US_22_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
-    public static String Adminssn="119-01-1203";
-    public static String Adminphonenumber="079-012-1123";
-    public static String Adminusername="AdminHekmatAmni";
-
+    public static String Adminssn="111-24-0001";
+    public static String Adminphonenumber="079-013-0001";
+    public static String Adminusername="HekmatAminiaaa";
 
     @When("Admin enters the first name for new Admin")
     public void adminEntersTheFirstNameForNewAdmin() {
@@ -52,16 +52,19 @@ public class US_22_StepDefs {
 
     @And("Admin enters phone number of new Admin in the format\\(xxx-xxx-xxxx)")
     public void adminEntersPhoneNumberOfNewAdminInTheFormatXxxXxxXxxx() {
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.phoneNumber,Adminphonenumber,2);
     }
 
     @And("Admin enters SSN number of new Admin in the format\\(xxx-xx-xxxx)")
     public void adminEntersSSNNumberOfNewAdminInTheFormatXxxXxXxxx() {
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,Adminssn,2);
     }
 
     @And("Admin enters a username for new Admin")
     public void adminEntersAUsernameForNewAdmin() {
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,Adminusername,2);
     }
 
@@ -73,13 +76,13 @@ public class US_22_StepDefs {
     @And("Admin clicks the Submit button")
     public void adminClicksTheSubmitButton() {
         BrowserUtils.clickWithTimeOut(adminManagementPage.submitButton,5);
-        WaitUtils.waitFor(4);
+        WaitUtils.waitFor(1);
 
     }
 
     @And("Admin should see Admin saved message")
     public void adminShouldSeeAdminSavedMessage() {
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
         adminManagementPage.adminsavedMessage.isDisplayed();
     }
 
@@ -87,7 +90,7 @@ public class US_22_StepDefs {
     public void adminShouldSeeTheNewAdminInTheAdminList() {
         ActionsUtils.actionsScrollDown();
         BrowserUtils.clickWithTimeOut(adminManagementPage.ListLastPartButton,5);
-        WaitUtils.waitFor(4);
+        WaitUtils.waitFor(6);
 
         List<WebElement> ssnColumnData = Driver.getDriver().findElements(By.xpath("//table//tbody//td[4]"));
         List<String> ssnColumn = new ArrayList<>();

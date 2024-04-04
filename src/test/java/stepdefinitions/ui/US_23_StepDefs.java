@@ -1,5 +1,6 @@
 package stepdefinitions.ui;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,9 +24,10 @@ public class US_23_StepDefs {
     AdminManagementPage adminManagementPage= new AdminManagementPage();
     MainMenuPage mainMenuPage= new MainMenuPage();
 
-    public static String vicedeanSsn="119-01-1219";
-    public static String vicedeanphoneNumber="079-012-1139";
-    public static String vivedeanUsername="HekmatAminb";
+
+    public static String vicedeanSsn="111-23-0003";
+    public static String vicedeanphoneNumber="079-012-0003";
+    public static String vicedeanUsername="AhmadRaminaab";
 
 
     @When("Admin enters the first name for new Vice Dean")
@@ -55,17 +57,20 @@ public class US_23_StepDefs {
 
     @And("Admin enters phone number of new Vice Dean in the format\\(xxx-xxx-xxxx)")
     public void adminEntersPhoneNumberOfNewViceDeanInTheFormatXxxXxxXxxx() {
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.phoneNumber,vicedeanphoneNumber,2);
     }
 
     @And("Admin enters SSN number of new Vice Dean in the format\\(xxx-xx-xxxx)")
     public void adminEntersSSNNumberOfNewViceDeanInTheFormatXxxXxXxxx() {
+
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,vicedeanSsn,2);
     }
 
     @And("Admin enters a username for new Vice Dean")
     public void adminEntersAUsernameForNewViceDean() {
-        BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,vivedeanUsername,2);
+
+        BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,vicedeanUsername,2);
     }
 
     @And("Admin enters a password for new Vice Dean\\(at least eight chars and UpC,LowC,Num)")

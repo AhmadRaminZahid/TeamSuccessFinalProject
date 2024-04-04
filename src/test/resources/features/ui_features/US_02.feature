@@ -1,6 +1,6 @@
-@us2 @ey
+@us2 @ey @regression
 
-Feature: Admin see the Guest user list
+Feature: US_02 Admin see the Guest user list
 
   Background:
     Given Student goes to website "https://managementonschools.com/"
@@ -10,7 +10,7 @@ Feature: Admin see the Guest user list
     And Admin clicks on Login button
     And Admin clicks on menu button
 
-
+@smoke
   Scenario: TC_01 The admin see the Guest user list
     When Admin clicks on the Guest user of the main menu
     And Admin should be able to see Name, Phone Number, SSN and User Name information in the guest user list.

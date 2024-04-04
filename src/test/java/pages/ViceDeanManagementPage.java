@@ -15,7 +15,7 @@ public class ViceDeanManagementPage {
     @FindBy (xpath = "//button[@id='controlled-tab-example-tab-lessonProgram']")
     public WebElement viceDeanLessonProgram;
 
-    @FindBy (xpath = "(//*[@id=\"lessonProgramId\"])[8]")
+    @FindBy (xpath = "(//*[@id=\"lessonProgramId\"])[12]")
     public WebElement viceDeanChooseLesson;
     // (//input[@id='lessonProgramId'])[5]
 

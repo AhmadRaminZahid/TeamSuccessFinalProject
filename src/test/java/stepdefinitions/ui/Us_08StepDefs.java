@@ -1,5 +1,6 @@
 package stepdefinitions.ui;
 
+
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
@@ -13,12 +14,14 @@ import utilities.WaitUtils;
 import static org.junit.Assert.assertEquals;
 
 public class Us_08StepDefs {
+
     public static String className="c1Aclass";
+
     ViceDeanManagementPage viceDeanManagementPage = new ViceDeanManagementPage();
     LoginPage loginPage= new LoginPage();
     @And("User enters a valid Vice Dean User name")
     public void userEntersAValidViceDeanUserName() {
-    loginPage.userName.sendKeys(ConfigReader.getProperty("ViceDeanUsername"));
+        loginPage.userName.sendKeys(ConfigReader.getProperty("ViceDeanUsername"));
     }
 
     @And("User enters a valid Vice Dean password")
@@ -44,12 +47,12 @@ public class Us_08StepDefs {
     @And("User enters credit score for lesson on Credit Score field")
     public void userEntersCreditScoreForLessonOnCreditScoreField() {
 
- viceDeanManagementPage.creditScore.sendKeys("4");
+        viceDeanManagementPage.creditScore.sendKeys("4");
     }
 
     @And("User clicks Submit button")
     public void userClicksSubmitButton() {
-       viceDeanManagementPage.submitButtonLessonManagement.click();
+        viceDeanManagementPage.submitButtonLessonManagement.click();
     }
 
     @And("User enters same lesson name that already created on Lesson Name field")
@@ -60,7 +63,7 @@ public class Us_08StepDefs {
 
     @And("User sees a error message")
     public void userSeesAErrorMessage() {
-       WaitUtils.waitFor(1);
+        WaitUtils.waitFor(1);
         BrowserUtils.verifyElementDisplayed(viceDeanManagementPage.errorLessonNameAlreadyRegister);
 //        String text = viceDeanManagementPage.alertMessage.getText();
 //        String expectedText = "Error: Lesson with lesson name c++ already registered";

@@ -1,12 +1,12 @@
-@us_04
+@us_04 @regression
 Feature: US_04 Add Dean
   Background: Login as a Admin
     Given Admin goes to website "https://managementonschools.com/"
     And Admin clicks on the Log in button at the home page
-    And Admin enters the  admin User Name
+    And Admin enters the  admin username
     And Admin enters the  admin password
     And Admin clicks on the Login button
-
+@smoke
   Scenario: US_04 TC_01 Admin should be able to add Dean
     When Admin clicks the Menu button
     And clicks Dean Management option

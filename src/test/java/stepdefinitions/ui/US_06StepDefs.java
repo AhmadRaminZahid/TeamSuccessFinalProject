@@ -17,6 +17,7 @@ import utilities.WaitUtils;
 import static com.github.javafaker.Faker.instance;
 
 public class US_06StepDefs {
+
     public static String viceDeanCreateUserName ="aAbCc1";
     public static  String viceDeanCreateSSN= "495-11-2039";
     public static  String viceDeanPhoneNumb= "445-410-1039";
@@ -49,22 +50,28 @@ public class US_06StepDefs {
 
     @When("User enters name in name field")
     public void userEntersNameInNameField() {
+
 deanManagementPage.name.sendKeys("Naim");
+
     }
 
     @And("User enters last name in the Surname field")
     public void userEntersLastNameInTheSurnameField() {
+
 deanManagementPage.surname.sendKeys("last");
+
     }
 
     @And("User enters place of birth in the Birth Place field")
     public void userEntersPlaceOfBirthInTheBirthPlaceField() {
+
 deanManagementPage.birthPlace.sendKeys("Ankara");
+
     }
 
     @And("User select gender")
     public void userSelectGender() {
-deanManagementPage.maleGender.click();
+        deanManagementPage.maleGender.click();
     }
 
     @And("User enters date of birth in the date of birth field")
@@ -74,22 +81,27 @@ deanManagementPage.maleGender.click();
 
     @And("User enters phone number in the phone number field")
     public void userEntersPhoneNumberInThePhoneNumberField() {
+
 deanManagementPage.phoneNumber.sendKeys(viceDeanPhoneNumb);
     }
 
     @And("User enters social security number in the SSN field")
     public void userEntersSocialSecurityNumberInTheSSNField() {
+
 deanManagementPage.ssn.sendKeys(viceDeanCreateSSN);
+
     }
 
     @And("User enters user name in the User Name field")
     public void userEntersUserNameInTheUserNameField() {
+
 deanManagementPage.username.sendKeys(viceDeanCreateUserName);
+
     }
 
     @And("User enters valid password in the Password field")
     public void userEntersValidPasswordInThePasswordField() {
-deanManagementPage.password.sendKeys("123456789Ae");
+        deanManagementPage.password.sendKeys("123456789Ae");
     }
 
     @And("User clicks the Submit button")
