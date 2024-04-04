@@ -24,16 +24,9 @@ public class US_17_Stepdefs {
 
     MainMenuPage mainMenuPAge =new MainMenuPage();
 
-
     StudentInfoManagementPage studentInfoManagementPage=new StudentInfoManagementPage();
 
     Actions actions = new Actions(Driver.getDriver());
-
-
-
-
-
-
 
     @Given("The teacher navigates to {string}")
     public void theTeacherNavigatesTo(String HomeUrl) {
@@ -134,8 +127,8 @@ public class US_17_Stepdefs {
         studentInfoManagementPage.chooseButtonSTudentTermInfoManagement.click();
     }
     
-    @And("teachers must see {string} message")
-    public void teachersMustSeeMessage(String expectedResult) {
+    @And("teachers must see Student Info saved Successfully message")
+    public void teachersMustSeeMessage() {
         studentInfoManagementPage.studentinfosavedMessage.isDisplayed();
         WaitUtils.waitFor(1);
     }
@@ -221,7 +214,3 @@ public class US_17_Stepdefs {
         Driver.closeDriver();
     }
 }
-    
-    
-    
-    

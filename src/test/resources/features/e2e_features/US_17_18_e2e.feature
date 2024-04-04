@@ -1,4 +1,4 @@
-@us_17_e2e
+@us_17_18_e2e
 Feature: Grade Submission by Teacher
 
   Scenario: US_17 TC_01 - Teacher gives grades to students (Add Student Info)
@@ -16,11 +16,11 @@ Feature: Grade Submission by Teacher
     And The teacher enters Final Exam
     And The teacher enters Info Note
     And  teacher clicks Submit Button
-    And teachers must see "Student Info Saved Succesfully" message
+    And teachers must see Student Info saved Successfully message
     And Close driver
 
 
-  Scenario: Teacher get the created Student info
+  Scenario: Teacher get the id of created Student info
     Given User is authorized as "teacherIbrahim"
     When Teacher sets the Url for GetAll Student info for teacher
     And Teacher sets the expected data for Student info
@@ -35,6 +35,23 @@ Feature: Grade Submission by Teacher
     And teacher executes query for created meet US_17
     Then teacher validates result set US_17
     And teacher terminates connection US_17
+
+
+  Scenario: Teacher get the created Student info by Id
+    Given User is authorized as "teacherIbrahim"
+    When Teacher sets the Url for GetId Student info for teacher
+    And Teacher sets the expected data for to updated Student info
+    And Teacher sends GETId request and get response
+    And Teacher set the url to update Student info
+    And Teacher set update request for student info
+    Then Teacher verifies new body for update
+
+  Scenario: teacher validates updated student info
+    When teacher sets connection US_18
+    And teacher creates statement US_18
+    And teacher executes query for created meet US_18
+    Then teacher validates result set US_18
+    And teacher terminates connection US_18
 
   Scenario: Teacher deletes created Student info
     Given User is authorized as "teacherIbrahim"

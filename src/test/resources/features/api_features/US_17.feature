@@ -10,6 +10,3 @@ Scenario: Teacher get the created Student info
   And Teacher get id of created Student info
   Then Teacher verifies status code is 200
   And Teacher verifies response body for Student info
-
-Scenario: Teacher deletes created Student info
-  When Teacher deletes Student info by id
