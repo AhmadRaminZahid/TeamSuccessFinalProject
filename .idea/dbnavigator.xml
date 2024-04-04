@@ -16,13 +16,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-<<<<<<< HEAD
     <connection id="5b5d37dc-f2ed-4a00-b438-2f971f417c3f">
       <console name="fordatabasetest" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM guest_user where name = 'John']]></console>
-=======
-    <connection id="50d765bc-f813-48af-be74-00832628af98">
-      <console name="TeamSuccess" type="STANDARD" schema="" session="Main"><![CDATA[select * from contact_message where email='Kadıbaba@gmail.com']]></console>
->>>>>>> origin/master
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -32,14 +27,7 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-<<<<<<< HEAD
     <connection id="5b5d37dc-f2ed-4a00-b438-2f971f417c3f" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="5b5d37dc-f2ed-4a00-b438-2f971f417c3f" dataset="public.guest_user" active-filter-id="" />
-=======
-    <connection id="50d765bc-f813-48af-be74-00832628af98" />
->>>>>>> origin/master
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -50,15 +38,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-<<<<<<< HEAD
       <connection id="5b5d37dc-f2ed-4a00-b438-2f971f417c3f" active="true" signed="true">
         <database>
           <name value="fordatabasetest" />
-=======
-      <connection id="50d765bc-f813-48af-be74-00832628af98" active="true" signed="true">
-        <database>
-          <name value="TeamSuccess" />
->>>>>>> origin/master
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
@@ -120,10 +102,7 @@
           <debugger-type value="ASK" />
         </debugger>
         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false" hide-audit-columns="false">
-<<<<<<< HEAD
           <object-filters />
-=======
->>>>>>> origin/master
           <object-type-filter use-master-settings="true">
             <object-type name="SCHEMA" enabled="true" />
             <object-type name="USER" enabled="true" />
@@ -151,10 +130,6 @@
             <object-type name="CLUSTER" enabled="true" />
             <object-type name="DBLINK" enabled="true" />
           </object-type-filter>
-<<<<<<< HEAD
-=======
-          <object-name-filters />
->>>>>>> origin/master
         </object-filters>
       </connection>
     </connections>
@@ -289,7 +264,6 @@
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
           <content-type name="Groovy" enabled="true" />
-          <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Manifest" enabled="true" />
         </content-types>
