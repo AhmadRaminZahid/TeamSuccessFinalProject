@@ -95,7 +95,8 @@ public class StudentInfoManagementPage {
     @FindBy(xpath = "//span[@class='page-link']")
     public WebElement studentInfoManagementNumOfPage;
 
-
+    @FindBy(xpath = "//div[text()='Student Info saved Successfully']")
+    public WebElement studentinfosavedMessage;
 
 }
 

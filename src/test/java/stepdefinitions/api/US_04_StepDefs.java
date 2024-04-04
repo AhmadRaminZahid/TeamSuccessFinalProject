@@ -52,6 +52,9 @@ public class US_04_StepDefs {
             case "student":
                 setUp("CaptainKid","Nikolas2022!!");
                 break;
+            case "teacheribrahim":
+                setUp("İbrahim3","ibrahim33A");
+                break;
             default:
                 System.out.println("Please provide valid credentials for your role");
         }

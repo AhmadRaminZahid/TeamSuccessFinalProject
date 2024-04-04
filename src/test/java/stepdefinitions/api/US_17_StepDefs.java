@@ -20,8 +20,8 @@ public class US_17_StepDefs {
     Response response;
     JsonPath actualData;
     
-    static Integer midtermExam;
-    static Integer finalExam;
+    static Double midtermExam;
+    static Double finalExam;
     
     static Integer absentee;
     
@@ -33,16 +33,16 @@ public class US_17_StepDefs {
     static Integer educationTermId;
     
     StudentInfoExpectedDataPojo expectedData;
-    Integer studentInfoId;
+    public static Integer studentInfoId;
     @When("Teacher sets the Url for GetAll Student info for teacher")
     public void teacherSetsTheUrlForGetAllStudentInfoForTeacher() {
         spec.pathParams("first","studentInfo","second","getAllForTeacher").queryParams("page","0","size","200");
-    WaitUtils.waitFor(2);
+        WaitUtils.waitFor(2);
     }
     
     @And("Teacher sets the expected data for Student info")
     public void teacherSetsTheExpectedDataForStudentInfo() {
-        expectedData= new StudentInfoExpectedDataPojo(10,47,56,"hello world, this is a test",4451,40,3361);
+        expectedData= new StudentInfoExpectedDataPojo(10,47,56.0,"hello world, this is a test",4451,40.0,3361);
     }
     
     @And("Teacher sends GETAll request and get response")
@@ -62,8 +62,8 @@ public class US_17_StepDefs {
                 String id=actualData.getString("content[0].id");
                 studentInfoId=Integer.valueOf(id);
                 System.out.println("studentInfoId = " + studentInfoId);
-                midtermExam=Integer.valueOf(actualData.getString("content[0].midtermExam"));
-                finalExam=Integer.valueOf(actualData.getString("content[0].finalExam"));
+                midtermExam=Double.valueOf(actualData.getString("content[0].midtermExam"));
+                finalExam=Double.valueOf(actualData.getString("content[0].finalExam"));
                 absentee=Integer.valueOf(actualData.getString("content[0].absentee"));
                 InfoNote=actualData.getString("content[0].infoNote");
                 LessonId=Integer.valueOf(actualData.getString("content[0].lessonId"));
@@ -82,8 +82,8 @@ public class US_17_StepDefs {
     
     @And("Teacher verifies response body for Student info")
     public void teacherVerifiesResponseBodyForStudentInfo() {
-        Integer expectedMidterm=expectedData.getMidtermExam();
-        Integer expectedfinalExam=expectedData.getFinalExam();
+        Double expectedMidterm=expectedData.getMidtermExam();
+        Double expectedfinalExam=expectedData.getFinalExam();
         Integer expectedAbseentee=expectedData.getAbsentee();
         Integer expectedLessonId=expectedData.getLessonId();
         Integer expectedStudentId=expectedData.getStudentId();
@@ -106,7 +106,6 @@ public class US_17_StepDefs {
         
         spec.pathParams("first","studentInfo", "second", "delete", "third", studentInfoId);
         response = given(spec).delete("{first}/{second}/{third}");
-        
         response.then().statusCode(200);
     }
 }

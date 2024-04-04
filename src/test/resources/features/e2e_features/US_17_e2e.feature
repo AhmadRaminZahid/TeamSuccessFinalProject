@@ -21,7 +21,7 @@ Feature: Grade Submission by Teacher
 
 
   Scenario: Teacher get the created Student info
-    Given User is authorized as "teacher"
+    Given User is authorized as "teacherIbrahim"
     When Teacher sets the Url for GetAll Student info for teacher
     And Teacher sets the expected data for Student info
     And Teacher sends GETAll request and get response
@@ -37,5 +37,5 @@ Feature: Grade Submission by Teacher
     And teacher terminates connection US_17
 
   Scenario: Teacher deletes created Student info
-    Given User is authorized as "teacher"
+    Given User is authorized as "teacherIbrahim"
     When Teacher deletes Student info by id
