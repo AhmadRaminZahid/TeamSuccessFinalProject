@@ -20,11 +20,11 @@ public class US_15_StepDefs {
     MainMenuPage mainMenuPage = new MainMenuPage();
     StudentManagementPage studentManagementPage = new StudentManagementPage();
 
-    public static String name;
-    public static String userName = "xname";
-    public static String EmailAddress;
-    public static int phoneNumber;
-    public static int ssnNumber;
+    public static String name = "Melissay";
+    public static String userName = "Alvesinho";
+    public static String EmailAddress = "aniita@gmail.com";
+    public static String phoneNumber = "344-214-4444";
+    public static String ssnNumber = "322-23-2221";
 
     @Given("Vice Dean goes to {string} homepage")
     public void vice_dean_goes_to_homepage(String url) {
@@ -32,8 +32,8 @@ public class US_15_StepDefs {
     }
     @And("clicks on Login right corner of the page")
     public void clicks_on_login_right_corner_of_the_page() {
-        WaitUtils.waitFor(2);
-        loginPage.loginButtonMainPage.click();
+        WaitUtils.waitFor(1);
+        BrowserUtils.clickWithTimeOut(loginPage.loginButtonMainPage,2);
     }
     @And("enters username in the Username input field")
     public void enters_username_in_the_username_input_field() {
@@ -71,13 +71,13 @@ public class US_15_StepDefs {
     @And("enters a valid student Name")
     public void enters_a_valid_student_name() {
         WaitUtils.waitFor(2);
-        name=Faker.instance().name().name();
+      //  name=Faker.instance().name().name();
         studentManagementPage.name.sendKeys(name);
     }
     @And("enters a valid student Surname")
     public void enters_a_valid_student_surname() {
         WaitUtils.waitFor(2);
-        studentManagementPage.surname.sendKeys("Marques");
+        studentManagementPage.surname.sendKeys("Alves");
     }
     @And("enters the student Birth Place")
     public void enters_the_student_birth_place() {
@@ -87,14 +87,14 @@ public class US_15_StepDefs {
     @And("enters a valid email address")
     public void enters_a_valid_email_address() {
         WaitUtils.waitFor(2);
-        EmailAddress=Faker.instance().name().username();
-        studentManagementPage.email.sendKeys(EmailAddress+"@gmail.com");
+      //  EmailAddress=Faker.instance().name().username();
+        studentManagementPage.email.sendKeys(EmailAddress);
     }
     @And("enters a valid Phone number")
     public void enters_a_valid_phone_number() {
         WaitUtils.waitFor(2);
-        phoneNumber = Faker.instance().number().numberBetween(100,999);
-        studentManagementPage.phoneNumber.sendKeys(phoneNumber+"-987-6089");
+      //  phoneNumber = Faker.instance().number().numberBetween(100,999);
+        studentManagementPage.phoneNumber.sendKeys(phoneNumber);
     }
     @And("selects the student gender")
     public void selects_the_student_gender() {
@@ -104,29 +104,29 @@ public class US_15_StepDefs {
     @And("enters the Date of Birth")
     public void enters_the_date_of_birth() {
         WaitUtils.waitFor(2);
-        studentManagementPage.dateOfBirth.sendKeys("20/08/1989");
+        studentManagementPage.dateOfBirth.sendKeys("22/07/1992");
     }
     @And("enters a valid SSN number")
     public void enters_a_valid_ssn_number() {
         WaitUtils.waitFor(2);
-        ssnNumber = Faker.instance().number().numberBetween(100,999);
-        studentManagementPage.ssn.sendKeys(ssnNumber+"-75-5907");
+       // ssnNumber = Faker.instance().number().numberBetween(100,999);
+        studentManagementPage.ssn.sendKeys(ssnNumber);
     }
     @And("enters a valid User name")
     public void enters_a_valid_user_name() {
         WaitUtils.waitFor(2);
-        userName=Faker.instance().name().username();
+      //  userName=Faker.instance().name().username();
         studentManagementPage.username.sendKeys(userName);
     }
     @And("enters the student Father's name")
     public void enters_the_student_father_s_name() {
         WaitUtils.waitFor(2);
-        studentManagementPage.fatherName.sendKeys("Pedrog Marques");
+        studentManagementPage.fatherName.sendKeys("Eliot Paes");
     }
     @And("enters the student Mother's name")
     public void enters_the_student_mother_s_name() {
         WaitUtils.waitFor(2);
-        studentManagementPage.motherName.sendKeys("Alices Marques");
+        studentManagementPage.motherName.sendKeys("Juliana Paes");
     }
     @And("enters a valid Password")
     public void enters_a_valid_password() {
@@ -142,7 +142,7 @@ public class US_15_StepDefs {
     @Then("sees the success message {string}")
     public void sees_the_message(String expectedResult) {
         assertEquals(expectedResult, studentManagementPage.successMessageStudentSaved.getText() );
-        WaitUtils.waitFor(1);
+        WaitUtils.waitFor(2);
        // studentManagementPage.successMessageStudentSaved.isDisplayed();
     }
 

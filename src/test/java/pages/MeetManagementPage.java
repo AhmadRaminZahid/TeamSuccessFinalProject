@@ -54,10 +54,10 @@ public class MeetManagementPage {
     @FindBy(xpath = "(//*[text()='Meet Updated Successfully'])[1]")
     public WebElement teacherMeetEditUpdatedSuccessfully;
 
-    @FindBy(xpath = "(//*[text()='must be a future date'])[1]")
+    @FindBy(xpath = "(//*[text()='ileri bir tarih olmalı'])[1]")
     public WebElement teacherMeetEditMustBeFutureDateMessage;
 
-    @FindBy(xpath = "//div[text()='must be a future date']")
+    @FindBy(xpath = "//div[text()='ileri bir tarih olmalı']")
     public WebElement teacherMeetMustBeFutureDateMessage;
 
 

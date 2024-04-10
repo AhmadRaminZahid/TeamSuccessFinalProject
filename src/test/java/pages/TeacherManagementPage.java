@@ -12,6 +12,9 @@ public class TeacherManagementPage {
     public TeacherManagementPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+    @FindBy(xpath = "//button[text()='Menu']")
+    public WebElement menuButton;
     @FindBy(xpath = "//a[text()='Teacher Management']")
     public WebElement teacherManagement;
     @FindBy(xpath = "(//button[@type='button'])[9]")
@@ -117,6 +120,11 @@ public class TeacherManagementPage {
     public WebElement submitButton;
 
 
+    @FindBy(xpath = "//div[text()='Please enter valid SSN number']")
+    public WebElement failSsnMessage;
+    @FindBy(xpath = "//*[text()='Choose Lessons']/following-sibling::div/div/div[1]//input")
+    public WebElement inputLessons;
+
     // pup up teacher box
 
     @FindBy(xpath = "//span[text()='Rolandas']")
@@ -134,7 +142,7 @@ public class TeacherManagementPage {
     @FindBy(xpath = "(//input[@id='surname'])[2]")
     public WebElement surnameBox;
 
-    @FindBy(xpath = "//input[@value='Madrid']")
+    @FindBy(xpath = "(//input[@id='birthPlace'])[2]")
     public WebElement BirthPlaceBox;
 
     @FindBy(xpath = "(//input[@id='email'])[2]")

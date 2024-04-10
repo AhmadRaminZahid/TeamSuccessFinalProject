@@ -1,0 +1,843 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MY SPARK REPORT</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">abr 3, 2024 09:17:32 da tarde</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>abr 3, 2024 09:17:32 da tarde</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>abr 3, 2024 09:18:43 da tarde</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='100%'><b>4</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='71%'><b>28</b> steps passed</small></div>
+<div>
+<small data-tooltip='10%'><b>4</b> steps failed,
+<b>7</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"End to end test for creating a Student":70.025
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@e2e_us15</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 4,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 28,
+failGrandChild: 4,
+warningGrandChild: 0,
+skipGrandChild: 7,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@e2e_us15</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">End to end test for creating a Student</p>
+            <p class="text-sm">
+              <span>21:17:33</span> / <span>00:01:10:025</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">End to end test for creating a Student</h5>
+<span class='badge badge-success'>04.03.2024 21:17:33</span>
+<span class='badge badge-danger'>04.03.2024 21:18:43</span>
+<span class='badge badge-default'>00:01:10:025</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>US_15 TC_01 Vice Deans should be able to create a student.++-</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.vice_dean_goes_to_homepage(java.lang.String)">
+                <span>Given Vice Dean goes to "https://managementonschools.com/" homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.clicks_on_login_right_corner_of_the_page()">
+                <span>And clicks on Login right corner of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_username_in_the_username_input_field()">
+                <span>And enters username in the Username input field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_password_in_the_password_input_field()">
+                <span>And enters password in the password input field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.clicks_on_login_button()">
+                <span>And clicks on Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.click_on_the_menu_button_on_the_right_corner_of_the_page()">
+                <span>When click on the Menu button on the right corner of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.selects_student_management_on_the_dropdown_list()">
+                <span>And selects Student Management on the dropdown list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.select_the_teacher_on_the_dropdown_list()">
+                <span>And select the teacher on the dropdown list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_a_valid_student_name()">
+                <span>And enters a valid student Name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_a_valid_student_surname()">
+                <span>And enters a valid student Surname</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_the_student_birth_place()">
+                <span>And enters the student Birth Place</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_a_valid_email_address()">
+                <span>And enters a valid email address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_a_valid_phone_number()">
+                <span>And enters a valid Phone number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.selects_the_student_gender()">
+                <span>And selects the student gender</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_the_date_of_birth()">
+                <span>And enters the Date of Birth</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_a_valid_ssn_number()">
+                <span>And enters a valid SSN number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_a_valid_user_name()">
+                <span>And enters a valid User name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_the_student_father_s_name()">
+                <span>And enters the student Father's name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_the_student_mother_s_name()">
+                <span>And enters the student Mother's name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.enters_a_valid_password()">
+                <span>And enters a valid Password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.ui.US_15_StepDefs.clicks_on_submit_button()">
+                <span>And clicks on Submit button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepdefinitions.ui.US_15_StepDefs.sees_the_message(java.lang.String)">
+                <span>Then sees the success message "Student saved Successfully"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Student saved Successfully']"}
+  (Session info: chrome=123.0.6312.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e2b95aa690b4839e38b61305371883f2, findElement {using=xpath, value=//div[text()='Student saved Successfully']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\MARIEL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50763}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50763/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e2b95aa690b4839e38b61305371883f2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at jdk.internal.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invokeUnderlying(ThreadGuard.java:99)
+	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invoke(ThreadGuard.java:91)
+	at com.sun.proxy.$Proxy21.findElement(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy24.getText(Unknown Source)
+	at stepdefinitions.ui.US_15_StepDefs.sees_the_message(US_15_StepDefs.java:144)
+	at ✽.sees the success message "Student saved Successfully"(file:///C:/Users/Marielle%20Matos/IdeaProjects/TeamSuccessFinalProject/./src/test/resources/features/e2e_features/e2e_US15.feature:25)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.ui.US_02_Stepdefs.closeTheDriver()">
+                <span>And close the driver</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>screenshot of failed step
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log fail-bg mr-2">Fail</span>Vice Dean gets the information for the created Student Test</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="stepdefinitions.api.US_15_StepDefs.viceDeanGetsIdOfTheStudentWithName(java.lang.String)">
+                <span>And Vice Dean gets id of the Student with name "Melissay"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepdefinitions.api.US_15_StepDefs.viceDeanGetsIdOfTheStudentWithName(US_15_StepDefs.java:109)
+	at ✽.Vice Dean gets id of the Student with name "Melissay"(file:///C:/Users/Marielle%20Matos/IdeaProjects/TeamSuccessFinalProject/./src/test/resources/features/e2e_features/e2e_US15.feature:28)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.api.US_15_StepDefs.setsTheExpectedDataForGetStudentByName()">
+                <span>And sets the expected data for Get Student By name</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.api.US_15_StepDefs.sendsGETRequestAndGetResponseForStudent()">
+                <span>When sends GET request and get response for Student</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.api.US_15_StepDefs.verifiesStatusCodeForStudentIs(int)">
+                <span>Then verifies status code for Student is 200</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.api.US_15_StepDefs.verifiesResponseBodyForGetStudentByName()">
+                <span>And verifies response body for Get Student By name</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>screenshot of failed step
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded2.png' src="../embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="34"><span class="badge log fail-bg mr-2">Fail</span>Vice Dean Validates Created Student From DB</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.db.US_15_StepDefs.viceDeanSetsConnectionStudent()">
+                <span>Given Vice Dean sets connection Student</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.db.US_15_StepDefs.viceDeanCreatesStatementStudent()">
+                <span>And Vice Dean creates statement Student</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.db.US_15_StepDefs.viceDeanExecutesQueryForCreatedStudent()">
+                <span>When Vice Dean executes query for created Student</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepdefinitions.db.US_15_StepDefs.viceDeanValidatesResultSetStudent()">
+                <span>Then Vice Dean validates result set Student</span>
+      <div>
+        <textarea disabled class="code-block">org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:3176)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2317)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2840)
+	at stepdefinitions.db.US_15_StepDefs.viceDeanValidatesResultSetStudent(US_15_StepDefs.java:43)
+	at ✽.Vice Dean validates result set Student(file:///C:/Users/Marielle%20Matos/IdeaProjects/TeamSuccessFinalProject/./src/test/resources/features/e2e_features/e2e_US15.feature:37)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.db.US_15_StepDefs.viceDeanTerminatesConnectionStudent()">
+                <span>And Vice Dean terminates connection Student</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>screenshot of failed step
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded3.png' src="../embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="41"><span class="badge log fail-bg mr-2">Fail</span>Vice Dean deletes created Student Test</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="stepdefinitions.api.US_15_StepDefs.viceDeanGetsIdOfTheStudentWithName(java.lang.String)">
+                <span>And Vice Dean gets id of the Student with name "Melissay"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepdefinitions.api.US_15_StepDefs.viceDeanGetsIdOfTheStudentWithName(US_15_StepDefs.java:109)
+	at ✽.Vice Dean gets id of the Student with name "Melissay"(file:///C:/Users/Marielle%20Matos/IdeaProjects/TeamSuccessFinalProject/./src/test/resources/features/e2e_features/e2e_US15.feature:40)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.api.US_15_StepDefs.viceDeanDeletesTheCreatedStudent()">
+                <span>And Vice Dean deletes the created Student</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>screenshot of failed step
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded4.png' src="../embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">@e2e_us15</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@e2e_us15</h4>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:17:33 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>US_15 TC_01 Vice Deans should be able to create a student.++-</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.US_15 TC_01 Vice Deans should be able to create a student.++-</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:18:38 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Vice Dean gets the information for the created Student Test</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.Vice Dean gets the information for the created Student Test</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:18:39 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='34'>Vice Dean Validates Created Student From DB</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.Vice Dean Validates Created Student From DB</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:18:42 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='41'>Vice Dean deletes created Student Test</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.Vice Dean deletes created Student Test</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:18:17 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='24'>Then sees the success message "Student saved Successfully"</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.US_15 TC_01 Vice Deans should be able to create a student.++-.Then sees the success message "Student saved Successfully"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.postgresql.util.PSQLException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.postgresql.util.PSQLException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:18:40 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='38'>Then Vice Dean validates result set Student</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.Vice Dean Validates Created Student From DB.Then Vice Dean validates result set Student</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:18:38 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='28'>And Vice Dean gets id of the Student with name "Melissay"</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.Vice Dean gets the information for the created Student Test.And Vice Dean gets id of the Student with name "Melissay"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:18:42 da tarde</td>
+<td>
+<a href="#" class="linked" test-id='1' id='42'>And Vice Dean gets id of the Student with name "Melissay"</a>
+<div class="">
+<span class="badge badge-default">End to end test for creating a Student.Vice Dean deletes created Student Test.And Vice Dean gets id of the Student with name "Melissay"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -48,7 +48,7 @@ public class US_14_StepDefs {
     @And("enters a valid teacher Name on Edit Box")
     public void entersAValidTeacherNameOnEditBox() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.nameBox.sendKeys(Keys.DELETE, "Janetey");
+        teacherManagementPage.nameBox.sendKeys(Keys.TAB);
     }
     @And("enters a valid teacher Surname on Edit Box")
     public void entersAValidTeacherSurnameOnEditBox() {
@@ -57,13 +57,15 @@ public class US_14_StepDefs {
     }
     @And("enters a valid Birth Place on Edit Box")
     public void entersAValidBirthPlaceOnEditBox() {
-        WaitUtils.waitFor(2);
-        teacherManagementPage.BirthPlaceBox.sendKeys(Keys.TAB);
+        WaitUtils.waitFor(1);
+        teacherManagementPage.BirthPlaceBox.sendKeys(Keys.DELETE, "Madrid");
     }
     @And("enters a valid email address on Edit Box")
     public void entersAValidEmailAddressOnEditBox() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.emailBox.sendKeys("roihgl@gmail.com");
+
+        teacherManagementPage.emailBox.sendKeys(Keys.TAB);
+
     }
     @And("enters a valid Phone number on Edit Box")
     public void entersAValidPhoneNumberOnEditBox() {
@@ -73,7 +75,11 @@ public class US_14_StepDefs {
     @And("enters a valid SSN on Edit Box")
     public void entersAValidSSNOnEditBox() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.ssnEditBox.sendKeys("345-23-3406",Keys.TAB);
+
+        teacherManagementPage.ssnEditBox.sendKeys(Keys.TAB);
+
+        teacherManagementPage.ssnEditBox.sendKeys(Keys.TAB);
+
     }
     @And("selects the Is Advisor Teacher box on Edit Box")
     public void selectsTheIsAdvisorTeacherBoxOnEditBox() {
@@ -98,7 +104,7 @@ public class US_14_StepDefs {
     @And("enters a valid Password on Edit Box")
     public void entersAValidPasswordOnEditBox() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.passwordBox.sendKeys("Abfgy456@");
+        teacherManagementPage.passwordBox.sendKeys("Abfll456@");
     }
     @And("clicks on Submit button on Edit Box")
     public void clicksOnSubmitButtonOnEditBox() {

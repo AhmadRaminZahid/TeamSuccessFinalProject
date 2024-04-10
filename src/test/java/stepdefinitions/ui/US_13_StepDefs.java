@@ -2,6 +2,7 @@ package stepdefinitions.ui;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -23,11 +24,13 @@ import static stepdefinitions.ui.US_15_StepDefs.*;
 
 public class US_13_StepDefs {
 
-    public static String teacherName = "Biribiri";
-    public static String teacherUsername = "Boroboro";
 
-    public static String teacherSurname = "Meeee";
-    public  static String teacherSsn = "219-38-2199";
+    public static String teacherName = "Juliete";
+    public static String teacherUsername = "Juliete";
+
+    public static String teacherSurname = "Alves";
+    public  static String teacherSsn = "228-13-2861";
+
     Actions action;
 
 
@@ -36,6 +39,7 @@ public class US_13_StepDefs {
     LoginPage loginPage = new LoginPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
     TeacherManagementPage teacherManagementPage = new TeacherManagementPage();
+
 
     @And("selects Teacher Management on the menu")
     public void selectsTeacherManagementOnTheMenu() {
@@ -50,7 +54,7 @@ public class US_13_StepDefs {
         teacherManagementPage.chooseLessons.click();
         action = new Actions(Driver.getDriver());
 
-        BrowserUtils.sendKeysWithTimeout(teacherManagementPage.chooseLessons,"Flying"+Keys.ENTER, 2);
+       // BrowserUtils.sendKeysWithTimeout(teacherManagementPage.chooseLessons,"Flying"+Keys.ENTER, 2);
         action.doubleClick(teacherManagementPage.chooseLessons);
         teacherManagementPage.chooseLessons.sendKeys("C#",Keys.TAB);
 
@@ -77,7 +81,7 @@ public class US_13_StepDefs {
     @And("enters a valid Birth Place")
     public void entersAValidBirthPlace() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.teacherBirthPlace.sendKeys("EUA");
+        teacherManagementPage.teacherBirthPlace.sendKeys("Brazil");
     }
 
     @And("selects the Is Advisor Teacher box")
@@ -95,7 +99,7 @@ public class US_13_StepDefs {
     @And("enters a valid Date of Birth")
     public void entersAValidDateOfBirth() {
         WaitUtils.waitFor(2);
-        teacherManagementPage.DateOfBirth.sendKeys("29/11/1991");
+        teacherManagementPage.DateOfBirth.sendKeys("22/07/1992");
     }
 
     @And("enters a valid SSN")
@@ -134,4 +138,6 @@ public class US_13_StepDefs {
         assertEquals(error_message, teacherManagementPage.invalidSsnmessage.getText());
         WaitUtils.waitFor(1);
     }
+
+
 }

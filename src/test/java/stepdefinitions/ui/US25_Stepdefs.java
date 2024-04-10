@@ -47,13 +47,13 @@ public class US25_Stepdefs {
         WaitUtils.waitFor(1);
     }
 
-    @And("Admin enters the father name")
+    @And("Admin enters the Father name")
     public void adminEntersTheFatherName() {
         studentManagementPage.fatherName.sendKeys("Gokhan");
         WaitUtils.waitFor(1);
     }
 
-    @And("Admin enters the mother name")
+    @And("Admin enters the Mother name")
     public void adminEntersTheMotherName() {
         studentManagementPage.motherName.sendKeys("Sule");
         WaitUtils.waitFor(1);
@@ -112,7 +112,7 @@ public class US25_Stepdefs {
         WaitUtils.waitFor(1);
     }
 
-    @And("Admin enters a User Name as {string}")
+    @And("Admin enters a username as {string}")
     public void adminEntersAUserNameAs(String userName) {
         studentManagementPage.username.sendKeys(userName);
         WaitUtils.waitFor(1);

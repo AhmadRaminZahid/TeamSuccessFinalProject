@@ -1,5 +1,6 @@
 package stepdefinitions.ui;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,10 +20,10 @@ import java.util.List;
 public class US_22_StepDefs {
     LoginPage loginPage = new LoginPage();
     AdminManagementPage adminManagementPage= new AdminManagementPage();
-    public static String Adminssn="112-01-1201";
-    public static String Adminphonenumber="073-012-1120";
-    public static String Adminusername="AdminHekmatAmini";
-
+    public static String Adminssn;
+    public static String Adminphonenumber;
+    public static String Adminusername;
+    Faker faker= new Faker();
 
     @When("Admin enters the first name for new Admin")
     public void adminEntersTheFirstNameForNewAdmin() {
@@ -52,16 +53,19 @@ public class US_22_StepDefs {
 
     @And("Admin enters phone number of new Admin in the format\\(xxx-xxx-xxxx)")
     public void adminEntersPhoneNumberOfNewAdminInTheFormatXxxXxxXxxx() {
+        Adminphonenumber="079-012-"+faker.number().numberBetween(1000,9999);
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.phoneNumber,Adminphonenumber,2);
     }
 
     @And("Admin enters SSN number of new Admin in the format\\(xxx-xx-xxxx)")
     public void adminEntersSSNNumberOfNewAdminInTheFormatXxxXxXxxx() {
+        Adminssn=faker.number().numberBetween(100,999)+"-23-5674";
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.ssn,Adminssn,2);
     }
 
     @And("Admin enters a username for new Admin")
     public void adminEntersAUsernameForNewAdmin() {
+        Adminusername=faker.name().username();
         BrowserUtils.sendKeysWithTimeout(adminManagementPage.username,Adminusername,2);
     }
 
@@ -73,12 +77,13 @@ public class US_22_StepDefs {
     @And("Admin clicks the Submit button")
     public void adminClicksTheSubmitButton() {
         BrowserUtils.clickWithTimeOut(adminManagementPage.submitButton,5);
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
 
     }
 
     @And("Admin should see Admin saved message")
     public void adminShouldSeeAdminSavedMessage() {
+        WaitUtils.waitFor(1);
         adminManagementPage.adminsavedMessage.isDisplayed();
     }
 
@@ -120,6 +125,7 @@ public class US_22_StepDefs {
 
     @And("Admin should see Please enter valid SSN number message")
     public void adminShouldSeePleaseEnterValidSSNNumberMessage() {
+        WaitUtils.waitFor(2);
         adminManagementPage.EnterValidSSNNumberMessage.isDisplayed();
     }
 
